@@ -40,7 +40,7 @@ Partial Class HistoryForm
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(379, 64)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "History Form" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the contents is still in update"
+        Me.Label1.Text = "History Form" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the contents is still in update - git change"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'HistoryForm
