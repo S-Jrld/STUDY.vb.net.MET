@@ -48,11 +48,11 @@ Partial Class GoalsForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(199, 285)
+        Me.Label2.Location = New System.Drawing.Point(165, 281)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(428, 64)
+        Me.Label2.Size = New System.Drawing.Size(476, 64)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "add new label to the goal form," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "check changes to the github"
+        Me.Label2.Text = "change new label to the goal form," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "check changes to the github"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GoalsForm
