@@ -23,20 +23,22 @@ Partial Class DashboardContentsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbldashtitle = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblexp = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblbal = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gaddtbxqty = New Guna.UI2.WinForms.Guna2TextBox()
         Me.gaddtbxname = New Guna.UI2.WinForms.Guna2TextBox()
@@ -44,9 +46,6 @@ Partial Class DashboardContentsForm
         Me.gaddcbxcat = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.gadddate = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.gdashgrid = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.gaddtbxid = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.gaddtbxsearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,19 +53,20 @@ Partial Class DashboardContentsForm
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.gaddtbxid = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.gaddtbxsearch = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnsave = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnupdate = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtndel = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnclear = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.chrtexpenses = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
-        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chrtexpenses, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -87,7 +87,6 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel1.FillColor = System.Drawing.Color.LightGreen
         Me.Guna2Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(485, 115)
         Me.Guna2Panel1.TabIndex = 0
         '
@@ -112,9 +111,19 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel3.FillColor = System.Drawing.Color.Honeydew
         Me.Guna2Panel3.Location = New System.Drawing.Point(251, 31)
         Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
         Me.Guna2Panel3.Size = New System.Drawing.Size(226, 76)
         Me.Guna2Panel3.TabIndex = 2
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(3, 39)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(35, 35)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 47
+        Me.Guna2PictureBox2.TabStop = False
         '
         'lblexp
         '
@@ -146,7 +155,6 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel2.FillColor = System.Drawing.Color.Honeydew
         Me.Guna2Panel2.Location = New System.Drawing.Point(9, 30)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
         Me.Guna2Panel2.Size = New System.Drawing.Size(226, 76)
         Me.Guna2Panel2.TabIndex = 1
         '
@@ -158,6 +166,17 @@ Partial Class DashboardContentsForm
         Me.lblbal.Size = New System.Drawing.Size(183, 25)
         Me.lblbal.TabIndex = 11
         Me.lblbal.Text = "0"
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(3, 38)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 46
+        Me.Guna2PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -177,21 +196,17 @@ Partial Class DashboardContentsForm
         Me.gaddtbxqty.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gaddtbxqty.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gaddtbxqty.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxqty.DisabledState.Parent = Me.gaddtbxqty
         Me.gaddtbxqty.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gaddtbxqty.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxqty.FocusedState.Parent = Me.gaddtbxqty
         Me.gaddtbxqty.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gaddtbxqty.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxqty.HoverState.Parent = Me.gaddtbxqty
         Me.gaddtbxqty.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxqty.Location = New System.Drawing.Point(638, 184)
-        Me.gaddtbxqty.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gaddtbxqty.Location = New System.Drawing.Point(637, 200)
+        Me.gaddtbxqty.Margin = New System.Windows.Forms.Padding(4)
         Me.gaddtbxqty.Name = "gaddtbxqty"
         Me.gaddtbxqty.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gaddtbxqty.PlaceholderText = "Quantity"
         Me.gaddtbxqty.SelectedText = ""
-        Me.gaddtbxqty.ShadowDecoration.Parent = Me.gaddtbxqty
         Me.gaddtbxqty.Size = New System.Drawing.Size(200, 39)
         Me.gaddtbxqty.TabIndex = 28
         '
@@ -203,21 +218,17 @@ Partial Class DashboardContentsForm
         Me.gaddtbxname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gaddtbxname.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gaddtbxname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxname.DisabledState.Parent = Me.gaddtbxname
         Me.gaddtbxname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gaddtbxname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxname.FocusedState.Parent = Me.gaddtbxname
         Me.gaddtbxname.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gaddtbxname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxname.HoverState.Parent = Me.gaddtbxname
         Me.gaddtbxname.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxname.Location = New System.Drawing.Point(638, 88)
-        Me.gaddtbxname.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gaddtbxname.Location = New System.Drawing.Point(637, 106)
+        Me.gaddtbxname.Margin = New System.Windows.Forms.Padding(4)
         Me.gaddtbxname.Name = "gaddtbxname"
         Me.gaddtbxname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gaddtbxname.PlaceholderText = "Expenses name"
         Me.gaddtbxname.SelectedText = ""
-        Me.gaddtbxname.ShadowDecoration.Parent = Me.gaddtbxname
         Me.gaddtbxname.Size = New System.Drawing.Size(200, 39)
         Me.gaddtbxname.TabIndex = 29
         '
@@ -229,21 +240,17 @@ Partial Class DashboardContentsForm
         Me.gaddtbxprice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gaddtbxprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gaddtbxprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxprice.DisabledState.Parent = Me.gaddtbxprice
         Me.gaddtbxprice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gaddtbxprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxprice.FocusedState.Parent = Me.gaddtbxprice
         Me.gaddtbxprice.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gaddtbxprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxprice.HoverState.Parent = Me.gaddtbxprice
         Me.gaddtbxprice.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxprice.Location = New System.Drawing.Point(638, 136)
-        Me.gaddtbxprice.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gaddtbxprice.Location = New System.Drawing.Point(637, 153)
+        Me.gaddtbxprice.Margin = New System.Windows.Forms.Padding(4)
         Me.gaddtbxprice.Name = "gaddtbxprice"
         Me.gaddtbxprice.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gaddtbxprice.PlaceholderText = "Price"
         Me.gaddtbxprice.SelectedText = ""
-        Me.gaddtbxprice.ShadowDecoration.Parent = Me.gaddtbxprice
         Me.gaddtbxprice.Size = New System.Drawing.Size(200, 39)
         Me.gaddtbxprice.TabIndex = 31
         '
@@ -254,32 +261,29 @@ Partial Class DashboardContentsForm
         Me.gaddcbxcat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.gaddcbxcat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.gaddcbxcat.FocusedColor = System.Drawing.Color.Empty
-        Me.gaddcbxcat.FocusedState.Parent = Me.gaddcbxcat
         Me.gaddcbxcat.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.gaddcbxcat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.gaddcbxcat.FormattingEnabled = True
-        Me.gaddcbxcat.HoverState.Parent = Me.gaddcbxcat
         Me.gaddcbxcat.ItemHeight = 30
         Me.gaddcbxcat.Items.AddRange(New Object() {"Food", "Transportation", "Utilities", "Clothing", "Healthcare", "Insurance", "Necessity", "Debt", "Savings", "Other expenses"})
-        Me.gaddcbxcat.ItemsAppearance.Parent = Me.gaddcbxcat
-        Me.gaddcbxcat.Location = New System.Drawing.Point(638, 45)
+        Me.gaddcbxcat.Location = New System.Drawing.Point(637, 63)
         Me.gaddcbxcat.Name = "gaddcbxcat"
-        Me.gaddcbxcat.ShadowDecoration.Parent = Me.gaddcbxcat
         Me.gaddcbxcat.Size = New System.Drawing.Size(200, 36)
         Me.gaddcbxcat.TabIndex = 32
         '
         'gadddate
         '
         Me.gadddate.BorderRadius = 12
-        Me.gadddate.CheckedState.Parent = Me.gadddate
+        Me.gadddate.BorderThickness = 1
+        Me.gadddate.Checked = True
         Me.gadddate.CustomFormat = "yyyy-mm-dd"
+        Me.gadddate.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.gadddate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.gadddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.gadddate.HoverState.Parent = Me.gadddate
-        Me.gadddate.Location = New System.Drawing.Point(638, 231)
+        Me.gadddate.Location = New System.Drawing.Point(637, 18)
         Me.gadddate.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.gadddate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.gadddate.Name = "gadddate"
-        Me.gadddate.ShadowDecoration.Parent = Me.gadddate
         Me.gadddate.Size = New System.Drawing.Size(200, 39)
         Me.gadddate.TabIndex = 33
         Me.gadddate.Value = New Date(2024, 11, 26, 0, 0, 0, 0)
@@ -288,41 +292,34 @@ Partial Class DashboardContentsForm
         '
         Me.gdashgrid.AllowUserToAddRows = False
         Me.gdashgrid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.gdashgrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.gdashgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.gdashgrid.BackgroundColor = System.Drawing.Color.White
-        Me.gdashgrid.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.gdashgrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.gdashgrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gdashgrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gdashgrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.gdashgrid.ColumnHeadersHeight = 19
+        Me.gdashgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.gdashgrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle3
-        Me.gdashgrid.EnableHeadersVisualStyles = False
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle9
         Me.gdashgrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.gdashgrid.Location = New System.Drawing.Point(12, 336)
         Me.gdashgrid.Name = "gdashgrid"
         Me.gdashgrid.ReadOnly = True
         Me.gdashgrid.RowHeadersVisible = False
-        Me.gdashgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gdashgrid.Size = New System.Drawing.Size(826, 202)
+        Me.gdashgrid.Size = New System.Drawing.Size(774, 214)
         Me.gdashgrid.TabIndex = 7
-        Me.gdashgrid.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
@@ -344,73 +341,6 @@ Partial Class DashboardContentsForm
         Me.gdashgrid.ThemeStyle.RowsStyle.Height = 22
         Me.gdashgrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.gdashgrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'gaddtbxid
-        '
-        Me.gaddtbxid.BorderRadius = 12
-        Me.gaddtbxid.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gaddtbxid.DefaultText = "ID"
-        Me.gaddtbxid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gaddtbxid.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gaddtbxid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxid.DisabledState.Parent = Me.gaddtbxid
-        Me.gaddtbxid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxid.FocusedState.Parent = Me.gaddtbxid
-        Me.gaddtbxid.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gaddtbxid.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxid.HoverState.Parent = Me.gaddtbxid
-        Me.gaddtbxid.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxid.Location = New System.Drawing.Point(13, 290)
-        Me.gaddtbxid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.gaddtbxid.Name = "gaddtbxid"
-        Me.gaddtbxid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gaddtbxid.PlaceholderText = "Expenses name"
-        Me.gaddtbxid.SelectedText = ""
-        Me.gaddtbxid.SelectionStart = 2
-        Me.gaddtbxid.ShadowDecoration.Parent = Me.gaddtbxid
-        Me.gaddtbxid.Size = New System.Drawing.Size(76, 39)
-        Me.gaddtbxid.TabIndex = 43
-        '
-        'gaddtbxsearch
-        '
-        Me.gaddtbxsearch.BorderRadius = 12
-        Me.gaddtbxsearch.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gaddtbxsearch.DefaultText = ""
-        Me.gaddtbxsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gaddtbxsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gaddtbxsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxsearch.DisabledState.Parent = Me.gaddtbxsearch
-        Me.gaddtbxsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxsearch.FocusedState.Parent = Me.gaddtbxsearch
-        Me.gaddtbxsearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gaddtbxsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxsearch.HoverState.Parent = Me.gaddtbxsearch
-        Me.gaddtbxsearch.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxsearch.Location = New System.Drawing.Point(97, 290)
-        Me.gaddtbxsearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.gaddtbxsearch.Name = "gaddtbxsearch"
-        Me.gaddtbxsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gaddtbxsearch.PlaceholderText = "Search"
-        Me.gaddtbxsearch.SelectedText = ""
-        Me.gaddtbxsearch.ShadowDecoration.Parent = Me.gaddtbxsearch
-        Me.gaddtbxsearch.Size = New System.Drawing.Size(328, 39)
-        Me.gaddtbxsearch.TabIndex = 44
-        '
-        'Guna2Button4
-        '
-        Me.Guna2Button4.CheckedState.Parent = Me.Guna2Button4
-        Me.Guna2Button4.CustomImages.Parent = Me.Guna2Button4
-        Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button4.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button4.HoverState.Parent = Me.Guna2Button4
-        Me.Guna2Button4.Location = New System.Drawing.Point(512, 18)
-        Me.Guna2Button4.Name = "Guna2Button4"
-        Me.Guna2Button4.ShadowDecoration.Parent = Me.Guna2Button4
-        Me.Guna2Button4.Size = New System.Drawing.Size(99, 45)
-        Me.Guna2Button4.TabIndex = 45
-        Me.Guna2Button4.Text = "Set budget"
         '
         'Column1
         '
@@ -467,110 +397,132 @@ Partial Class DashboardContentsForm
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 61
         '
+        'gaddtbxid
+        '
+        Me.gaddtbxid.BorderRadius = 12
+        Me.gaddtbxid.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gaddtbxid.DefaultText = "ID"
+        Me.gaddtbxid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gaddtbxid.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gaddtbxid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gaddtbxid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gaddtbxid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gaddtbxid.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gaddtbxid.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gaddtbxid.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.gaddtbxid.Location = New System.Drawing.Point(13, 290)
+        Me.gaddtbxid.Margin = New System.Windows.Forms.Padding(4)
+        Me.gaddtbxid.Name = "gaddtbxid"
+        Me.gaddtbxid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.gaddtbxid.PlaceholderText = "Expenses name"
+        Me.gaddtbxid.SelectedText = ""
+        Me.gaddtbxid.SelectionStart = 2
+        Me.gaddtbxid.Size = New System.Drawing.Size(76, 39)
+        Me.gaddtbxid.TabIndex = 43
+        '
+        'gaddtbxsearch
+        '
+        Me.gaddtbxsearch.BorderRadius = 12
+        Me.gaddtbxsearch.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gaddtbxsearch.DefaultText = ""
+        Me.gaddtbxsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gaddtbxsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gaddtbxsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gaddtbxsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gaddtbxsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gaddtbxsearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gaddtbxsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gaddtbxsearch.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.gaddtbxsearch.Location = New System.Drawing.Point(97, 290)
+        Me.gaddtbxsearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.gaddtbxsearch.Name = "gaddtbxsearch"
+        Me.gaddtbxsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.gaddtbxsearch.PlaceholderText = "Search"
+        Me.gaddtbxsearch.SelectedText = ""
+        Me.gaddtbxsearch.Size = New System.Drawing.Size(328, 39)
+        Me.gaddtbxsearch.TabIndex = 44
+        '
+        'Guna2Button4
+        '
+        Me.Guna2Button4.Animated = True
+        Me.Guna2Button4.BackColor = System.Drawing.Color.White
+        Me.Guna2Button4.BorderRadius = 10
+        Me.Guna2Button4.BorderThickness = 1
+        Me.Guna2Button4.FillColor = System.Drawing.Color.LightGreen
+        Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button4.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button4.Location = New System.Drawing.Point(512, 43)
+        Me.Guna2Button4.Name = "Guna2Button4"
+        Me.Guna2Button4.Size = New System.Drawing.Size(107, 45)
+        Me.Guna2Button4.TabIndex = 45
+        Me.Guna2Button4.Text = "Set budget"
+        '
         'gbtnsave
         '
         Me.gbtnsave.BorderRadius = 10
-        Me.gbtnsave.CheckedState.Parent = Me.gbtnsave
-        Me.gbtnsave.CustomImages.Parent = Me.gbtnsave
         Me.gbtnsave.FillColor = System.Drawing.Color.Transparent
         Me.gbtnsave.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.gbtnsave.ForeColor = System.Drawing.Color.White
-        Me.gbtnsave.HoverState.Parent = Me.gbtnsave
         Me.gbtnsave.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Save_icon48
         Me.gbtnsave.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtnsave.Location = New System.Drawing.Point(449, 281)
+        Me.gbtnsave.Location = New System.Drawing.Point(793, 336)
         Me.gbtnsave.Name = "gbtnsave"
-        Me.gbtnsave.ShadowDecoration.Parent = Me.gbtnsave
         Me.gbtnsave.Size = New System.Drawing.Size(48, 48)
         Me.gbtnsave.TabIndex = 42
         '
         'gbtnupdate
         '
         Me.gbtnupdate.BorderRadius = 10
-        Me.gbtnupdate.CheckedState.Parent = Me.gbtnupdate
-        Me.gbtnupdate.CustomImages.Parent = Me.gbtnupdate
         Me.gbtnupdate.FillColor = System.Drawing.Color.Transparent
         Me.gbtnupdate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.gbtnupdate.ForeColor = System.Drawing.Color.White
-        Me.gbtnupdate.HoverState.Parent = Me.gbtnupdate
         Me.gbtnupdate.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Update_icon64
         Me.gbtnupdate.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtnupdate.Location = New System.Drawing.Point(503, 281)
+        Me.gbtnupdate.Location = New System.Drawing.Point(794, 390)
         Me.gbtnupdate.Name = "gbtnupdate"
-        Me.gbtnupdate.ShadowDecoration.Parent = Me.gbtnupdate
         Me.gbtnupdate.Size = New System.Drawing.Size(48, 48)
         Me.gbtnupdate.TabIndex = 41
         '
         'gbtndel
         '
         Me.gbtndel.BorderRadius = 10
-        Me.gbtndel.CheckedState.Parent = Me.gbtndel
-        Me.gbtndel.CustomImages.Parent = Me.gbtndel
         Me.gbtndel.FillColor = System.Drawing.Color.Transparent
         Me.gbtndel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.gbtndel.ForeColor = System.Drawing.Color.White
-        Me.gbtndel.HoverState.Parent = Me.gbtndel
         Me.gbtndel.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Delete_icon48
         Me.gbtndel.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtndel.Location = New System.Drawing.Point(557, 281)
+        Me.gbtndel.Location = New System.Drawing.Point(795, 439)
         Me.gbtndel.Name = "gbtndel"
-        Me.gbtndel.ShadowDecoration.Parent = Me.gbtndel
         Me.gbtndel.Size = New System.Drawing.Size(48, 48)
         Me.gbtndel.TabIndex = 40
         '
         'gbtnclear
         '
         Me.gbtnclear.BorderRadius = 10
-        Me.gbtnclear.CheckedState.Parent = Me.gbtnclear
-        Me.gbtnclear.CustomImages.Parent = Me.gbtnclear
         Me.gbtnclear.FillColor = System.Drawing.Color.Transparent
         Me.gbtnclear.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.gbtnclear.ForeColor = System.Drawing.Color.White
-        Me.gbtnclear.HoverState.Parent = Me.gbtnclear
         Me.gbtnclear.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Clear_icon48
         Me.gbtnclear.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtnclear.Location = New System.Drawing.Point(618, 282)
+        Me.gbtnclear.Location = New System.Drawing.Point(795, 489)
         Me.gbtnclear.Name = "gbtnclear"
-        Me.gbtnclear.ShadowDecoration.Parent = Me.gbtnclear
         Me.gbtnclear.Size = New System.Drawing.Size(48, 48)
         Me.gbtnclear.TabIndex = 39
         '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(3, 39)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.ShadowDecoration.Parent = Me.Guna2PictureBox2
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(35, 35)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox2.TabIndex = 47
-        Me.Guna2PictureBox2.TabStop = False
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(3, 38)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 46
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'chrtexpenses
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.chrtexpenses.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.chrtexpenses.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.chrtexpenses.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.chrtexpenses.Legends.Add(Legend3)
         Me.chrtexpenses.Location = New System.Drawing.Point(13, 133)
         Me.chrtexpenses.Name = "chrtexpenses"
         Me.chrtexpenses.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.chrtexpenses.Series.Add(Series1)
-        Me.chrtexpenses.Size = New System.Drawing.Size(430, 150)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.chrtexpenses.Series.Add(Series3)
+        Me.chrtexpenses.Size = New System.Drawing.Size(484, 150)
         Me.chrtexpenses.TabIndex = 46
         Me.chrtexpenses.Text = "Chart1"
         '
@@ -601,11 +553,11 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel1.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
-        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chrtexpenses, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

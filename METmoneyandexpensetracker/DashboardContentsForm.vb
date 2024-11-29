@@ -226,4 +226,8 @@ Public Class DashboardContentsForm
         gaddtbxid.ReadOnly = True
         gbtnsave.Enabled = False
     End Sub
+
+    Private Sub gaddcbxcat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gaddcbxcat.SelectedIndexChanged
+
+    End Sub
 End Class
