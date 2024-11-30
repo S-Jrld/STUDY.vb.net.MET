@@ -86,9 +86,9 @@ Public Class RegisterForm
     End Sub
 
     Private Sub glogbtnreg_Click(sender As Object, e As EventArgs) Handles gregbtnlog.Click
-        'change form into login form
-        Dim log As New LoginForm
-        log.Show()
+        'change form into starting page
+        Dim start As New Form1
+        start.Show()
         Me.Hide()
 
     End Sub

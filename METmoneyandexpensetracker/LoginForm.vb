@@ -4,12 +4,14 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Public Class LoginForm
     Public Sub checkacc()
         'check the no. of rows to see if there is an account
+        Dim query As String = "SELECT COUNT(*) FROM tblusers WHERE Username = @Username AND Password = @Password"
+
         Try
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
-            Dim cmd As New MySqlCommand("SELECT COUNT(*) FROM tblusers WHERE Username = @Username AND Password = @Password", connection)
+            Dim cmd As New MySqlCommand(query, connection)
             cmd.Parameters.AddWithValue("@Username", glogtbxname.Text)
             cmd.Parameters.AddWithValue("@Password", glogtbxpass.Text)
 
@@ -42,9 +44,9 @@ Public Class LoginForm
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles glogbtnreg.Click
-        'change form into registerform
-        Dim reg As New RegisterForm
-        reg.Show()
+        'change form into starting page
+        Dim start As New Form1
+        start.Show()
         Me.Hide()
     End Sub
 

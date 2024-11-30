@@ -251,7 +251,6 @@ Partial Class AboutUs
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.BackgroundImage = My.Resources.Resources._62062434369867451311
         GroupBox1.BackgroundImageLayout = ImageLayout.Stretch
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label3)

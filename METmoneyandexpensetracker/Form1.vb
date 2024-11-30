@@ -3,17 +3,22 @@
 
     End Sub
 
-    Private Sub gstartbtn_Click(sender As Object, e As EventArgs) Handles gstartbtn.Click
-        If MsgBox("Are you sure you want to Start the Application?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
-            'change into login form
-            Dim login As New LoginForm
-            login.Show()
-            Me.Hide()
-        End If
+    Private Sub gstartbtn_Click(sender As Object, e As EventArgs) Handles gloginbtn.Click
+        'change into login form
+        Dim login As New LoginForm
+        login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         'close the application
         Application.Exit()
+    End Sub
+
+    Private Sub gsignbtn_Click(sender As Object, e As EventArgs) Handles gsignbtn.Click
+        'change into signup form
+        Dim sign As New RegisterForm
+        sign.Show()
+        Me.Hide()
     End Sub
 End Class

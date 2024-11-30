@@ -134,7 +134,9 @@
     <Compile Include="AboutUs.Designer.vb">
       <DependentUpon>AboutUs.vb</DependentUpon>
     </Compile>
-    <Compile Include="AboutUs.vb" />
+    <Compile Include="AboutUs.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashboardContentsForm.Designer.vb">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
     </Compile>
@@ -300,6 +302,7 @@
     <Content Include="Resources\6206243436986745131.jpg" />
     <Content Include="Resources\62062434369867451311.jpg" />
     <Content Include="Resources\6206243436986745384.jpg" />
+    <None Include="Resources\Back_icon48.png" />
     <Content Include="Resources\Screenshot 2024-11-25 165002.png" />
     <Content Include="Resources\Screenshot 2024-11-25 165148.png" />
   </ItemGroup>
