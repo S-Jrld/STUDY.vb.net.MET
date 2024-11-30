@@ -199,7 +199,7 @@ Partial Class DashboardForm
         Me.gbtnprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.gbtnprofile.BorderRadius = 11
         Me.gbtnprofile.BorderThickness = 1
-        Me.gbtnprofile.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.gbtnprofile.Cursor = System.Windows.Forms.Cursors.Default
         Me.gbtnprofile.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.gbtnprofile.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbtnprofile.ForeColor = System.Drawing.Color.Black
@@ -263,7 +263,6 @@ Partial Class DashboardForm
         Me.gpnlmain.BackColor = System.Drawing.Color.Ivory
         Me.gpnlmain.BorderColor = System.Drawing.Color.Black
         Me.gpnlmain.BorderRadius = 20
-        Me.gpnlmain.BorderThickness = 1
         Me.gpnlmain.Location = New System.Drawing.Point(223, 79)
         Me.gpnlmain.Name = "gpnlmain"
         Me.gpnlmain.Size = New System.Drawing.Size(850, 550)
