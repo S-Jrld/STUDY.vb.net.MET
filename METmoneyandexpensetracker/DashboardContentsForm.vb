@@ -254,4 +254,8 @@ Public Class DashboardContentsForm
     Private Sub gaddcbxcat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gaddcbxcat.SelectedIndexChanged
 
     End Sub
+
+    Private Sub gdashgrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gdashgrid.CellContentClick
+
+    End Sub
 End Class
