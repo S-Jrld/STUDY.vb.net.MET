@@ -23,6 +23,7 @@ Partial Class RegisterForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegisterForm))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -45,8 +46,10 @@ Partial Class RegisterForm
         Me.gregtbxnew = New Guna.UI2.WinForms.Guna2TextBox()
         Me.gregtbxname = New Guna.UI2.WinForms.Guna2TextBox()
         Me.gckbxshow2 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -60,20 +63,17 @@ Partial Class RegisterForm
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(10, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 25)
+        Me.Label1.Size = New System.Drawing.Size(0, 25)
         Me.Label1.TabIndex = 7
-        Me.Label1.Text = "M.E.T"
         '
         'Guna2ControlBox3
         '
         Me.Guna2ControlBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox
-        Me.Guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.Guna2ControlBox3.HoverState.Parent = Me.Guna2ControlBox3
+        Me.Guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Guna2ControlBox3.IconColor = System.Drawing.Color.White
         Me.Guna2ControlBox3.Location = New System.Drawing.Point(505, 1)
         Me.Guna2ControlBox3.Name = "Guna2ControlBox3"
-        Me.Guna2ControlBox3.ShadowDecoration.Parent = Me.Guna2ControlBox3
         Me.Guna2ControlBox3.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox3.TabIndex = 6
         '
@@ -81,35 +81,32 @@ Partial Class RegisterForm
         '
         Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.Guna2ControlBox2.HoverState.Parent = Me.Guna2ControlBox2
+        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Guna2ControlBox2.IconColor = System.Drawing.Color.White
         Me.Guna2ControlBox2.Location = New System.Drawing.Point(460, 1)
         Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Me.Guna2ControlBox2.ShadowDecoration.Parent = Me.Guna2ControlBox2
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox2.TabIndex = 5
         '
         'Guna2ControlBox1
         '
         Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.Guna2ControlBox1.HoverState.Parent = Me.Guna2ControlBox1
+        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
         Me.Guna2ControlBox1.Location = New System.Drawing.Point(550, 1)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.ShadowDecoration.Parent = Me.Guna2ControlBox1
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 4
         '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel2.Controls.Add(Me.Label4)
         Me.Guna2Panel2.Controls.Add(Me.Label3)
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 29)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
         Me.Guna2Panel2.Size = New System.Drawing.Size(247, 371)
         Me.Guna2Panel2.TabIndex = 18
         '
@@ -117,7 +114,7 @@ Partial Class RegisterForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(41, 193)
+        Me.Label4.Location = New System.Drawing.Point(41, 241)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(167, 48)
         Me.Label4.TabIndex = 10
@@ -128,7 +125,7 @@ Partial Class RegisterForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(9, 167)
+        Me.Label3.Location = New System.Drawing.Point(9, 201)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(229, 21)
         Me.Label3.TabIndex = 9
@@ -138,7 +135,7 @@ Partial Class RegisterForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(74, 125)
+        Me.Label2.Location = New System.Drawing.Point(79, 142)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 39)
         Me.Label2.TabIndex = 8
@@ -146,31 +143,25 @@ Partial Class RegisterForm
         '
         'gregbtn
         '
+        Me.gregbtn.BackColor = System.Drawing.Color.Transparent
         Me.gregbtn.BorderRadius = 10
-        Me.gregbtn.CheckedState.Parent = Me.gregbtn
-        Me.gregbtn.CustomImages.Parent = Me.gregbtn
-        Me.gregbtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.gregbtn.ForeColor = System.Drawing.Color.White
-        Me.gregbtn.HoverState.Parent = Me.gregbtn
-        Me.gregbtn.Location = New System.Drawing.Point(274, 344)
+        Me.gregbtn.FillColor = System.Drawing.Color.White
+        Me.gregbtn.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gregbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.gregbtn.Location = New System.Drawing.Point(322, 332)
         Me.gregbtn.Name = "gregbtn"
-        Me.gregbtn.ShadowDecoration.Parent = Me.gregbtn
-        Me.gregbtn.Size = New System.Drawing.Size(300, 40)
+        Me.gregbtn.Size = New System.Drawing.Size(209, 40)
         Me.gregbtn.TabIndex = 25
         Me.gregbtn.Text = "Register"
         '
         'gregbtnlog
         '
-        Me.gregbtnlog.CheckedState.Parent = Me.gregbtnlog
-        Me.gregbtnlog.CustomImages.Parent = Me.gregbtnlog
         Me.gregbtnlog.FillColor = System.Drawing.Color.Transparent
         Me.gregbtnlog.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gregbtnlog.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.gregbtnlog.HoverState.Parent = Me.gregbtnlog
         Me.gregbtnlog.Location = New System.Drawing.Point(476, 74)
         Me.gregbtnlog.Name = "gregbtnlog"
-        Me.gregbtnlog.ShadowDecoration.Parent = Me.gregbtnlog
-        Me.gregbtnlog.Size = New System.Drawing.Size(51, 27)
+        Me.gregbtnlog.Size = New System.Drawing.Size(74, 27)
         Me.gregbtnlog.TabIndex = 21
         Me.gregbtnlog.Text = "Login"
         '
@@ -196,6 +187,7 @@ Partial Class RegisterForm
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Guna2Panel1.Controls.Add(Me.Label1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox2)
@@ -203,13 +195,14 @@ Partial Class RegisterForm
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(600, 30)
         Me.Guna2Panel1.TabIndex = 17
         '
         'Guna2DragControl1
         '
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
         Me.Guna2DragControl1.TargetControl = Me.Guna2Panel1
+        Me.Guna2DragControl1.UseTransparentDrag = True
         '
         'Label7
         '
@@ -227,13 +220,12 @@ Partial Class RegisterForm
         Me.gckbxshow1.BackColor = System.Drawing.Color.White
         Me.gckbxshow1.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
         Me.gckbxshow1.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.CheckedState.Parent = Me.gckbxshow1
-        Me.gckbxshow1.HoverState.Parent = Me.gckbxshow1
         Me.gckbxshow1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
+        Me.gckbxshow1.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.gckbxshow1.ImageRotate = 0!
         Me.gckbxshow1.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.Location = New System.Drawing.Point(535, 226)
+        Me.gckbxshow1.Location = New System.Drawing.Point(535, 222)
         Me.gckbxshow1.Name = "gckbxshow1"
-        Me.gckbxshow1.PressedState.Parent = Me.gckbxshow1
         Me.gckbxshow1.Size = New System.Drawing.Size(30, 30)
         Me.gckbxshow1.TabIndex = 28
         '
@@ -245,22 +237,18 @@ Partial Class RegisterForm
         Me.gregtbxcon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gregtbxcon.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gregtbxcon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gregtbxcon.DisabledState.Parent = Me.gregtbxcon
         Me.gregtbxcon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gregtbxcon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxcon.FocusedState.Parent = Me.gregtbxcon
         Me.gregtbxcon.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gregtbxcon.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxcon.HoverState.Parent = Me.gregtbxcon
         Me.gregtbxcon.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
         Me.gregtbxcon.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gregtbxcon.Location = New System.Drawing.Point(274, 271)
-        Me.gregtbxcon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gregtbxcon.Location = New System.Drawing.Point(274, 264)
+        Me.gregtbxcon.Margin = New System.Windows.Forms.Padding(4)
         Me.gregtbxcon.Name = "gregtbxcon"
         Me.gregtbxcon.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.gregtbxcon.PlaceholderText = "Confirm Password"
         Me.gregtbxcon.SelectedText = ""
-        Me.gregtbxcon.ShadowDecoration.Parent = Me.gregtbxcon
         Me.gregtbxcon.Size = New System.Drawing.Size(300, 40)
         Me.gregtbxcon.TabIndex = 27
         '
@@ -272,22 +260,18 @@ Partial Class RegisterForm
         Me.gregtbxmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gregtbxmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gregtbxmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gregtbxmail.DisabledState.Parent = Me.gregtbxmail
         Me.gregtbxmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gregtbxmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxmail.FocusedState.Parent = Me.gregtbxmail
         Me.gregtbxmail.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gregtbxmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxmail.HoverState.Parent = Me.gregtbxmail
         Me.gregtbxmail.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Email_icon
         Me.gregtbxmail.IconLeftSize = New System.Drawing.Size(30, 30)
         Me.gregtbxmail.Location = New System.Drawing.Point(274, 121)
-        Me.gregtbxmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gregtbxmail.Margin = New System.Windows.Forms.Padding(4)
         Me.gregtbxmail.Name = "gregtbxmail"
         Me.gregtbxmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gregtbxmail.PlaceholderText = "Email"
         Me.gregtbxmail.SelectedText = ""
-        Me.gregtbxmail.ShadowDecoration.Parent = Me.gregtbxmail
         Me.gregtbxmail.Size = New System.Drawing.Size(300, 40)
         Me.gregtbxmail.TabIndex = 26
         '
@@ -299,22 +283,18 @@ Partial Class RegisterForm
         Me.gregtbxnew.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gregtbxnew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gregtbxnew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gregtbxnew.DisabledState.Parent = Me.gregtbxnew
         Me.gregtbxnew.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gregtbxnew.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxnew.FocusedState.Parent = Me.gregtbxnew
         Me.gregtbxnew.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gregtbxnew.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxnew.HoverState.Parent = Me.gregtbxnew
         Me.gregtbxnew.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
         Me.gregtbxnew.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gregtbxnew.Location = New System.Drawing.Point(274, 221)
-        Me.gregtbxnew.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gregtbxnew.Location = New System.Drawing.Point(274, 216)
+        Me.gregtbxnew.Margin = New System.Windows.Forms.Padding(4)
         Me.gregtbxnew.Name = "gregtbxnew"
         Me.gregtbxnew.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.gregtbxnew.PlaceholderText = "New Password"
         Me.gregtbxnew.SelectedText = ""
-        Me.gregtbxnew.ShadowDecoration.Parent = Me.gregtbxnew
         Me.gregtbxnew.Size = New System.Drawing.Size(300, 40)
         Me.gregtbxnew.TabIndex = 23
         '
@@ -326,22 +306,18 @@ Partial Class RegisterForm
         Me.gregtbxname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.gregtbxname.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.gregtbxname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gregtbxname.DisabledState.Parent = Me.gregtbxname
         Me.gregtbxname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.gregtbxname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxname.FocusedState.Parent = Me.gregtbxname
         Me.gregtbxname.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gregtbxname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gregtbxname.HoverState.Parent = Me.gregtbxname
         Me.gregtbxname.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.User_icon
         Me.gregtbxname.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gregtbxname.Location = New System.Drawing.Point(274, 171)
-        Me.gregtbxname.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gregtbxname.Location = New System.Drawing.Point(274, 168)
+        Me.gregtbxname.Margin = New System.Windows.Forms.Padding(4)
         Me.gregtbxname.Name = "gregtbxname"
         Me.gregtbxname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gregtbxname.PlaceholderText = "Username"
         Me.gregtbxname.SelectedText = ""
-        Me.gregtbxname.ShadowDecoration.Parent = Me.gregtbxname
         Me.gregtbxname.Size = New System.Drawing.Size(300, 40)
         Me.gregtbxname.TabIndex = 22
         '
@@ -350,15 +326,26 @@ Partial Class RegisterForm
         Me.gckbxshow2.BackColor = System.Drawing.Color.White
         Me.gckbxshow2.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
         Me.gckbxshow2.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow2.CheckedState.Parent = Me.gckbxshow2
-        Me.gckbxshow2.HoverState.Parent = Me.gckbxshow2
         Me.gckbxshow2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
+        Me.gckbxshow2.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.gckbxshow2.ImageRotate = 0!
         Me.gckbxshow2.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow2.Location = New System.Drawing.Point(535, 276)
+        Me.gckbxshow2.Location = New System.Drawing.Point(535, 271)
         Me.gckbxshow2.Name = "gckbxshow2"
-        Me.gckbxshow2.PressedState.Parent = Me.gckbxshow2
         Me.gckbxshow2.Size = New System.Drawing.Size(30, 30)
         Me.gckbxshow2.TabIndex = 29
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(44, 7)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(164, 129)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 11
+        Me.Guna2PictureBox1.TabStop = False
         '
         'RegisterForm
         '
@@ -386,6 +373,7 @@ Partial Class RegisterForm
         Me.Guna2Panel2.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -413,4 +401,5 @@ Partial Class RegisterForm
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents gckbxshow1 As Guna.UI2.WinForms.Guna2ImageCheckBox
     Friend WithEvents gckbxshow2 As Guna.UI2.WinForms.Guna2ImageCheckBox
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

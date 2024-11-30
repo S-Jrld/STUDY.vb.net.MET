@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DashboardContentsForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,15 @@ Partial Class DashboardContentsForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbldashtitle = New System.Windows.Forms.Label()
@@ -201,7 +201,7 @@ Partial Class DashboardContentsForm
         Me.gaddtbxqty.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gaddtbxqty.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.gaddtbxqty.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxqty.Location = New System.Drawing.Point(638, 184)
+        Me.gaddtbxqty.Location = New System.Drawing.Point(637, 200)
         Me.gaddtbxqty.Margin = New System.Windows.Forms.Padding(4)
         Me.gaddtbxqty.Name = "gaddtbxqty"
         Me.gaddtbxqty.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -223,7 +223,7 @@ Partial Class DashboardContentsForm
         Me.gaddtbxname.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gaddtbxname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.gaddtbxname.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxname.Location = New System.Drawing.Point(638, 88)
+        Me.gaddtbxname.Location = New System.Drawing.Point(637, 106)
         Me.gaddtbxname.Margin = New System.Windows.Forms.Padding(4)
         Me.gaddtbxname.Name = "gaddtbxname"
         Me.gaddtbxname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -245,7 +245,7 @@ Partial Class DashboardContentsForm
         Me.gaddtbxprice.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gaddtbxprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.gaddtbxprice.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxprice.Location = New System.Drawing.Point(638, 136)
+        Me.gaddtbxprice.Location = New System.Drawing.Point(637, 153)
         Me.gaddtbxprice.Margin = New System.Windows.Forms.Padding(4)
         Me.gaddtbxprice.Name = "gaddtbxprice"
         Me.gaddtbxprice.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -266,7 +266,7 @@ Partial Class DashboardContentsForm
         Me.gaddcbxcat.FormattingEnabled = True
         Me.gaddcbxcat.ItemHeight = 30
         Me.gaddcbxcat.Items.AddRange(New Object() {"Food", "Transportation", "Utilities", "Clothing", "Healthcare", "Insurance", "Necessity", "Debt", "Savings", "Other expenses"})
-        Me.gaddcbxcat.Location = New System.Drawing.Point(638, 45)
+        Me.gaddcbxcat.Location = New System.Drawing.Point(637, 63)
         Me.gaddcbxcat.Name = "gaddcbxcat"
         Me.gaddcbxcat.Size = New System.Drawing.Size(200, 36)
         Me.gaddcbxcat.TabIndex = 32
@@ -274,11 +274,13 @@ Partial Class DashboardContentsForm
         'gadddate
         '
         Me.gadddate.BorderRadius = 12
+        Me.gadddate.BorderThickness = 1
         Me.gadddate.Checked = True
-        Me.gadddate.CustomFormat = "MM/dd/yyyy"
+        Me.gadddate.CustomFormat = "yyyy-mm-dd"
+        Me.gadddate.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.gadddate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.gadddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.gadddate.Location = New System.Drawing.Point(638, 231)
+        Me.gadddate.Location = New System.Drawing.Point(637, 18)
         Me.gadddate.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.gadddate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.gadddate.Name = "gadddate"
@@ -290,33 +292,33 @@ Partial Class DashboardContentsForm
         '
         Me.gdashgrid.AllowUserToAddRows = False
         Me.gdashgrid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.gdashgrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gdashgrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gdashgrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.gdashgrid.ColumnHeadersHeight = 19
         Me.gdashgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.gdashgrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle9
         Me.gdashgrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.gdashgrid.Location = New System.Drawing.Point(12, 336)
         Me.gdashgrid.Name = "gdashgrid"
         Me.gdashgrid.ReadOnly = True
         Me.gdashgrid.RowHeadersVisible = False
-        Me.gdashgrid.Size = New System.Drawing.Size(826, 202)
+        Me.gdashgrid.Size = New System.Drawing.Size(774, 214)
         Me.gdashgrid.TabIndex = 7
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -442,11 +444,16 @@ Partial Class DashboardContentsForm
         '
         'Guna2Button4
         '
+        Me.Guna2Button4.Animated = True
+        Me.Guna2Button4.BackColor = System.Drawing.Color.White
+        Me.Guna2Button4.BorderRadius = 10
+        Me.Guna2Button4.BorderThickness = 1
+        Me.Guna2Button4.FillColor = System.Drawing.Color.LightGreen
         Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button4.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button4.Location = New System.Drawing.Point(512, 18)
+        Me.Guna2Button4.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button4.Location = New System.Drawing.Point(512, 43)
         Me.Guna2Button4.Name = "Guna2Button4"
-        Me.Guna2Button4.Size = New System.Drawing.Size(99, 45)
+        Me.Guna2Button4.Size = New System.Drawing.Size(107, 45)
         Me.Guna2Button4.TabIndex = 45
         Me.Guna2Button4.Text = "Set budget"
         '
@@ -458,7 +465,7 @@ Partial Class DashboardContentsForm
         Me.gbtnsave.ForeColor = System.Drawing.Color.White
         Me.gbtnsave.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Save_icon48
         Me.gbtnsave.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtnsave.Location = New System.Drawing.Point(449, 281)
+        Me.gbtnsave.Location = New System.Drawing.Point(793, 336)
         Me.gbtnsave.Name = "gbtnsave"
         Me.gbtnsave.Size = New System.Drawing.Size(48, 48)
         Me.gbtnsave.TabIndex = 42
@@ -471,7 +478,7 @@ Partial Class DashboardContentsForm
         Me.gbtnupdate.ForeColor = System.Drawing.Color.White
         Me.gbtnupdate.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Update_icon64
         Me.gbtnupdate.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtnupdate.Location = New System.Drawing.Point(503, 281)
+        Me.gbtnupdate.Location = New System.Drawing.Point(794, 390)
         Me.gbtnupdate.Name = "gbtnupdate"
         Me.gbtnupdate.Size = New System.Drawing.Size(48, 48)
         Me.gbtnupdate.TabIndex = 41
@@ -484,7 +491,7 @@ Partial Class DashboardContentsForm
         Me.gbtndel.ForeColor = System.Drawing.Color.White
         Me.gbtndel.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Delete_icon48
         Me.gbtndel.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtndel.Location = New System.Drawing.Point(557, 281)
+        Me.gbtndel.Location = New System.Drawing.Point(795, 439)
         Me.gbtndel.Name = "gbtndel"
         Me.gbtndel.Size = New System.Drawing.Size(48, 48)
         Me.gbtndel.TabIndex = 40
@@ -497,25 +504,25 @@ Partial Class DashboardContentsForm
         Me.gbtnclear.ForeColor = System.Drawing.Color.White
         Me.gbtnclear.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Clear_icon48
         Me.gbtnclear.ImageSize = New System.Drawing.Size(48, 48)
-        Me.gbtnclear.Location = New System.Drawing.Point(618, 282)
+        Me.gbtnclear.Location = New System.Drawing.Point(795, 489)
         Me.gbtnclear.Name = "gbtnclear"
         Me.gbtnclear.Size = New System.Drawing.Size(48, 48)
         Me.gbtnclear.TabIndex = 39
         '
         'chrtexpenses
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.chrtexpenses.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.chrtexpenses.Legends.Add(Legend2)
+        ChartArea3.Name = "ChartArea1"
+        Me.chrtexpenses.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.chrtexpenses.Legends.Add(Legend3)
         Me.chrtexpenses.Location = New System.Drawing.Point(13, 133)
         Me.chrtexpenses.Name = "chrtexpenses"
         Me.chrtexpenses.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.chrtexpenses.Series.Add(Series2)
-        Me.chrtexpenses.Size = New System.Drawing.Size(430, 150)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.chrtexpenses.Series.Add(Series3)
+        Me.chrtexpenses.Size = New System.Drawing.Size(484, 150)
         Me.chrtexpenses.TabIndex = 46
         Me.chrtexpenses.Text = "Chart1"
         '
