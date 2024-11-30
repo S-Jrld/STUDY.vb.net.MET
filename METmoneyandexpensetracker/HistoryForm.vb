@@ -224,37 +224,5 @@ Public Class HistoryForm
         LoadChartData()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
-    End Sub
-
-    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-
-    End Sub
-
-    Private Sub gbtnhistory_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub gbtndashboard_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub chartexpense_Click(sender As Object, e As EventArgs) Handles chartexpense.Click
-
-    End Sub
-
-    Private Sub gdatagrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gdatagrid.CellContentClick
-
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub lblMonths_Click(sender As Object, e As EventArgs) Handles lbldate.Click
-
-    End Sub
 End Class

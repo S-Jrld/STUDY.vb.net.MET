@@ -17,14 +17,25 @@ Public Class DashboardContentsForm
             cmd.Parameters.AddWithValue("@username", username)
             Dim dr As MySqlDataReader = cmd.ExecuteReader
             While dr.Read
-                gdashgrid.Rows.Add(dr.Item("expid"), dr.Item("category"), dr.Item("expname"), dr.Item("price"), dr.Item("qty"), dr.Item("expdate"), dr.Item("total"))
+                gdashgrid.Rows.Add(
+                    dr.Item("expid"),
+                    dr.Item("category"),
+                    dr.Item("expname"),
+                    Convert.ToDecimal(dr("price")).ToString("F2"),
+                    Convert.ToInt32(dr("qty")),
+                    Convert.ToDateTime(dr("expdate")).ToString("yyyy-MM-dd"),
+                    Convert.ToDecimal(dr("total")).ToString("F2")
+                )
             End While
+
             dr.Close()
 
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            connection.Close()
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
         End Try
         gadddate.Value = Now
     End Sub
