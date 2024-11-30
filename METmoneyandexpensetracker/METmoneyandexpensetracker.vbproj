@@ -131,6 +131,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.Designer.vb">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.vb" />
     <Compile Include="DashboardContentsForm.Designer.vb">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
     </Compile>
@@ -204,6 +208,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardContentsForm.resx">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +293,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ShowPass_icon48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\6203714706271748713 %281%29.jpg" />
+    <Content Include="Resources\6203991637173060270 %281%29.jpg" />
+    <Content Include="Resources\6206243436986745131.jpg" />
+    <Content Include="Resources\62062434369867451311.jpg" />
+    <Content Include="Resources\6206243436986745384.jpg" />
+    <Content Include="Resources\Screenshot 2024-11-25 165002.png" />
+    <Content Include="Resources\Screenshot 2024-11-25 165148.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
