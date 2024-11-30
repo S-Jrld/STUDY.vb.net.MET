@@ -8,7 +8,11 @@ Public Class DashboardContentsForm
         gdashgrid.Rows.Clear()
         'will create a query to show the values into the datagridview
         Try
-            connection.Open()
+
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
+
             Dim cmd As New MySqlCommand("SELECT expid, category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @username", connection)
             cmd.Parameters.AddWithValue("@username", username)
             Dim dr As MySqlDataReader = cmd.ExecuteReader
@@ -22,12 +26,15 @@ Public Class DashboardContentsForm
         Finally
             connection.Close()
         End Try
+        gadddate.Value = Now
     End Sub
 
     Public Sub Save()
         'create query to insert values into the database
         Try
-            connection.Open()
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
 
             Dim price As Decimal = CDec(gaddtbxprice.Text)
             Dim qty As Integer = CInt(gaddtbxqty.Text)
@@ -62,7 +69,9 @@ Public Class DashboardContentsForm
     Public Sub Update()
         'create a query that will update the values of a tuple
         Try
-            connection.Open()
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
 
             Dim price As Decimal = CDec(gaddtbxprice.Text)
             Dim qty As Integer = CInt(gaddtbxqty.Text)
@@ -98,7 +107,9 @@ Public Class DashboardContentsForm
         If MsgBox("Are you sure you want to Delete this record?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
             'delete a tuple from the datagridview
             Try
-                connection.Open()
+                If connection.State = ConnectionState.Closed Then
+                    connection.Open()
+                End If
 
                 Dim exid As Integer = CInt(gaddtbxid.Text)
 
@@ -132,14 +143,16 @@ Public Class DashboardContentsForm
         gaddtbxprice.Clear()
         gaddtbxqty.Clear()
         gadddate.Value = Now
-
+        gaddtbxid.Clear()
     End Sub
 
     Public Sub LoadChartData()
         Dim query As String = "SELECT category, SUM(total) AS total_expense FROM tblexpenses where Username = @username GROUP BY category"
 
         Try
-            connection.Open()
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
 
             Dim cmd As New MySqlCommand(query, connection)
             cmd.Parameters.AddWithValue("@username", username)
@@ -151,9 +164,13 @@ Public Class DashboardContentsForm
                 ' Add data points to the chart
                 chrtexpenses.Series("Expenses").Points.AddXY(category, totalExpense)
             End While
+            dr.Close()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
+        Finally
+            connection.Close()
         End Try
+        Dvg_load()
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles gbtndel.Click
@@ -173,12 +190,19 @@ Public Class DashboardContentsForm
     End Sub
 
     Private Sub gbtnprofile_Click(sender As Object, e As EventArgs) Handles gbtnclear.Click
-
+        'clear the text fields and allow again to save
+        clear()
+        gaddtbxid.ReadOnly = True
+        gbtnsave.Enabled = True
     End Sub
 
     Private Sub gaddtbxsearch_TextChanged(sender As Object, e As EventArgs) Handles gaddtbxsearch.TextChanged
         Try
-            connection.Open()
+
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
+
             Dim query As String = "SELECT * FROM tblexpenses WHERE Username = @username AND expname LIKE @search"
 
             Dim cmd As New MySqlCommand(query, connection)
@@ -190,7 +214,7 @@ Public Class DashboardContentsForm
             While dr.Read()
                 gdashgrid.Rows.Add(dr("expid"), dr("category"), dr("expname"), dr("price"), dr("qty"), dr("expdate"), dr("total"))
             End While
-
+            dr.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally

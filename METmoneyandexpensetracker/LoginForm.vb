@@ -5,7 +5,9 @@ Public Class LoginForm
     Public Sub checkacc()
         'check the no. of rows to see if there is an account
         Try
-            connection.Open()
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
 
             Dim cmd As New MySqlCommand("SELECT COUNT(*) FROM tblusers WHERE Username = @Username AND Password = @Password", connection)
             cmd.Parameters.AddWithValue("@Username", glogtbxname.Text)
