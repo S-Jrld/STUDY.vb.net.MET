@@ -222,6 +222,9 @@ Public Class HistoryForm
         DisplayExpenseDetails()
         Dvg_open()
         LoadChartData()
+
+        'change value of label username to show user acc
+        lblname.Text = username
     End Sub
 
 
