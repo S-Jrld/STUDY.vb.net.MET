@@ -2,10 +2,18 @@
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class DashboardContentsForm
-
+    Dim calculatetotal As Decimal
     Public Sub Dvg_load()
+        'clear the lblexp to avoid redunduncy of values
+        calculatetotal = 0
         'clear the rows of the datagrid view
         gdashgrid.Rows.Clear()
+        Dim query As String = ""
+        If expperiod = "Monthly" Then
+            query = "SELECT expid, category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @Username AND YEAR(expdate) = YEAR(CURDATE()) AND MONTH(expdate) = MONTH(CURDATE())"
+        ElseIf expperiod = "Yearly" Then
+            query = "SELECT expid, category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @Username AND YEAR(expdate) = YEAR(CURDATE())"
+        End If
         'will create a query to show the values into the datagridview
         Try
 
@@ -13,8 +21,9 @@ Public Class DashboardContentsForm
                 connection.Open()
             End If
 
-            Dim cmd As New MySqlCommand("SELECT expid, category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @username", connection)
-            cmd.Parameters.AddWithValue("@username", username)
+            Dim cmd As New MySqlCommand(query, connection)
+            cmd.Parameters.AddWithValue("@Username", username)
+
             Dim dr As MySqlDataReader = cmd.ExecuteReader
             While dr.Read
                 gdashgrid.Rows.Add(
@@ -26,6 +35,7 @@ Public Class DashboardContentsForm
                     Convert.ToDateTime(dr("expdate")).ToString("yyyy-MM-dd"),
                     Convert.ToDecimal(dr("total")).ToString("F2")
                 )
+                calculatetotal += Convert.ToDecimal(dr("total"))
             End While
 
             dr.Close()
@@ -38,6 +48,9 @@ Public Class DashboardContentsForm
             End If
         End Try
         gadddate.Value = Now
+        'change the lblexp to display values of total expenses
+        lblexp.Text = calculatetotal
+
     End Sub
 
     Public Sub Save()
@@ -77,7 +90,7 @@ Public Class DashboardContentsForm
         Dvg_load()
 
     End Sub
-    Public Sub Update()
+    Public Sub Updaterecord()
         'create a query that will update the values of a tuple
         Try
             If connection.State = ConnectionState.Closed Then
@@ -158,15 +171,20 @@ Public Class DashboardContentsForm
     End Sub
 
     Public Sub LoadChartData()
-        Dim query As String = "SELECT category, SUM(total) AS total_expense FROM tblexpenses where Username = @username GROUP BY category"
 
+        Dim query As String = ""
+        If expperiod = "Monthly" Then
+            query = "SELECT category, SUM(total) AS total_expense FROM tblexpenses where Username = @Username AND YEAR(expdate) = YEAR(CURDATE()) AND MONTH(expdate) = MONTH(CURDATE()) GROUP BY category"
+        ElseIf expperiod = "Yearly" Then
+            query = "SELECT category, SUM(total) AS total_expense FROM tblexpenses where Username = @Username AND YEAR(expdate) = YEAR(CURDATE()) GROUP BY category"
+        End If
         Try
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@Username", username)
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
             While dr.Read()
                 Dim category As String = dr("category").ToString()
@@ -176,12 +194,100 @@ Public Class DashboardContentsForm
                 chrtexpenses.Series("Expenses").Points.AddXY(category, totalExpense)
             End While
             dr.Close()
+
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         Finally
             connection.Close()
         End Try
         Dvg_load()
+    End Sub
+
+    Public Sub newbudget()
+        'create a query that will insert a new balance into the table
+        Dim query As String = "INSERT INTO tblbalance(userid, Username, balance, remainbal, totalexp, startdate) VALUES((SELECT userid FROM tblusers WHERE Username = @Username), @Username, @balance, @remainbal, @totalexp, @startdate)"
+        Dim remaining As Decimal = lblbudget.Text - lblexp.Text
+        If MsgBox("Do you want to set new budget?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
+            Try
+                If connection.State = ConnectionState.Closed Then
+                    connection.Open()
+                End If
+
+                Dim cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@Username", username)
+                cmd.Parameters.AddWithValue("@balance", gtbxbudget.Text)
+                cmd.Parameters.AddWithValue("@remainbal", remaining)
+                cmd.Parameters.AddWithValue("@totalexp", lblexp.Text)
+                cmd.Parameters.AddWithValue("@startdate", Now())
+
+                Dim i As Integer = cmd.ExecuteNonQuery
+                If i > 0 Then
+                    MessageBox.Show("Set New Budget Succesfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Set New Budget Unsuccessfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show("An error occurred: newbalance" & ex.Message)
+            Finally
+                connection.Close()
+            End Try
+        End If
+    End Sub
+    Public Sub selectcurrentbalance()
+        Dim query As String = "SELECT balance, startdate FROM tblbalance ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+
+        Try
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
+
+            Dim cmd As New MySqlCommand(query, connection)
+            Dim dr As MySqlDataReader = cmd.ExecuteReader
+            While dr.Read
+                balance = Convert.ToDecimal(dr("balance"))
+                startdate = Convert.ToDateTime(dr("startdate")).ToString("yyyy-MM-dd")
+            End While
+
+            dr.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: SelectCurrentBalance" & ex.Message)
+        Finally
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
+        End Try
+    End Sub
+
+    Public Sub addbudget()
+        Dim budget As Decimal = balance + Val(gtbxbudget.Text)
+        Dim query As String = "UPDATE tblbalance SET balance = @balance ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+        If MsgBox("Do you want to add new funds?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
+            Try
+                If connection.State = ConnectionState.Closed Then
+                    connection.Open()
+                End If
+                Dim cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@balance", budget)
+
+                Dim i As Integer = cmd.ExecuteNonQuery
+                If i > 0 Then
+                    MessageBox.Show("Add Budget Succesfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Add Budget Unsuccessfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show("An Error Occured: addbudget" & ex.Message)
+            Finally
+                If connection.State = ConnectionState.Open Then
+                    connection.Close()
+                End If
+            End Try
+        End If
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles gbtndel.Click
@@ -191,7 +297,7 @@ Public Class DashboardContentsForm
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles gbtnupdate.Click
         'use the metheod to update a tuple from the datagridview
-        Update()
+        Updaterecord()
 
     End Sub
 
@@ -234,8 +340,18 @@ Public Class DashboardContentsForm
     End Sub
 
     Private Sub DashboardContentsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'use method to get the balance and startdate
+        selectcurrentbalance()
+
+        'change username into user account
+        lblusername.Text = username
+
+        'set the tbx id for read only
+        gaddtbxid.ReadOnly = True
+
         'use the method datagridview load to display the values into the datagridview
         Dvg_load()
+
         ' Configure the chart
         chrtexpenses.Series.Clear()
         chrtexpenses.Titles.Add("Expenses by Category")
@@ -246,6 +362,14 @@ Public Class DashboardContentsForm
 
         ' Load data into the chart
         LoadChartData()
+
+        'set the label into select value from balance and startdate
+        lblbudget.Text = balance
+
+        'set the remaining balance from the difference of budget and total expense
+        Dim remaining As Decimal = CDec(lblbudget.Text) - CDec(lblexp.Text)
+        lblbal.Text = remaining
+
     End Sub
 
     Private Sub gdashgrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles gdashgrid.CellClick
@@ -258,6 +382,8 @@ Public Class DashboardContentsForm
         gadddate.Text = gdashgrid.CurrentRow.Cells(5).Value
 
         id = gaddtbxid.Text
+
+        'setting the values 
         gaddtbxid.ReadOnly = True
         gbtnsave.Enabled = False
     End Sub
@@ -268,5 +394,34 @@ Public Class DashboardContentsForm
 
     Private Sub gdashgrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gdashgrid.CellContentClick
 
+    End Sub
+
+    Private Sub gbtnset_Click(sender As Object, e As EventArgs) Handles gbtnaddbal.Click
+        'execute the method to add budget
+        addbudget()
+
+    End Sub
+
+    Private Sub gbtnnewbal_Click(sender As Object, e As EventArgs) Handles gbtnnewbal.Click
+        'a method to insert value into db
+        newbudget()
+    End Sub
+
+    Private Sub gsignbtn_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click
+        'set the value of expense period into monthly
+        If expperiod = "Yearly" Then
+            expperiod = "Monthly"
+        End If
+
+        Dvg_load()
+    End Sub
+
+    Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles gbtnyearly.Click
+        'set the value of expense period into yearly
+        If expperiod = "Monthly" Then
+            expperiod = "Yearly"
+        End If
+
+        Dvg_load()
     End Sub
 End Class

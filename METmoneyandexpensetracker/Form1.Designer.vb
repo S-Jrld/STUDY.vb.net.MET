@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
@@ -34,7 +35,9 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.gloginbtn = New Guna.UI2.WinForms.Guna2Button()
         Me.gsignbtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -98,9 +101,10 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Consolas", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(396, 125)
+        Me.Label2.Location = New System.Drawing.Point(399, 141)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(119, 43)
         Me.Label2.TabIndex = 5
@@ -109,9 +113,10 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(412, 198)
+        Me.Label3.Location = New System.Drawing.Point(413, 198)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 32)
         Me.Label3.TabIndex = 6
@@ -120,9 +125,10 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(363, 230)
+        Me.Label4.Location = New System.Drawing.Point(367, 230)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(184, 36)
         Me.Label4.TabIndex = 7
@@ -136,7 +142,7 @@ Partial Class Form1
         Me.gloginbtn.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
         Me.gloginbtn.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gloginbtn.ForeColor = System.Drawing.Color.White
-        Me.gloginbtn.Location = New System.Drawing.Point(350, 288)
+        Me.gloginbtn.Location = New System.Drawing.Point(355, 288)
         Me.gloginbtn.Name = "gloginbtn"
         Me.gloginbtn.PressedColor = System.Drawing.Color.White
         Me.gloginbtn.Size = New System.Drawing.Size(210, 33)
@@ -155,12 +161,26 @@ Partial Class Form1
         Me.gsignbtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
         Me.gsignbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gsignbtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gsignbtn.Location = New System.Drawing.Point(350, 334)
+        Me.gsignbtn.Location = New System.Drawing.Point(355, 337)
         Me.gsignbtn.Name = "gsignbtn"
         Me.gsignbtn.PressedColor = System.Drawing.Color.Transparent
         Me.gsignbtn.Size = New System.Drawing.Size(210, 33)
         Me.gsignbtn.TabIndex = 9
         Me.gsignbtn.Text = "Sign Up"
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 29)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(361, 370)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 10
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
         '
         'Form1
         '
@@ -168,17 +188,19 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(600, 400)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.gsignbtn)
         Me.Controls.Add(Me.gloginbtn)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Guna2Panel1.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +217,5 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents gsignbtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

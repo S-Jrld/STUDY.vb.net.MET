@@ -1,5 +1,9 @@
 ﻿Public Class GoalsForm
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub GoalsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblname.Text = username
     End Sub
 End Class

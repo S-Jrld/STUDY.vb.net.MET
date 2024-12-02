@@ -185,6 +185,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -206,6 +207,12 @@
       <DependentUpon>RegisterForm.vb</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SurveyForm.Designer.vb">
+      <DependentUpon>SurveyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SurveyForm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SurveyForm.resx">
+      <DependentUpon>SurveyForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
