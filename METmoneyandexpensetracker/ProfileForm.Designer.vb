@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ProfileForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,51 @@ Partial Class ProfileForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProfileForm))
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox6 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.gaddcbxcat = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.gbtnsecurity = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnuser = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblprofileusername = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblcomname = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.gaddtbxsearch = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.gbtnyearly = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnmonthly = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.gdashgrid = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblbal = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel7.SuspendLayout()
+        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel5.SuspendLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -48,303 +72,497 @@ Partial Class ProfileForm
         Me.Guna2Elipse1.BorderRadius = 20
         Me.Guna2Elipse1.TargetControl = Me
         '
-        'Label1
+        'Guna2Panel1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(297, 240)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 32)
-        Me.Label1.TabIndex = 2
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel1.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.Controls.Add(Me.gbtnsecurity)
+        Me.Guna2Panel1.Controls.Add(Me.gbtnuser)
+        Me.Guna2Panel1.Controls.Add(Me.lblprofileusername)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
+        Me.Guna2Panel1.Controls.Add(Me.lblcomname)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel1.Location = New System.Drawing.Point(23, 184)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(293, 391)
+        Me.Guna2Panel1.TabIndex = 34
+        Me.Guna2Panel1.UseTransparentBackground = True
         '
-        'Guna2HtmlLabel1
+        'gbtnsecurity
         '
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(58, 23)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(104, 34)
-        Me.Guna2HtmlLabel1.TabIndex = 3
-        Me.Guna2HtmlLabel1.Text = "PROFILE"
+        Me.gbtnsecurity.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.gbtnsecurity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.gbtnsecurity.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.gbtnsecurity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.gbtnsecurity.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnsecurity.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnsecurity.ForeColor = System.Drawing.Color.Black
+        Me.gbtnsecurity.Location = New System.Drawing.Point(17, 334)
+        Me.gbtnsecurity.Name = "gbtnsecurity"
+        Me.gbtnsecurity.Size = New System.Drawing.Size(260, 45)
+        Me.gbtnsecurity.TabIndex = 4
+        Me.gbtnsecurity.Text = "Account security"
+        Me.gbtnsecurity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.gbtnsecurity.UseTransparentBackground = True
         '
-        'Guna2HtmlLabel2
+        'gbtnuser
         '
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(58, 87)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(68, 18)
-        Me.Guna2HtmlLabel2.TabIndex = 4
-        Me.Guna2HtmlLabel2.Text = "Full Name"
+        Me.gbtnuser.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.gbtnuser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.gbtnuser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.gbtnuser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.gbtnuser.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnuser.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.gbtnuser.ForeColor = System.Drawing.Color.Black
+        Me.gbtnuser.Location = New System.Drawing.Point(17, 283)
+        Me.gbtnuser.Name = "gbtnuser"
+        Me.gbtnuser.Size = New System.Drawing.Size(260, 45)
+        Me.gbtnuser.TabIndex = 3
+        Me.gbtnuser.Text = "User profile"
+        Me.gbtnuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.gbtnuser.UseTransparentBackground = True
         '
-        'Guna2HtmlLabel3
+        'lblprofileusername
         '
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(58, 246)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(58, 18)
-        Me.Guna2HtmlLabel3.TabIndex = 5
-        Me.Guna2HtmlLabel3.Text = "Birthday"
+        Me.lblprofileusername.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblprofileusername.ForeColor = System.Drawing.Color.Black
+        Me.lblprofileusername.Location = New System.Drawing.Point(33, 243)
+        Me.lblprofileusername.Name = "lblprofileusername"
+        Me.lblprofileusername.Size = New System.Drawing.Size(227, 23)
+        Me.lblprofileusername.TabIndex = 2
+        Me.lblprofileusername.Text = "Username"
+        Me.lblprofileusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2HtmlLabel4
+        'Guna2PictureBox1
         '
-        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(418, 87)
-        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(111, 18)
-        Me.Guna2HtmlLabel4.TabIndex = 6
-        Me.Guna2HtmlLabel4.Text = "Contact Address"
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(27, 18)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(240, 184)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 1
+        Me.Guna2PictureBox1.TabStop = False
         '
-        'Guna2HtmlLabel5
+        'lblcomname
         '
-        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(58, 408)
-        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(110, 18)
-        Me.Guna2HtmlLabel5.TabIndex = 7
-        Me.Guna2HtmlLabel5.Text = "Contact Number"
+        Me.lblcomname.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcomname.ForeColor = System.Drawing.Color.Black
+        Me.lblcomname.Location = New System.Drawing.Point(34, 215)
+        Me.lblcomname.Name = "lblcomname"
+        Me.lblcomname.Size = New System.Drawing.Size(227, 23)
+        Me.lblcomname.TabIndex = 0
+        Me.lblcomname.Text = "Complete Name"
+        Me.lblcomname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2HtmlLabel6
+        'lblusername
         '
-        Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(418, 157)
-        Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(39, 18)
-        Me.Guna2HtmlLabel6.TabIndex = 8
-        Me.Guna2HtmlLabel6.Text = "Email"
+        Me.lblusername.AutoSize = True
+        Me.lblusername.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblusername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.lblusername.Location = New System.Drawing.Point(695, 18)
+        Me.lblusername.Name = "lblusername"
+        Me.lblusername.Size = New System.Drawing.Size(106, 24)
+        Me.lblusername.TabIndex = 54
+        Me.lblusername.Text = "Username"
         '
-        'Guna2HtmlLabel7
+        'Label6
         '
-        Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(58, 157)
-        Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(30, 18)
-        Me.Guna2HtmlLabel7.TabIndex = 9
-        Me.Guna2HtmlLabel7.Text = "Age"
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(594, 18)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(106, 24)
+        Me.Label6.TabIndex = 53
+        Me.Label6.Text = "Welcome,"
         '
-        'Guna2TextBox1
+        'Label5
         '
-        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox1.BorderRadius = 10
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(58, 111)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = "e.g Rodel Cute"
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(315, 38)
-        Me.Guna2TextBox1.TabIndex = 10
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(6, 13)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(119, 32)
+        Me.Label5.TabIndex = 52
+        Me.Label5.Text = "Profile"
         '
-        'Guna2TextBox2
+        'gaddtbxsearch
         '
-        Me.Guna2TextBox2.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox2.BorderRadius = 10
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(58, 181)
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox2.PlaceholderText = "e.g 19"
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(315, 38)
-        Me.Guna2TextBox2.TabIndex = 11
+        Me.gaddtbxsearch.BackColor = System.Drawing.Color.Transparent
+        Me.gaddtbxsearch.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gaddtbxsearch.BorderRadius = 12
+        Me.gaddtbxsearch.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gaddtbxsearch.DefaultText = ""
+        Me.gaddtbxsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gaddtbxsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gaddtbxsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gaddtbxsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gaddtbxsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gaddtbxsearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gaddtbxsearch.ForeColor = System.Drawing.Color.Black
+        Me.gaddtbxsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gaddtbxsearch.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gaddtbxsearch.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.gaddtbxsearch.Location = New System.Drawing.Point(167, 16)
+        Me.gaddtbxsearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.gaddtbxsearch.Name = "gaddtbxsearch"
+        Me.gaddtbxsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.gaddtbxsearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gaddtbxsearch.PlaceholderText = "Search in table"
+        Me.gaddtbxsearch.SelectedText = ""
+        Me.gaddtbxsearch.Size = New System.Drawing.Size(387, 27)
+        Me.gaddtbxsearch.TabIndex = 51
         '
-        'Guna2TextBox3
+        'Guna2Panel2
         '
-        Me.Guna2TextBox3.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox3.BorderRadius = 10
-        Me.Guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox3.DefaultText = ""
-        Me.Guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.Location = New System.Drawing.Point(58, 270)
-        Me.Guna2TextBox3.Name = "Guna2TextBox3"
-        Me.Guna2TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox3.PlaceholderText = "e.g 03/07/05"
-        Me.Guna2TextBox3.SelectedText = ""
-        Me.Guna2TextBox3.Size = New System.Drawing.Size(315, 38)
-        Me.Guna2TextBox3.TabIndex = 12
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderRadius = 20
+        Me.Guna2Panel2.FillColor = System.Drawing.Color.DimGray
+        Me.Guna2Panel2.Location = New System.Drawing.Point(329, 75)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.Size = New System.Drawing.Size(170, 214)
+        Me.Guna2Panel2.TabIndex = 35
+        Me.Guna2Panel2.UseTransparentBackground = True
         '
-        'Guna2TextBox4
+        'Guna2Panel7
         '
-        Me.Guna2TextBox4.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox4.BorderRadius = 10
-        Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox4.DefaultText = ""
-        Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(418, 181)
-        Me.Guna2TextBox4.Name = "Guna2TextBox4"
-        Me.Guna2TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox4.PlaceholderText = "e.g 03/07/05"
-        Me.Guna2TextBox4.SelectedText = ""
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(315, 38)
-        Me.Guna2TextBox4.TabIndex = 13
+        Me.Guna2Panel7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel7.BorderRadius = 20
+        Me.Guna2Panel7.Controls.Add(Me.gbtnyearly)
+        Me.Guna2Panel7.Controls.Add(Me.gbtnmonthly)
+        Me.Guna2Panel7.Controls.Add(Me.Label4)
+        Me.Guna2Panel7.Controls.Add(Me.gdashgrid)
+        Me.Guna2Panel7.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel7.Location = New System.Drawing.Point(329, 315)
+        Me.Guna2Panel7.Name = "Guna2Panel7"
+        Me.Guna2Panel7.Size = New System.Drawing.Size(550, 260)
+        Me.Guna2Panel7.TabIndex = 57
         '
-        'Guna2TextBox5
+        'gbtnyearly
         '
-        Me.Guna2TextBox5.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox5.BorderRadius = 10
-        Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox5.DefaultText = ""
-        Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(58, 432)
-        Me.Guna2TextBox5.Name = "Guna2TextBox5"
-        Me.Guna2TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox5.PlaceholderText = "e.g 09123456789"
-        Me.Guna2TextBox5.SelectedText = ""
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(315, 38)
-        Me.Guna2TextBox5.TabIndex = 14
+        Me.gbtnyearly.BackColor = System.Drawing.Color.White
+        Me.gbtnyearly.BorderColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnyearly.BorderRadius = 10
+        Me.gbtnyearly.BorderThickness = 2
+        Me.gbtnyearly.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnyearly.FillColor = System.Drawing.Color.White
+        Me.gbtnyearly.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnyearly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnyearly.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gbtnyearly.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnyearly.Location = New System.Drawing.Point(451, 15)
+        Me.gbtnyearly.Name = "gbtnyearly"
+        Me.gbtnyearly.PressedColor = System.Drawing.Color.Transparent
+        Me.gbtnyearly.Size = New System.Drawing.Size(94, 25)
+        Me.gbtnyearly.TabIndex = 11
+        Me.gbtnyearly.Text = "Yearly"
         '
-        'Guna2TextBox6
+        'gbtnmonthly
         '
-        Me.Guna2TextBox6.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox6.BorderRadius = 10
-        Me.Guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox6.DefaultText = ""
-        Me.Guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Location = New System.Drawing.Point(418, 111)
-        Me.Guna2TextBox6.Name = "Guna2TextBox6"
-        Me.Guna2TextBox6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox6.PlaceholderText = "e.g 10 # Mango Ext. Pinagkaisa Q.C"
-        Me.Guna2TextBox6.SelectedText = ""
-        Me.Guna2TextBox6.Size = New System.Drawing.Size(315, 41)
-        Me.Guna2TextBox6.TabIndex = 15
+        Me.gbtnmonthly.BackColor = System.Drawing.Color.White
+        Me.gbtnmonthly.BorderColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnmonthly.BorderRadius = 10
+        Me.gbtnmonthly.BorderThickness = 2
+        Me.gbtnmonthly.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnmonthly.FillColor = System.Drawing.Color.White
+        Me.gbtnmonthly.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnmonthly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnmonthly.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gbtnmonthly.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnmonthly.Location = New System.Drawing.Point(351, 15)
+        Me.gbtnmonthly.Name = "gbtnmonthly"
+        Me.gbtnmonthly.PressedColor = System.Drawing.Color.Transparent
+        Me.gbtnmonthly.Size = New System.Drawing.Size(94, 25)
+        Me.gbtnmonthly.TabIndex = 10
+        Me.gbtnmonthly.Text = "Monthly"
         '
-        'Guna2Button1
+        'Label4
         '
-        Me.Guna2Button1.BorderRadius = 10
-        Me.Guna2Button1.BorderThickness = 1
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.White
-        Me.Guna2Button1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2Button1.Location = New System.Drawing.Point(498, 240)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(135, 45)
-        Me.Guna2Button1.TabIndex = 16
-        Me.Guna2Button1.Text = "Save"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(17, 8)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(134, 32)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Expenses"
         '
-        'Guna2HtmlLabel8
+        'gdashgrid
         '
-        Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(58, 331)
-        Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(52, 18)
-        Me.Guna2HtmlLabel8.TabIndex = 17
-        Me.Guna2HtmlLabel8.Text = "Gender"
+        Me.gdashgrid.AllowUserToAddRows = False
+        Me.gdashgrid.AllowUserToDeleteRows = False
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        Me.gdashgrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gdashgrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.gdashgrid.ColumnHeadersHeight = 19
+        Me.gdashgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.gdashgrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle9
+        Me.gdashgrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.Location = New System.Drawing.Point(5, 48)
+        Me.gdashgrid.Name = "gdashgrid"
+        Me.gdashgrid.ReadOnly = True
+        Me.gdashgrid.RowHeadersVisible = False
+        Me.gdashgrid.Size = New System.Drawing.Size(540, 200)
+        Me.gdashgrid.TabIndex = 0
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.gdashgrid.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.gdashgrid.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.gdashgrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.gdashgrid.ThemeStyle.HeaderStyle.Height = 19
+        Me.gdashgrid.ThemeStyle.ReadOnly = True
+        Me.gdashgrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.gdashgrid.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.gdashgrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.RowsStyle.Height = 22
+        Me.gdashgrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'gaddcbxcat
+        'Column1
         '
-        Me.gaddcbxcat.BackColor = System.Drawing.Color.Transparent
-        Me.gaddcbxcat.BorderColor = System.Drawing.Color.Black
-        Me.gaddcbxcat.BorderRadius = 12
-        Me.gaddcbxcat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.gaddcbxcat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.gaddcbxcat.FocusedColor = System.Drawing.Color.Empty
-        Me.gaddcbxcat.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gaddcbxcat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.gaddcbxcat.FormattingEnabled = True
-        Me.gaddcbxcat.ItemHeight = 30
-        Me.gaddcbxcat.Items.AddRange(New Object() {"Food", "Transportation", "Utilities", "Clothing", "Healthcare", "Insurance", "Necessity", "Debt", "Savings", "Other expenses"})
-        Me.gaddcbxcat.Location = New System.Drawing.Point(58, 355)
-        Me.gaddcbxcat.Name = "gaddcbxcat"
-        Me.gaddcbxcat.Size = New System.Drawing.Size(315, 36)
-        Me.gaddcbxcat.TabIndex = 33
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 44
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column2.HeaderText = "Category"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 86
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column3.HeaderText = "Expenses Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column4.HeaderText = "Price"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 65
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column5.HeaderText = "Quantity"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 86
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column6.HeaderText = "Date"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 58
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column7.HeaderText = "Total"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 65
+        '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel3.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel3.BorderRadius = 20
+        Me.Guna2Panel3.FillColor = System.Drawing.Color.DimGray
+        Me.Guna2Panel3.Location = New System.Drawing.Point(519, 75)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.Size = New System.Drawing.Size(170, 214)
+        Me.Guna2Panel3.TabIndex = 36
+        Me.Guna2Panel3.UseTransparentBackground = True
+        '
+        'Guna2Panel4
+        '
+        Me.Guna2Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel4.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel4.BorderRadius = 20
+        Me.Guna2Panel4.FillColor = System.Drawing.Color.DimGray
+        Me.Guna2Panel4.Location = New System.Drawing.Point(709, 75)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.Size = New System.Drawing.Size(170, 214)
+        Me.Guna2Panel4.TabIndex = 36
+        Me.Guna2Panel4.UseTransparentBackground = True
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.Controls.Add(Me.lblbal)
+        Me.Guna2Panel5.Controls.Add(Me.Guna2PictureBox2)
+        Me.Guna2Panel5.Controls.Add(Me.Label3)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(119, Byte), Integer))
+        Me.Guna2Panel5.Location = New System.Drawing.Point(23, 64)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(251, 100)
+        Me.Guna2Panel5.TabIndex = 36
+        Me.Guna2Panel5.UseTransparentBackground = True
+        '
+        'lblbal
+        '
+        Me.lblbal.BackColor = System.Drawing.Color.Transparent
+        Me.lblbal.Font = New System.Drawing.Font("Consolas", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblbal.ForeColor = System.Drawing.Color.Black
+        Me.lblbal.Location = New System.Drawing.Point(63, 52)
+        Me.lblbal.Name = "lblbal"
+        Me.lblbal.Size = New System.Drawing.Size(131, 35)
+        Me.lblbal.TabIndex = 48
+        Me.lblbal.Text = "0"
+        Me.lblbal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(17, 47)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 49
+        Me.Guna2PictureBox2.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(13, 11)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(162, 19)
+        Me.Label3.TabIndex = 47
+        Me.Label3.Text = "Available Balance"
+        '
+        'Guna2Panel6
+        '
+        Me.Guna2Panel6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel6.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel6.BorderRadius = 20
+        Me.Guna2Panel6.FillColor = System.Drawing.Color.DimGray
+        Me.Guna2Panel6.Location = New System.Drawing.Point(62, 64)
+        Me.Guna2Panel6.Name = "Guna2Panel6"
+        Me.Guna2Panel6.Size = New System.Drawing.Size(233, 100)
+        Me.Guna2Panel6.TabIndex = 50
+        Me.Guna2Panel6.UseTransparentBackground = True
+        '
+        'Guna2Panel8
+        '
+        Me.Guna2Panel8.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel8.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel8.BorderRadius = 20
+        Me.Guna2Panel8.FillColor = System.Drawing.Color.Black
+        Me.Guna2Panel8.Location = New System.Drawing.Point(83, 64)
+        Me.Guna2Panel8.Name = "Guna2Panel8"
+        Me.Guna2Panel8.Size = New System.Drawing.Size(233, 100)
+        Me.Guna2Panel8.TabIndex = 51
+        Me.Guna2Panel8.UseTransparentBackground = True
         '
         'ProfileForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(850, 550)
-        Me.Controls.Add(Me.gaddcbxcat)
-        Me.Controls.Add(Me.Guna2HtmlLabel8)
-        Me.Controls.Add(Me.Guna2Button1)
-        Me.Controls.Add(Me.Guna2TextBox6)
-        Me.Controls.Add(Me.Guna2TextBox5)
-        Me.Controls.Add(Me.Guna2TextBox4)
-        Me.Controls.Add(Me.Guna2TextBox3)
-        Me.Controls.Add(Me.Guna2TextBox2)
-        Me.Controls.Add(Me.Guna2TextBox1)
-        Me.Controls.Add(Me.Guna2HtmlLabel7)
-        Me.Controls.Add(Me.Guna2HtmlLabel6)
-        Me.Controls.Add(Me.Guna2HtmlLabel5)
-        Me.Controls.Add(Me.Guna2HtmlLabel4)
-        Me.Controls.Add(Me.Guna2HtmlLabel3)
-        Me.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.Controls.Add(Me.Label1)
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ClientSize = New System.Drawing.Size(900, 600)
+        Me.Controls.Add(Me.Guna2Panel5)
+        Me.Controls.Add(Me.Guna2Panel4)
+        Me.Controls.Add(Me.Guna2Panel3)
+        Me.Controls.Add(Me.Guna2Panel7)
+        Me.Controls.Add(Me.lblusername)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.gaddtbxsearch)
+        Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.Guna2Panel2)
+        Me.Controls.Add(Me.Guna2Panel6)
+        Me.Controls.Add(Me.Guna2Panel8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ProfileForm"
         Me.Text = "ProfileForm"
+        Me.Guna2Panel1.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel7.ResumeLayout(False)
+        Me.Guna2Panel7.PerformLayout()
+        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox6 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gaddcbxcat As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblusername As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents gaddtbxsearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents gbtnyearly As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnmonthly As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents gdashgrid As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblcomname As Label
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents gbtnsecurity As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnuser As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblprofileusername As Label
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblbal As Label
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
 End Class

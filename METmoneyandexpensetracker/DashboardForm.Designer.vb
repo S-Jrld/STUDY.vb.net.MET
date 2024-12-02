@@ -28,7 +28,7 @@ Partial Class DashboardForm
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.gctrlclose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.gbtnabout = New Guna.UI2.WinForms.Guna2Button()
         Me.gpnlmain = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
@@ -53,7 +53,7 @@ Partial Class DashboardForm
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox2)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox1)
+        Me.Guna2Panel1.Controls.Add(Me.gctrlclose)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -86,17 +86,17 @@ Partial Class DashboardForm
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox2.TabIndex = 5
         '
-        'Guna2ControlBox1
+        'gctrlclose
         '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(1052, 1)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
-        Me.Guna2ControlBox1.TabIndex = 4
+        Me.gctrlclose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gctrlclose.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gctrlclose.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gctrlclose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.gctrlclose.IconColor = System.Drawing.Color.White
+        Me.gctrlclose.Location = New System.Drawing.Point(1052, 1)
+        Me.gctrlclose.Name = "gctrlclose"
+        Me.gctrlclose.Size = New System.Drawing.Size(45, 29)
+        Me.gctrlclose.TabIndex = 4
         '
         'gbtnabout
         '
@@ -104,7 +104,7 @@ Partial Class DashboardForm
         Me.gbtnabout.FillColor = System.Drawing.Color.Transparent
         Me.gbtnabout.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
         Me.gbtnabout.ForeColor = System.Drawing.Color.LightGreen
-        Me.gbtnabout.Location = New System.Drawing.Point(23, 538)
+        Me.gbtnabout.Location = New System.Drawing.Point(38, 549)
         Me.gbtnabout.Name = "gbtnabout"
         Me.gbtnabout.Size = New System.Drawing.Size(97, 23)
         Me.gbtnabout.TabIndex = 42
@@ -112,15 +112,16 @@ Partial Class DashboardForm
         '
         'gpnlmain
         '
-        Me.gpnlmain.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.gpnlmain.BackColor = System.Drawing.Color.Transparent
         Me.gpnlmain.BorderColor = System.Drawing.Color.Black
         Me.gpnlmain.BorderRadius = 20
-        Me.gpnlmain.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.gpnlmain.Location = New System.Drawing.Point(183, 40)
+        Me.gpnlmain.FillColor = System.Drawing.SystemColors.ControlLight
+        Me.gpnlmain.Location = New System.Drawing.Point(189, 40)
         Me.gpnlmain.Margin = New System.Windows.Forms.Padding(0)
         Me.gpnlmain.Name = "gpnlmain"
         Me.gpnlmain.Size = New System.Drawing.Size(900, 600)
         Me.gpnlmain.TabIndex = 34
+        Me.gpnlmain.UseTransparentBackground = True
         '
         'Guna2DragControl1
         '
@@ -133,7 +134,7 @@ Partial Class DashboardForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Consolas", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LightGreen
-        Me.Label2.Location = New System.Drawing.Point(16, 48)
+        Me.Label2.Location = New System.Drawing.Point(26, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(132, 41)
         Me.Label2.TabIndex = 43
@@ -152,10 +153,11 @@ Partial Class DashboardForm
         Me.Guna2Panel2.Controls.Add(Me.gbtngoal)
         Me.Guna2Panel2.Controls.Add(Me.gbtnprofile)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2Panel2.Location = New System.Drawing.Point(7, 40)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(9, 40)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(168, 600)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(179, 600)
         Me.Guna2Panel2.TabIndex = 44
+        Me.Guna2Panel2.UseTransparentBackground = True
         '
         'gbtndashboard
         '
@@ -170,7 +172,7 @@ Partial Class DashboardForm
         Me.gbtndashboard.Image = CType(resources.GetObject("gbtndashboard.Image"), System.Drawing.Image)
         Me.gbtndashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtndashboard.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtndashboard.Location = New System.Drawing.Point(8, 171)
+        Me.gbtndashboard.Location = New System.Drawing.Point(19, 171)
         Me.gbtndashboard.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtndashboard.Name = "gbtndashboard"
         Me.gbtndashboard.Size = New System.Drawing.Size(140, 40)
@@ -191,7 +193,7 @@ Partial Class DashboardForm
         Me.gbtnhistory.Image = CType(resources.GetObject("gbtnhistory.Image"), System.Drawing.Image)
         Me.gbtnhistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtnhistory.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtnhistory.Location = New System.Drawing.Point(8, 259)
+        Me.gbtnhistory.Location = New System.Drawing.Point(19, 259)
         Me.gbtnhistory.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnhistory.Name = "gbtnhistory"
         Me.gbtnhistory.Size = New System.Drawing.Size(140, 40)
@@ -209,7 +211,7 @@ Partial Class DashboardForm
         Me.gdashbtnout.Image = CType(resources.GetObject("gdashbtnout.Image"), System.Drawing.Image)
         Me.gdashbtnout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gdashbtnout.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gdashbtnout.Location = New System.Drawing.Point(23, 486)
+        Me.gdashbtnout.Location = New System.Drawing.Point(27, 486)
         Me.gdashbtnout.Margin = New System.Windows.Forms.Padding(0)
         Me.gdashbtnout.Name = "gdashbtnout"
         Me.gdashbtnout.Size = New System.Drawing.Size(125, 40)
@@ -230,7 +232,7 @@ Partial Class DashboardForm
         Me.gbtngoal.Image = CType(resources.GetObject("gbtngoal.Image"), System.Drawing.Image)
         Me.gbtngoal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtngoal.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtngoal.Location = New System.Drawing.Point(8, 215)
+        Me.gbtngoal.Location = New System.Drawing.Point(19, 215)
         Me.gbtngoal.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtngoal.Name = "gbtngoal"
         Me.gbtngoal.Size = New System.Drawing.Size(140, 40)
@@ -252,7 +254,7 @@ Partial Class DashboardForm
         Me.gbtnprofile.Image = CType(resources.GetObject("gbtnprofile.Image"), System.Drawing.Image)
         Me.gbtnprofile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtnprofile.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtnprofile.Location = New System.Drawing.Point(8, 303)
+        Me.gbtnprofile.Location = New System.Drawing.Point(19, 303)
         Me.gbtnprofile.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnprofile.Name = "gbtnprofile"
         Me.gbtnprofile.Size = New System.Drawing.Size(140, 40)
@@ -264,7 +266,7 @@ Partial Class DashboardForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(1100, 650)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.gpnlmain)
@@ -284,7 +286,7 @@ Partial Class DashboardForm
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents gctrlclose As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents gbtnhistory As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbtngoal As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbtnprofile As Guna.UI2.WinForms.Guna2Button

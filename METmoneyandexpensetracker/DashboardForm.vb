@@ -21,8 +21,13 @@ Public Class DashboardForm
     End Sub
 
     Private Sub DashboardForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        'close the application when close btn is clicked
-        Application.Exit()
+        'close the application if close button is clicked
+        If MsgBox("Do you want to close the application?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
+            Application.Exit()
+        Else
+            Dim dashboard As New DashboardForm
+            dashboard.Show()
+        End If
     End Sub
 
     Private Sub gbtndashboard_Click(sender As Object, e As EventArgs) Handles gbtndashboard.Click
@@ -61,6 +66,17 @@ Public Class DashboardForm
             'change into login form by loggin out
             Dim login As New LoginForm
             login.Show()
+            Me.Hide()
+        End If
+    End Sub
+
+    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles gctrlclose.Click
+        'close the application if closebutton.clicked is yes else return to the same form
+        If MsgBox("Do you want to close the application?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
+            Application.Exit()
+        Else
+            Dim dashboard As New DashboardForm
+            dashboard.Show()
             Me.Hide()
         End If
     End Sub

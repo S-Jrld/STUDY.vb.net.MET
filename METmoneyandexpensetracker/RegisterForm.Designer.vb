@@ -27,7 +27,7 @@ Partial Class RegisterForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.gctrlclose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.gregbtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -81,16 +81,16 @@ Partial Class RegisterForm
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox2.TabIndex = 5
         '
-        'Guna2ControlBox1
+        'gctrlclose
         '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(552, 1)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
-        Me.Guna2ControlBox1.TabIndex = 4
+        Me.gctrlclose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gctrlclose.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gctrlclose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.gctrlclose.IconColor = System.Drawing.Color.White
+        Me.gctrlclose.Location = New System.Drawing.Point(552, 1)
+        Me.gctrlclose.Name = "gctrlclose"
+        Me.gctrlclose.Size = New System.Drawing.Size(45, 29)
+        Me.gctrlclose.TabIndex = 4
         '
         'gregbtn
         '
@@ -133,7 +133,7 @@ Partial Class RegisterForm
         Me.Guna2Panel1.Controls.Add(Me.Label1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox2)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox1)
+        Me.Guna2Panel1.Controls.Add(Me.gctrlclose)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -142,7 +142,8 @@ Partial Class RegisterForm
         '
         'Guna2DragControl1
         '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 1.0R
+        Me.Guna2DragControl1.DragStartTransparencyValue = 1.0R
         Me.Guna2DragControl1.TargetControl = Me.Guna2Panel1
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
@@ -339,7 +340,7 @@ Partial Class RegisterForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents gctrlclose As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents gckbxshow1 As Guna.UI2.WinForms.Guna2ImageCheckBox
     Friend WithEvents gckbxshow2 As Guna.UI2.WinForms.Guna2ImageCheckBox

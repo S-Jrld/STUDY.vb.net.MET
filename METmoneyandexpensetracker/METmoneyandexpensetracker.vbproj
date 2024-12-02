@@ -137,6 +137,12 @@
     <Compile Include="AboutUs.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AccountSecurityForm.Designer.vb">
+      <DependentUpon>AccountSecurityForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSecurityForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashboardContentsForm.Designer.vb">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
     </Compile>
@@ -215,10 +221,19 @@
     <Compile Include="SurveyForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserProfileForm.Designer.vb">
+      <DependentUpon>UserProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutUs.resx">
       <DependentUpon>AboutUs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSecurityForm.resx">
+      <DependentUpon>AccountSecurityForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardContentsForm.resx">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
@@ -255,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SurveyForm.resx">
       <DependentUpon>SurveyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfileForm.resx">
+      <DependentUpon>UserProfileForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

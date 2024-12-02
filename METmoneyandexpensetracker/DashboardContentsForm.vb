@@ -22,7 +22,7 @@ Public Class DashboardContentsForm
             End If
 
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@Username", username)
+            cmd.Parameters.AddWithValue("@Username", uname)
 
             Dim dr As MySqlDataReader = cmd.ExecuteReader
             While dr.Read
@@ -66,7 +66,7 @@ Public Class DashboardContentsForm
 
             Dim cmd As New MySqlCommand("INSERT INTO `tblexpenses`(`userid`, `Username`, `category`, `expname`, `price`, `qty`, `expdate`, `total`) VALUES ((SELECT userid FROM tblusers WHERE Username = @Username), @Username, @category, @expname, @price, @qty, @expdate, @total)", connection)
             cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@Username", username)
+            cmd.Parameters.AddWithValue("@Username", uname)
             cmd.Parameters.AddWithValue("@category", gaddcbxcat.Text)
             cmd.Parameters.AddWithValue("@expname", gaddtbxname.Text)
             cmd.Parameters.AddWithValue("@price", price)
@@ -103,7 +103,7 @@ Public Class DashboardContentsForm
 
             Dim cmd As New MySqlCommand("UPDATE `tblexpenses` SET `category`=@category,`expname`=@expname,`price`=@price,`qty`=@qty,`expdate`=@expdate,`total`=@total WHERE expid = @id", connection)
             cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@id", id)
+            cmd.Parameters.AddWithValue("@id", userid)
             cmd.Parameters.AddWithValue("@category", gaddcbxcat.Text)
             cmd.Parameters.AddWithValue("@expname", gaddtbxname.Text)
             cmd.Parameters.AddWithValue("@price", price)
@@ -184,7 +184,7 @@ Public Class DashboardContentsForm
             End If
 
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@Username", username)
+            cmd.Parameters.AddWithValue("@Username", uname)
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
             While dr.Read()
                 Dim category As String = dr("category").ToString()
@@ -215,7 +215,7 @@ Public Class DashboardContentsForm
 
                 Dim cmd As New MySqlCommand(query, connection)
                 cmd.Parameters.Clear()
-                cmd.Parameters.AddWithValue("@Username", username)
+                cmd.Parameters.AddWithValue("@Username", uname)
                 cmd.Parameters.AddWithValue("@balance", gtbxbudget.Text)
                 cmd.Parameters.AddWithValue("@remainbal", remaining)
                 cmd.Parameters.AddWithValue("@totalexp", lblexp.Text)
@@ -323,7 +323,7 @@ Public Class DashboardContentsForm
             Dim query As String = "SELECT * FROM tblexpenses WHERE Username = @username AND expname LIKE @search"
 
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@username", uname)
             cmd.Parameters.AddWithValue("@search", "%" & gaddtbxsearch.Text & "%")
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
 
@@ -344,7 +344,7 @@ Public Class DashboardContentsForm
         selectcurrentbalance()
 
         'change username into user account
-        lblusername.Text = username
+        lblusername.Text = uname
 
         'set the tbx id for read only
         gaddtbxid.ReadOnly = True
@@ -381,7 +381,7 @@ Public Class DashboardContentsForm
         gaddtbxqty.Text = gdashgrid.CurrentRow.Cells(4).Value
         gadddate.Text = gdashgrid.CurrentRow.Cells(5).Value
 
-        id = gaddtbxid.Text
+        userid = gaddtbxid.Text
 
         'setting the values 
         gaddtbxid.ReadOnly = True

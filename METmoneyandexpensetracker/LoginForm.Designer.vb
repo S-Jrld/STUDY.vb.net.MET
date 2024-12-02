@@ -28,7 +28,7 @@ Partial Class LoginForm
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.gctrlclose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.glogbtnfor = New Guna.UI2.WinForms.Guna2Button()
         Me.glogbtn = New Guna.UI2.WinForms.Guna2Button()
@@ -36,7 +36,7 @@ Partial Class LoginForm
         Me.gckbxshow1 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
         Me.glogtbxpass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.glogtbxname = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.glogbtnreg = New Guna.UI2.WinForms.Guna2Button()
+        Me.glogbtnback = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +47,8 @@ Partial Class LoginForm
         '
         'Guna2DragControl1
         '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.8R
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 1.0R
+        Me.Guna2DragControl1.DragStartTransparencyValue = 1.0R
         Me.Guna2DragControl1.TargetControl = Me.Guna2Panel1
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
@@ -56,7 +57,7 @@ Partial Class LoginForm
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox2)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox1)
+        Me.Guna2Panel1.Controls.Add(Me.gctrlclose)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -87,16 +88,16 @@ Partial Class LoginForm
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox2.TabIndex = 5
         '
-        'Guna2ControlBox1
+        'gctrlclose
         '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(552, 1)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
-        Me.Guna2ControlBox1.TabIndex = 4
+        Me.gctrlclose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gctrlclose.FillColor = System.Drawing.Color.Transparent
+        Me.gctrlclose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.gctrlclose.IconColor = System.Drawing.Color.White
+        Me.gctrlclose.Location = New System.Drawing.Point(552, 1)
+        Me.gctrlclose.Name = "gctrlclose"
+        Me.gctrlclose.Size = New System.Drawing.Size(45, 29)
+        Me.gctrlclose.TabIndex = 4
         '
         'Label5
         '
@@ -217,21 +218,21 @@ Partial Class LoginForm
         Me.glogtbxname.Size = New System.Drawing.Size(255, 35)
         Me.glogtbxname.TabIndex = 13
         '
-        'glogbtnreg
+        'glogbtnback
         '
-        Me.glogbtnreg.FillColor = System.Drawing.Color.Transparent
-        Me.glogbtnreg.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.glogbtnreg.ForeColor = System.Drawing.Color.Black
-        Me.glogbtnreg.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.glogbtnreg.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.glogbtnreg.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
-        Me.glogbtnreg.Location = New System.Drawing.Point(300, 40)
-        Me.glogbtnreg.Margin = New System.Windows.Forms.Padding(0)
-        Me.glogbtnreg.Name = "glogbtnreg"
-        Me.glogbtnreg.PressedColor = System.Drawing.Color.Transparent
-        Me.glogbtnreg.Size = New System.Drawing.Size(65, 22)
-        Me.glogbtnreg.TabIndex = 12
-        Me.glogbtnreg.Text = "Back"
+        Me.glogbtnback.FillColor = System.Drawing.Color.Transparent
+        Me.glogbtnback.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.glogbtnback.ForeColor = System.Drawing.Color.Black
+        Me.glogbtnback.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.glogbtnback.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.glogbtnback.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
+        Me.glogbtnback.Location = New System.Drawing.Point(300, 40)
+        Me.glogbtnback.Margin = New System.Windows.Forms.Padding(0)
+        Me.glogbtnback.Name = "glogbtnback"
+        Me.glogbtnback.PressedColor = System.Drawing.Color.Transparent
+        Me.glogbtnback.Size = New System.Drawing.Size(65, 22)
+        Me.glogbtnback.TabIndex = 12
+        Me.glogbtnback.Text = "Back"
         '
         'LoginForm
         '
@@ -247,7 +248,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.glogtbxname)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.glogbtnreg)
+        Me.Controls.Add(Me.glogbtnback)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "LoginForm"
@@ -264,8 +265,8 @@ Partial Class LoginForm
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents glogbtnreg As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gctrlclose As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents glogbtnback As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label5 As Label
     Friend WithEvents glogtbxname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents glogtbxpass As Guna.UI2.WinForms.Guna2TextBox

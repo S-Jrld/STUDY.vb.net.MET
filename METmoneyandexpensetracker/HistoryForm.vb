@@ -19,7 +19,7 @@ Public Class HistoryForm
 
             ' Prepare the MySQL command
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@username", uname)
 
             ' Execute the query and load the data into the DataGridView
             Dim dr As MySqlDataReader = cmd.ExecuteReader
@@ -63,7 +63,7 @@ Public Class HistoryForm
 
             ' Prepare the MySQL command
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@username", uname)
 
             ' Execute the query and fetch the data
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
@@ -153,7 +153,7 @@ Public Class HistoryForm
 
             ' Prepare the MySQL command
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@username", uname)
 
             ' Execute the query and fetch the data
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
@@ -224,7 +224,7 @@ Public Class HistoryForm
         LoadChartData()
 
         'change value of label username to show user acc
-        lblname.Text = username
+        lblname.Text = uname
     End Sub
 
 
