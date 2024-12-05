@@ -3,22 +3,23 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class LoginForm
 
-    Public newuser As Boolean = False
+    Private newuser As Boolean = False
 
-    Public Sub checknewuser(username As String)
-        'create query to be execute in database
-        Dim query As String = "SELECT COUNT(*) FROM tblusers WHERE Username = @Username AND (fname = '' OR fname IS NULL)"
+    Private Sub CheckNewUser(username As String)
+        ' Create query to be executed in the database
+        Dim query As String = "SELECT COUNT(*) FROM tbluser WHERE uname = @username AND (fname = '' OR fname IS NULL)"
 
         Try
-            'check connection state if closed then open
+            ' Check connection state; if closed, then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
-            'save sql query to the variable cmd
-            Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@Username", username)
 
-            'execute query into database and return number of rows selected
+            ' Save SQL query to the variable cmd
+            Dim cmd As New MySqlCommand(query, connection)
+            cmd.Parameters.AddWithValue("@username", username)
+
+            ' Execute query in the database and return the number of rows selected
             Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
             If result > 0 Then
                 newuser = True
@@ -29,42 +30,42 @@ Public Class LoginForm
         Catch ex As Exception
             MsgBox("Error in checknewuser: " & ex.Message)
         Finally
-            'check connection state if open then close
+            ' Check connection state; if open, then close
             If connection.State = ConnectionState.Open Then
                 connection.Close()
             End If
         End Try
     End Sub
 
-    Public Sub checkacc(username As String, password As String)
-        'create a query that will select the number of rows to see if there is an account
-        Dim query As String = "SELECT COUNT(*) FROM tblusers WHERE Username = @Username AND Password = @Password"
+    Private Sub CheckAccount(username As String, password As String)
+        ' Create a query to select the number of rows to see if there is an account
+        Dim query As String = "SELECT COUNT(*) FROM tbluser WHERE uname = @username AND pass = @password"
 
         Try
-            'check connection state if closed then open
+            ' Check connection state; if closed, then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
-            'save sql query to the variable cmd
+            ' Save SQL query to the variable cmd
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@Username", username)
-            cmd.Parameters.AddWithValue("@Password", password)
+            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@password", password)
 
-            'execute query into database and return number of rows selected
+            ' Execute query in the database and return the number of rows selected
             Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
             If result > 0 Then
                 MessageBox.Show("Login successful!")
-                'save the value of username textbox to the global variable to be accessible across forms
-                uname = glogtbxname.Text
+                ' Save the value of username textbox to the global variable to be accessible across forms
+                usernamekey = glogtbxname.Text
 
-                'Proceed to the dashboardform if true else do the survey
-                If newuser = True Then
-                    Dim survey As New SurveyForm
+                ' Proceed to the dashboard or survey form based on user type
+                If newuser Then
+                    Dim survey As New SurveyForm()
                     survey.Show()
                     Me.Hide()
                 Else
-                    Dim dashboard As New DashboardForm
+                    Dim dashboard As New DashboardForm()
                     dashboard.Show()
                     Me.Hide()
                 End If
@@ -76,39 +77,39 @@ Public Class LoginForm
         Catch ex As Exception
             MsgBox("Error in checkacc: " & ex.Message)
         Finally
-            'check connection state if open then close
+            ' Check connection state; if open, then close
             If connection.State = ConnectionState.Open Then
                 connection.Close()
             End If
         End Try
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles glogbtnback.Click
+    Private Sub gbtnback_Click(sender As Object, e As EventArgs) Handles gbtnback.Click
         'change form into starting page
         Dim start As New Form1
         start.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles glogbtnfor.Click
+    Private Sub gbtnforgot_Click(sender As Object, e As EventArgs) Handles gbtnforgot.Click
         'change form into forgotform
         Dim forgot As New ForgotForm
         forgot.Show()
         Hide()
     End Sub
 
-    Private Sub gstartbtn_Click(sender As Object, e As EventArgs) Handles glogbtn.Click
+    Private Sub gbtnlogin_Click(sender As Object, e As EventArgs) Handles gbtnlogin.Click
 
         'check the user if new account or not
-        checknewuser(glogtbxname.Text)
+        CheckNewUser(glogtbxname.Text)
 
         'check if there is an account in the database
-        checkacc(glogtbxname.Text, glogtbxpass.Text)
+        CheckAccount(glogtbxname.Text, glogtbxpass.Text)
     End Sub
 
-    Private Sub gckbxshow1_CheckedChanged(sender As Object, e As EventArgs) Handles gckbxshow1.CheckedChanged
+    Private Sub gcheckshow_CheckedChanged(sender As Object, e As EventArgs) Handles gcheckshow.CheckedChanged
         'the condition to show password
-        If gckbxshow1.Checked Then
+        If gcheckshow.Checked Then
             ' Show the password
             glogtbxpass.PasswordChar = ControlChars.NullChar
         Else ' Hide the password
@@ -116,14 +117,14 @@ Public Class LoginForm
         End If
     End Sub
 
-    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles gctrlclose.Click
+    Private Sub gctrlclose_Click(sender As Object, e As EventArgs) Handles gctrlclose.Click
         'close the application if closebutton.clicked is yes else return to the same form
         If MsgBox("Do you want to close the application?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
             Application.Exit()
         Else
             Dim login As New LoginForm
             login.Show()
-            Me.Hide()
+            Me.Close()
         End If
     End Sub
 End Class

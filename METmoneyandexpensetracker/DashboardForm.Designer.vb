@@ -29,14 +29,14 @@ Partial Class DashboardForm
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.gctrlclose = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.gbtnabout = New Guna.UI2.WinForms.Guna2Button()
-        Me.gpnlmain = New Guna.UI2.WinForms.Guna2Panel()
+        Me.gbtnaboutus = New Guna.UI2.WinForms.Guna2Button()
+        Me.gpanelmain = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.gbtndashboard = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnhistory = New Guna.UI2.WinForms.Guna2Button()
-        Me.gdashbtnout = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnlogout = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtngoal = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnprofile = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
@@ -98,30 +98,30 @@ Partial Class DashboardForm
         Me.gctrlclose.Size = New System.Drawing.Size(45, 29)
         Me.gctrlclose.TabIndex = 4
         '
-        'gbtnabout
+        'gbtnaboutus
         '
-        Me.gbtnabout.BackColor = System.Drawing.Color.Transparent
-        Me.gbtnabout.FillColor = System.Drawing.Color.Transparent
-        Me.gbtnabout.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.gbtnabout.ForeColor = System.Drawing.Color.LightGreen
-        Me.gbtnabout.Location = New System.Drawing.Point(38, 549)
-        Me.gbtnabout.Name = "gbtnabout"
-        Me.gbtnabout.Size = New System.Drawing.Size(97, 23)
-        Me.gbtnabout.TabIndex = 42
-        Me.gbtnabout.Text = "About Us"
+        Me.gbtnaboutus.BackColor = System.Drawing.Color.Transparent
+        Me.gbtnaboutus.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnaboutus.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.gbtnaboutus.ForeColor = System.Drawing.Color.LightGreen
+        Me.gbtnaboutus.Location = New System.Drawing.Point(38, 549)
+        Me.gbtnaboutus.Name = "gbtnaboutus"
+        Me.gbtnaboutus.Size = New System.Drawing.Size(97, 23)
+        Me.gbtnaboutus.TabIndex = 42
+        Me.gbtnaboutus.Text = "About Us"
         '
-        'gpnlmain
+        'gpanelmain
         '
-        Me.gpnlmain.BackColor = System.Drawing.Color.Transparent
-        Me.gpnlmain.BorderColor = System.Drawing.Color.Black
-        Me.gpnlmain.BorderRadius = 20
-        Me.gpnlmain.FillColor = System.Drawing.SystemColors.ControlLight
-        Me.gpnlmain.Location = New System.Drawing.Point(189, 40)
-        Me.gpnlmain.Margin = New System.Windows.Forms.Padding(0)
-        Me.gpnlmain.Name = "gpnlmain"
-        Me.gpnlmain.Size = New System.Drawing.Size(900, 600)
-        Me.gpnlmain.TabIndex = 34
-        Me.gpnlmain.UseTransparentBackground = True
+        Me.gpanelmain.BackColor = System.Drawing.Color.Transparent
+        Me.gpanelmain.BorderColor = System.Drawing.Color.Black
+        Me.gpanelmain.BorderRadius = 20
+        Me.gpanelmain.FillColor = System.Drawing.Color.White
+        Me.gpanelmain.Location = New System.Drawing.Point(191, 40)
+        Me.gpanelmain.Margin = New System.Windows.Forms.Padding(0)
+        Me.gpanelmain.Name = "gpanelmain"
+        Me.gpanelmain.Size = New System.Drawing.Size(900, 600)
+        Me.gpanelmain.TabIndex = 34
+        Me.gpanelmain.UseTransparentBackground = True
         '
         'Guna2DragControl1
         '
@@ -144,18 +144,19 @@ Partial Class DashboardForm
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.BorderRadius = 20
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Controls.Add(Me.gbtndashboard)
-        Me.Guna2Panel2.Controls.Add(Me.gbtnabout)
+        Me.Guna2Panel2.Controls.Add(Me.gbtnaboutus)
         Me.Guna2Panel2.Controls.Add(Me.gbtnhistory)
-        Me.Guna2Panel2.Controls.Add(Me.gdashbtnout)
+        Me.Guna2Panel2.Controls.Add(Me.gbtnlogout)
         Me.Guna2Panel2.Controls.Add(Me.gbtngoal)
         Me.Guna2Panel2.Controls.Add(Me.gbtnprofile)
+        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2Panel2.Location = New System.Drawing.Point(9, 40)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 30)
+        Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(179, 600)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(186, 620)
         Me.Guna2Panel2.TabIndex = 44
         Me.Guna2Panel2.UseTransparentBackground = True
         '
@@ -201,23 +202,23 @@ Partial Class DashboardForm
         Me.gbtnhistory.Text = "History"
         Me.gbtnhistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'gdashbtnout
+        'gbtnlogout
         '
-        Me.gdashbtnout.Animated = True
-        Me.gdashbtnout.BorderRadius = 15
-        Me.gdashbtnout.FillColor = System.Drawing.Color.Empty
-        Me.gdashbtnout.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gdashbtnout.ForeColor = System.Drawing.Color.LightGreen
-        Me.gdashbtnout.Image = CType(resources.GetObject("gdashbtnout.Image"), System.Drawing.Image)
-        Me.gdashbtnout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.gdashbtnout.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gdashbtnout.Location = New System.Drawing.Point(27, 486)
-        Me.gdashbtnout.Margin = New System.Windows.Forms.Padding(0)
-        Me.gdashbtnout.Name = "gdashbtnout"
-        Me.gdashbtnout.Size = New System.Drawing.Size(125, 40)
-        Me.gdashbtnout.TabIndex = 41
-        Me.gdashbtnout.Text = "Logout"
-        Me.gdashbtnout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.gbtnlogout.Animated = True
+        Me.gbtnlogout.BorderRadius = 15
+        Me.gbtnlogout.FillColor = System.Drawing.Color.Empty
+        Me.gbtnlogout.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnlogout.ForeColor = System.Drawing.Color.LightGreen
+        Me.gbtnlogout.Image = CType(resources.GetObject("gbtnlogout.Image"), System.Drawing.Image)
+        Me.gbtnlogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.gbtnlogout.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gbtnlogout.Location = New System.Drawing.Point(27, 486)
+        Me.gbtnlogout.Margin = New System.Windows.Forms.Padding(0)
+        Me.gbtnlogout.Name = "gbtnlogout"
+        Me.gbtnlogout.Size = New System.Drawing.Size(125, 40)
+        Me.gbtnlogout.TabIndex = 41
+        Me.gbtnlogout.Text = "Logout"
+        Me.gbtnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'gbtngoal
         '
@@ -266,10 +267,10 @@ Partial Class DashboardForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1100, 650)
         Me.Controls.Add(Me.Guna2Panel2)
-        Me.Controls.Add(Me.gpnlmain)
+        Me.Controls.Add(Me.gpanelmain)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "DashboardForm"
@@ -291,9 +292,9 @@ Partial Class DashboardForm
     Friend WithEvents gbtngoal As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbtnprofile As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbtndashboard As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gbtnabout As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gdashbtnout As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gpnlmain As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents gbtnaboutus As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnlogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gpanelmain As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel

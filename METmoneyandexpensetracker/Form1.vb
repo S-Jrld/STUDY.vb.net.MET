@@ -1,26 +1,25 @@
 ﻿Public Class Form1
 
-    Private Sub gstartbtn_Click(sender As Object, e As EventArgs) Handles gloginbtn.Click
+    Private Sub gbtnlogin_Click(sender As Object, e As EventArgs) Handles gbtnlogin.Click
         'change into login form
-        Dim login As New LoginForm
+        Dim login As New LoginForm()
         login.Show()
         Me.Hide()
     End Sub
 
-    Private Sub gsignbtn_Click(sender As Object, e As EventArgs) Handles gsignbtn.Click
+    Private Sub gbtnsignup_Click(sender As Object, e As EventArgs) Handles gbtnsignup.Click
         'change into signup form
-        Dim sign As New RegisterForm
+        Dim sign As New RegisterForm()
         sign.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles gctrlclose.Click
-        'close the application if closebutton.clicked is yes else return to the same form
+    Private Sub gctrlclose_Click(sender As Object, e As EventArgs) Handles gctrlclose.Click
         If MsgBox("Do you want to close the application?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
             Application.Exit()
         Else
-            Dim start As New Form1
-            start.Show()
+            Dim login As New LoginForm
+            login.Show()
             Me.Hide()
         End If
     End Sub

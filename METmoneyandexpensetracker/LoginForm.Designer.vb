@@ -30,13 +30,13 @@ Partial Class LoginForm
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.gctrlclose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.glogbtnfor = New Guna.UI2.WinForms.Guna2Button()
-        Me.glogbtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnforgot = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnlogin = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.gckbxshow1 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
+        Me.gcheckshow = New Guna.UI2.WinForms.Guna2ImageCheckBox()
         Me.glogtbxpass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.glogtbxname = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.glogbtnback = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnback = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,31 +110,31 @@ Partial Class LoginForm
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Login"
         '
-        'glogbtnfor
+        'gbtnforgot
         '
-        Me.glogbtnfor.FillColor = System.Drawing.Color.Transparent
-        Me.glogbtnfor.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.glogbtnfor.ForeColor = System.Drawing.Color.Black
-        Me.glogbtnfor.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.glogbtnfor.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.glogbtnfor.Location = New System.Drawing.Point(389, 333)
-        Me.glogbtnfor.Margin = New System.Windows.Forms.Padding(0)
-        Me.glogbtnfor.Name = "glogbtnfor"
-        Me.glogbtnfor.Size = New System.Drawing.Size(163, 22)
-        Me.glogbtnfor.TabIndex = 15
-        Me.glogbtnfor.Text = "Forgot password?"
+        Me.gbtnforgot.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnforgot.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnforgot.ForeColor = System.Drawing.Color.Black
+        Me.gbtnforgot.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnforgot.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.gbtnforgot.Location = New System.Drawing.Point(389, 333)
+        Me.gbtnforgot.Margin = New System.Windows.Forms.Padding(0)
+        Me.gbtnforgot.Name = "gbtnforgot"
+        Me.gbtnforgot.Size = New System.Drawing.Size(163, 22)
+        Me.gbtnforgot.TabIndex = 15
+        Me.gbtnforgot.Text = "Forgot password?"
         '
-        'glogbtn
+        'gbtnlogin
         '
-        Me.glogbtn.BorderRadius = 15
-        Me.glogbtn.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.glogbtn.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.glogbtn.ForeColor = System.Drawing.Color.White
-        Me.glogbtn.Location = New System.Drawing.Point(389, 279)
-        Me.glogbtn.Name = "glogbtn"
-        Me.glogbtn.Size = New System.Drawing.Size(155, 35)
-        Me.glogbtn.TabIndex = 16
-        Me.glogbtn.Text = "Login"
+        Me.gbtnlogin.BorderRadius = 15
+        Me.gbtnlogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gbtnlogin.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnlogin.ForeColor = System.Drawing.Color.White
+        Me.gbtnlogin.Location = New System.Drawing.Point(389, 279)
+        Me.gbtnlogin.Name = "gbtnlogin"
+        Me.gbtnlogin.Size = New System.Drawing.Size(155, 35)
+        Me.gbtnlogin.TabIndex = 16
+        Me.gbtnlogin.Text = "Login"
         '
         'Label4
         '
@@ -148,19 +148,19 @@ Partial Class LoginForm
         Me.Label4.Text = "Login to continue"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'gckbxshow1
+        'gcheckshow
         '
-        Me.gckbxshow1.BackColor = System.Drawing.Color.White
-        Me.gckbxshow1.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
-        Me.gckbxshow1.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
-        Me.gckbxshow1.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.gckbxshow1.ImageRotate = 0!
-        Me.gckbxshow1.ImageSize = New System.Drawing.Size(25, 25)
-        Me.gckbxshow1.Location = New System.Drawing.Point(503, 211)
-        Me.gckbxshow1.Name = "gckbxshow1"
-        Me.gckbxshow1.Size = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.TabIndex = 29
+        Me.gcheckshow.BackColor = System.Drawing.Color.White
+        Me.gcheckshow.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
+        Me.gcheckshow.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gcheckshow.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
+        Me.gcheckshow.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.gcheckshow.ImageRotate = 0!
+        Me.gcheckshow.ImageSize = New System.Drawing.Size(25, 25)
+        Me.gcheckshow.Location = New System.Drawing.Point(503, 211)
+        Me.gcheckshow.Name = "gcheckshow"
+        Me.gcheckshow.Size = New System.Drawing.Size(30, 30)
+        Me.gcheckshow.TabIndex = 29
         '
         'glogtbxpass
         '
@@ -218,21 +218,21 @@ Partial Class LoginForm
         Me.glogtbxname.Size = New System.Drawing.Size(255, 35)
         Me.glogtbxname.TabIndex = 13
         '
-        'glogbtnback
+        'gbtnback
         '
-        Me.glogbtnback.FillColor = System.Drawing.Color.Transparent
-        Me.glogbtnback.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.glogbtnback.ForeColor = System.Drawing.Color.Black
-        Me.glogbtnback.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.glogbtnback.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.glogbtnback.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
-        Me.glogbtnback.Location = New System.Drawing.Point(300, 40)
-        Me.glogbtnback.Margin = New System.Windows.Forms.Padding(0)
-        Me.glogbtnback.Name = "glogbtnback"
-        Me.glogbtnback.PressedColor = System.Drawing.Color.Transparent
-        Me.glogbtnback.Size = New System.Drawing.Size(65, 22)
-        Me.glogbtnback.TabIndex = 12
-        Me.glogbtnback.Text = "Back"
+        Me.gbtnback.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnback.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnback.ForeColor = System.Drawing.Color.Black
+        Me.gbtnback.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnback.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.gbtnback.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
+        Me.gbtnback.Location = New System.Drawing.Point(300, 40)
+        Me.gbtnback.Margin = New System.Windows.Forms.Padding(0)
+        Me.gbtnback.Name = "gbtnback"
+        Me.gbtnback.PressedColor = System.Drawing.Color.Transparent
+        Me.gbtnback.Size = New System.Drawing.Size(65, 22)
+        Me.gbtnback.TabIndex = 12
+        Me.gbtnback.Text = "Back"
         '
         'LoginForm
         '
@@ -241,14 +241,14 @@ Partial Class LoginForm
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(600, 400)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.gckbxshow1)
-        Me.Controls.Add(Me.glogbtn)
-        Me.Controls.Add(Me.glogbtnfor)
+        Me.Controls.Add(Me.gcheckshow)
+        Me.Controls.Add(Me.gbtnlogin)
+        Me.Controls.Add(Me.gbtnforgot)
         Me.Controls.Add(Me.glogtbxpass)
         Me.Controls.Add(Me.glogtbxname)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.glogbtnback)
+        Me.Controls.Add(Me.gbtnback)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "LoginForm"
@@ -266,12 +266,12 @@ Partial Class LoginForm
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents gctrlclose As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents glogbtnback As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnback As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label5 As Label
     Friend WithEvents glogtbxname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents glogtbxpass As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents glogbtnfor As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents glogbtn As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gckbxshow1 As Guna.UI2.WinForms.Guna2ImageCheckBox
+    Friend WithEvents gbtnforgot As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnlogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gcheckshow As Guna.UI2.WinForms.Guna2ImageCheckBox
     Friend WithEvents Label4 As Label
 End Class

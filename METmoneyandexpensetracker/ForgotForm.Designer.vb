@@ -28,18 +28,17 @@ Partial Class ForgotForm
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.gforbtncnl = New Guna.UI2.WinForms.Guna2Button()
+        Me.gctrlclose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.gforbtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.gfortbxcon = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.gfortbxnew = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.gfortbxname = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.gckbxshow1 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
-        Me.gckbxshow2 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
+        Me.gcheckshow1 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
+        Me.gcheckshow2 = New Guna.UI2.WinForms.Guna2ImageCheckBox()
+        Me.gbtnback = New Guna.UI2.WinForms.Guna2Button()
+        Me.gtbxconfirmpass = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.gtbxnewpass = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.gbtnchangepass = New Guna.UI2.WinForms.Guna2Button()
+        Me.gtbxuname = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,7 +59,7 @@ Partial Class ForgotForm
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox2)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox1)
+        Me.Guna2Panel1.Controls.Add(Me.gctrlclose)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -93,196 +92,210 @@ Partial Class ForgotForm
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox2.TabIndex = 5
         '
-        'Guna2ControlBox1
+        'gctrlclose
         '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(552, 1)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
-        Me.Guna2ControlBox1.TabIndex = 4
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(270, 161)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 16)
-        Me.Label7.TabIndex = 28
-        Me.Label7.Text = "response to error"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'gforbtncnl
-        '
-        Me.gforbtncnl.FillColor = System.Drawing.Color.Transparent
-        Me.gforbtncnl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gforbtncnl.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.gforbtncnl.Location = New System.Drawing.Point(277, 347)
-        Me.gforbtncnl.Name = "gforbtncnl"
-        Me.gforbtncnl.Size = New System.Drawing.Size(93, 27)
-        Me.gforbtncnl.TabIndex = 33
-        Me.gforbtncnl.Text = "Cancel"
+        Me.gctrlclose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gctrlclose.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gctrlclose.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gctrlclose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.gctrlclose.IconColor = System.Drawing.Color.White
+        Me.gctrlclose.Location = New System.Drawing.Point(552, 1)
+        Me.gctrlclose.Name = "gctrlclose"
+        Me.gctrlclose.Size = New System.Drawing.Size(45, 29)
+        Me.gctrlclose.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(304, 131)
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(283, 147)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(246, 16)
+        Me.Label6.Size = New System.Drawing.Size(272, 18)
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "you can change your password here"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(326, 106)
+        Me.Label5.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(282, 113)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(190, 25)
+        Me.Label5.Size = New System.Drawing.Size(202, 24)
         Me.Label5.TabIndex = 32
         Me.Label5.Text = "Forgot password?"
-        '
-        'gforbtn
-        '
-        Me.gforbtn.BorderRadius = 10
-        Me.gforbtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.gforbtn.ForeColor = System.Drawing.Color.White
-        Me.gforbtn.Location = New System.Drawing.Point(430, 334)
-        Me.gforbtn.Name = "gforbtn"
-        Me.gforbtn.Size = New System.Drawing.Size(143, 40)
-        Me.gforbtn.TabIndex = 36
-        Me.gforbtn.Text = "Confirm"
         '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(396, 55)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(516, 47)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(48, 48)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox1.TabIndex = 40
         Me.Guna2PictureBox1.TabStop = False
         '
-        'gfortbxcon
+        'gcheckshow1
         '
-        Me.gfortbxcon.BorderRadius = 12
-        Me.gfortbxcon.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gfortbxcon.DefaultText = ""
-        Me.gfortbxcon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gfortbxcon.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gfortbxcon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gfortbxcon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gfortbxcon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gfortbxcon.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gfortbxcon.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gfortbxcon.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
-        Me.gfortbxcon.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gfortbxcon.Location = New System.Drawing.Point(273, 277)
-        Me.gfortbxcon.Margin = New System.Windows.Forms.Padding(4)
-        Me.gfortbxcon.Name = "gfortbxcon"
-        Me.gfortbxcon.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gfortbxcon.PlaceholderText = "Confirm Password"
-        Me.gfortbxcon.SelectedText = ""
-        Me.gfortbxcon.Size = New System.Drawing.Size(300, 40)
-        Me.gfortbxcon.TabIndex = 39
+        Me.gcheckshow1.BackColor = System.Drawing.Color.White
+        Me.gcheckshow1.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
+        Me.gcheckshow1.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gcheckshow1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
+        Me.gcheckshow1.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.gcheckshow1.ImageRotate = 0!
+        Me.gcheckshow1.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gcheckshow1.Location = New System.Drawing.Point(524, 240)
+        Me.gcheckshow1.Name = "gcheckshow1"
+        Me.gcheckshow1.Size = New System.Drawing.Size(30, 30)
+        Me.gcheckshow1.TabIndex = 41
         '
-        'gfortbxnew
+        'gcheckshow2
         '
-        Me.gfortbxnew.BorderRadius = 12
-        Me.gfortbxnew.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gfortbxnew.DefaultText = ""
-        Me.gfortbxnew.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gfortbxnew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gfortbxnew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gfortbxnew.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gfortbxnew.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gfortbxnew.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gfortbxnew.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gfortbxnew.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
-        Me.gfortbxnew.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gfortbxnew.Location = New System.Drawing.Point(273, 230)
-        Me.gfortbxnew.Margin = New System.Windows.Forms.Padding(4)
-        Me.gfortbxnew.Name = "gfortbxnew"
-        Me.gfortbxnew.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gfortbxnew.PlaceholderText = "New Password"
-        Me.gfortbxnew.SelectedText = ""
-        Me.gfortbxnew.Size = New System.Drawing.Size(300, 40)
-        Me.gfortbxnew.TabIndex = 38
+        Me.gcheckshow2.BackColor = System.Drawing.Color.White
+        Me.gcheckshow2.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
+        Me.gcheckshow2.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gcheckshow2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
+        Me.gcheckshow2.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.gcheckshow2.ImageRotate = 0!
+        Me.gcheckshow2.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gcheckshow2.Location = New System.Drawing.Point(524, 282)
+        Me.gcheckshow2.Name = "gcheckshow2"
+        Me.gcheckshow2.Size = New System.Drawing.Size(30, 30)
+        Me.gcheckshow2.TabIndex = 42
         '
-        'gfortbxname
+        'gbtnback
         '
-        Me.gfortbxname.BorderRadius = 12
-        Me.gfortbxname.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gfortbxname.DefaultText = ""
-        Me.gfortbxname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gfortbxname.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gfortbxname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gfortbxname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gfortbxname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gfortbxname.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gfortbxname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gfortbxname.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.User_icon
-        Me.gfortbxname.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gfortbxname.Location = New System.Drawing.Point(273, 184)
-        Me.gfortbxname.Margin = New System.Windows.Forms.Padding(4)
-        Me.gfortbxname.Name = "gfortbxname"
-        Me.gfortbxname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gfortbxname.PlaceholderText = "Username"
-        Me.gfortbxname.SelectedText = ""
-        Me.gfortbxname.Size = New System.Drawing.Size(300, 40)
-        Me.gfortbxname.TabIndex = 37
+        Me.gbtnback.BackColor = System.Drawing.Color.Transparent
+        Me.gbtnback.BorderRadius = 10
+        Me.gbtnback.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnback.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnback.ForeColor = System.Drawing.Color.Black
+        Me.gbtnback.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnback.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.gbtnback.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
+        Me.gbtnback.Location = New System.Drawing.Point(273, 42)
+        Me.gbtnback.Margin = New System.Windows.Forms.Padding(0)
+        Me.gbtnback.Name = "gbtnback"
+        Me.gbtnback.Size = New System.Drawing.Size(71, 24)
+        Me.gbtnback.TabIndex = 43
+        Me.gbtnback.Text = "Back"
         '
-        'gckbxshow1
+        'gtbxconfirmpass
         '
-        Me.gckbxshow1.BackColor = System.Drawing.Color.White
-        Me.gckbxshow1.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
-        Me.gckbxshow1.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
-        Me.gckbxshow1.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.gckbxshow1.ImageRotate = 0!
-        Me.gckbxshow1.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.Location = New System.Drawing.Point(534, 235)
-        Me.gckbxshow1.Name = "gckbxshow1"
-        Me.gckbxshow1.Size = New System.Drawing.Size(30, 30)
-        Me.gckbxshow1.TabIndex = 41
+        Me.gtbxconfirmpass.BackColor = System.Drawing.Color.Transparent
+        Me.gtbxconfirmpass.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxconfirmpass.BorderRadius = 15
+        Me.gtbxconfirmpass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gtbxconfirmpass.DefaultText = ""
+        Me.gtbxconfirmpass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gtbxconfirmpass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gtbxconfirmpass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxconfirmpass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxconfirmpass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gtbxconfirmpass.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gtbxconfirmpass.ForeColor = System.Drawing.Color.Black
+        Me.gtbxconfirmpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gtbxconfirmpass.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gtbxconfirmpass.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
+        Me.gtbxconfirmpass.IconRightSize = New System.Drawing.Size(25, 25)
+        Me.gtbxconfirmpass.Location = New System.Drawing.Point(273, 280)
+        Me.gtbxconfirmpass.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxconfirmpass.Name = "gtbxconfirmpass"
+        Me.gtbxconfirmpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.gtbxconfirmpass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxconfirmpass.PlaceholderText = "Confirm Password"
+        Me.gtbxconfirmpass.SelectedText = ""
+        Me.gtbxconfirmpass.Size = New System.Drawing.Size(291, 35)
+        Me.gtbxconfirmpass.TabIndex = 47
         '
-        'gckbxshow2
+        'gtbxnewpass
         '
-        Me.gckbxshow2.BackColor = System.Drawing.Color.White
-        Me.gckbxshow2.CheckedState.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.ShowPass_icon48
-        Me.gckbxshow2.CheckedState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.HidePass_icon50
-        Me.gckbxshow2.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.gckbxshow2.ImageRotate = 0!
-        Me.gckbxshow2.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gckbxshow2.Location = New System.Drawing.Point(534, 282)
-        Me.gckbxshow2.Name = "gckbxshow2"
-        Me.gckbxshow2.Size = New System.Drawing.Size(30, 30)
-        Me.gckbxshow2.TabIndex = 42
+        Me.gtbxnewpass.BackColor = System.Drawing.Color.Transparent
+        Me.gtbxnewpass.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxnewpass.BorderRadius = 15
+        Me.gtbxnewpass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gtbxnewpass.DefaultText = ""
+        Me.gtbxnewpass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gtbxnewpass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gtbxnewpass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxnewpass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxnewpass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gtbxnewpass.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gtbxnewpass.ForeColor = System.Drawing.Color.Black
+        Me.gtbxnewpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gtbxnewpass.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gtbxnewpass.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.Pass_icon
+        Me.gtbxnewpass.IconRightSize = New System.Drawing.Size(25, 25)
+        Me.gtbxnewpass.Location = New System.Drawing.Point(273, 237)
+        Me.gtbxnewpass.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxnewpass.Name = "gtbxnewpass"
+        Me.gtbxnewpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.gtbxnewpass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxnewpass.PlaceholderText = "New Password"
+        Me.gtbxnewpass.SelectedText = ""
+        Me.gtbxnewpass.Size = New System.Drawing.Size(291, 35)
+        Me.gtbxnewpass.TabIndex = 45
+        '
+        'gbtnchangepass
+        '
+        Me.gbtnchangepass.BackColor = System.Drawing.Color.Transparent
+        Me.gbtnchangepass.BorderRadius = 15
+        Me.gbtnchangepass.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gbtnchangepass.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnchangepass.ForeColor = System.Drawing.Color.White
+        Me.gbtnchangepass.Location = New System.Drawing.Point(398, 337)
+        Me.gbtnchangepass.Name = "gbtnchangepass"
+        Me.gbtnchangepass.Size = New System.Drawing.Size(166, 35)
+        Me.gbtnchangepass.TabIndex = 46
+        Me.gbtnchangepass.Text = "Change password"
+        '
+        'gtbxuname
+        '
+        Me.gtbxuname.BackColor = System.Drawing.Color.Transparent
+        Me.gtbxuname.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxuname.BorderRadius = 15
+        Me.gtbxuname.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gtbxuname.DefaultText = ""
+        Me.gtbxuname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gtbxuname.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gtbxuname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxuname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxuname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gtbxuname.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gtbxuname.ForeColor = System.Drawing.Color.Black
+        Me.gtbxuname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gtbxuname.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gtbxuname.IconLeft = Global.METmoneyandexpensetracker.My.Resources.Resources.User_icon
+        Me.gtbxuname.IconRightSize = New System.Drawing.Size(25, 25)
+        Me.gtbxuname.Location = New System.Drawing.Point(273, 194)
+        Me.gtbxuname.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxuname.Name = "gtbxuname"
+        Me.gtbxuname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.gtbxuname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxuname.PlaceholderText = "Username"
+        Me.gtbxuname.SelectedText = ""
+        Me.gtbxuname.Size = New System.Drawing.Size(291, 35)
+        Me.gtbxuname.TabIndex = 44
         '
         'ForgotForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(600, 400)
-        Me.Controls.Add(Me.gckbxshow2)
-        Me.Controls.Add(Me.gckbxshow1)
+        Me.Controls.Add(Me.gbtnchangepass)
+        Me.Controls.Add(Me.gtbxuname)
+        Me.Controls.Add(Me.gbtnback)
+        Me.Controls.Add(Me.gcheckshow2)
+        Me.Controls.Add(Me.gcheckshow1)
         Me.Controls.Add(Me.Guna2PictureBox1)
-        Me.Controls.Add(Me.gfortbxcon)
-        Me.Controls.Add(Me.gforbtncnl)
-        Me.Controls.Add(Me.gfortbxnew)
-        Me.Controls.Add(Me.gfortbxname)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.gforbtn)
+        Me.Controls.Add(Me.gtbxnewpass)
+        Me.Controls.Add(Me.gtbxconfirmpass)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ForgotForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -296,19 +309,18 @@ Partial Class ForgotForm
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
-    Friend WithEvents Label7 As Label
-    Friend WithEvents gforbtncnl As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents gforbtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gctrlclose As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents gfortbxcon As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents gfortbxnew As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents gfortbxname As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents gckbxshow2 As Guna.UI2.WinForms.Guna2ImageCheckBox
-    Friend WithEvents gckbxshow1 As Guna.UI2.WinForms.Guna2ImageCheckBox
+    Friend WithEvents gcheckshow2 As Guna.UI2.WinForms.Guna2ImageCheckBox
+    Friend WithEvents gcheckshow1 As Guna.UI2.WinForms.Guna2ImageCheckBox
+    Friend WithEvents gbtnback As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gtbxconfirmpass As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents gtbxnewpass As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents gbtnchangepass As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gtbxuname As Guna.UI2.WinForms.Guna2TextBox
 End Class

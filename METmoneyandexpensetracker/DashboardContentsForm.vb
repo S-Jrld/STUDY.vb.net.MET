@@ -1,182 +1,111 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Web.Configuration
 Imports System.Windows.Forms.DataVisualization.Charting
+Imports ZstdSharp.Unsafe
 
 Public Class DashboardContentsForm
-    Dim calculatetotal As Decimal
-    Public Sub Dvg_load()
-        'clear the lblexp to avoid redunduncy of values
-        calculatetotal = 0
-        'clear the rows of the datagrid view
-        gdashgrid.Rows.Clear()
-        Dim query As String = ""
-        If expperiod = "Monthly" Then
-            query = "SELECT expid, category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @Username AND YEAR(expdate) = YEAR(CURDATE()) AND MONTH(expdate) = MONTH(CURDATE())"
-        ElseIf expperiod = "Yearly" Then
-            query = "SELECT expid, category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @Username AND YEAR(expdate) = YEAR(CURDATE())"
-        End If
-        'will create a query to show the values into the datagridview
-        Try
 
+    Public Sub DataGridView_load()
+        ' Clear the value of totalcalc
+        gtotal = 0
+
+        ' Clear the rows of the DataGridView
+        gdashgrid.Rows.Clear()
+
+        Dim query As String = ""
+        If gexpperiod = "Monthly" Then
+            query = "SELECT transid, transstatus, category, transname, price, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND (YEAR(transdate) = YEAR(CURDATE()) AND MONTH(transdate) = MONTH(CURDATE()))"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "SELECT transid, transstatus, category, transname, price, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND YEAR(transdate) = YEAR(CURDATE())"
+        End If
+
+        ' Create a query to show the values into the DataGridView
+        Try
+            ' Check connection state; if closed, then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
-            Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@Username", uname)
+            ' Save SQL query to the variable cmd
+            Using cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.AddWithValue("@username", usernamekey)
 
-            Dim dr As MySqlDataReader = cmd.ExecuteReader
-            While dr.Read
-                gdashgrid.Rows.Add(
-                    dr.Item("expid"),
-                    dr.Item("category"),
-                    dr.Item("expname"),
-                    Convert.ToDecimal(dr("price")).ToString("F2"),
-                    Convert.ToInt32(dr("qty")),
-                    Convert.ToDateTime(dr("expdate")).ToString("yyyy-MM-dd"),
-                    Convert.ToDecimal(dr("total")).ToString("F2")
-                )
-                calculatetotal += Convert.ToDecimal(dr("total"))
-            End While
+                ' Execute query in the database and return the read value of every column selected
+                Using dr As MySqlDataReader = cmd.ExecuteReader()
+                    While dr.Read()
+                        gdashgrid.Rows.Add(
+                            dr.Item("transid"),
+                            dr.Item("transstatus"),
+                            dr.Item("category"),
+                            dr.Item("transname"),
+                            Convert.ToDecimal(dr("price")).ToString("F2"),
+                            Convert.ToInt32(dr("quantity")),
+                            Convert.ToDecimal(dr("total")).ToString("F2"),
+                            Convert.ToDateTime(dr("transdate")).ToString("yyyy-MM-dd")
+                        )
+                        gtotal += Convert.ToDecimal(dr("total"))
+                    End While
+                End Using
+            End Using
 
-            dr.Close()
-
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in dgvload from dashcontentsform: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show("Error in dgvload from dashcontentsform: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
+            ' Check connection state; if open, then close
             If connection.State = ConnectionState.Open Then
                 connection.Close()
             End If
         End Try
-        gadddate.Value = Now
-        'change the lblexp to display values of total expenses
-        lblexp.Text = calculatetotal
+
+        ' Update the total expense label
+        lblexp.Text = gtotal.ToString("F2")
 
     End Sub
 
-    Public Sub Save()
-        'create query to insert values into the database
+    Private Sub DeleteTransaction(transactionId As Integer)
+        Dim query As String = "DELETE FROM tbltransaction WHERE transid = @transid"
+
         Try
+            ' Check connection state; if closed, then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
-            Dim price As Decimal = CDec(gaddtbxprice.Text)
-            Dim qty As Integer = CInt(gaddtbxqty.Text)
-            Dim total As Decimal = price * qty
-
-            Dim cmd As New MySqlCommand("INSERT INTO `tblexpenses`(`userid`, `Username`, `category`, `expname`, `price`, `qty`, `expdate`, `total`) VALUES ((SELECT userid FROM tblusers WHERE Username = @Username), @Username, @category, @expname, @price, @qty, @expdate, @total)", connection)
-            cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@Username", uname)
-            cmd.Parameters.AddWithValue("@category", gaddcbxcat.Text)
-            cmd.Parameters.AddWithValue("@expname", gaddtbxname.Text)
-            cmd.Parameters.AddWithValue("@price", price)
-            cmd.Parameters.AddWithValue("@qty", qty)
-            cmd.Parameters.AddWithValue("@expdate", CDate(gadddate.Value))
-            cmd.Parameters.AddWithValue("@total", total)
-
-            Dim i As Integer = cmd.ExecuteNonQuery
-            If i > 0 Then
-                MessageBox.Show("Save Record Succesfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Save Record Unsuccessfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        Finally
-            connection.Close()
-        End Try
-        clear()
-        Dvg_load()
-
-    End Sub
-    Public Sub Updaterecord()
-        'create a query that will update the values of a tuple
-        Try
-            If connection.State = ConnectionState.Closed Then
-                connection.Open()
-            End If
-
-            Dim price As Decimal = CDec(gaddtbxprice.Text)
-            Dim qty As Integer = CInt(gaddtbxqty.Text)
-            Dim total As Decimal = price * qty
-
-            Dim cmd As New MySqlCommand("UPDATE `tblexpenses` SET `category`=@category,`expname`=@expname,`price`=@price,`qty`=@qty,`expdate`=@expdate,`total`=@total WHERE expid = @id", connection)
-            cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@id", userid)
-            cmd.Parameters.AddWithValue("@category", gaddcbxcat.Text)
-            cmd.Parameters.AddWithValue("@expname", gaddtbxname.Text)
-            cmd.Parameters.AddWithValue("@price", price)
-            cmd.Parameters.AddWithValue("@qty", qty)
-            cmd.Parameters.AddWithValue("@expdate", CDate(gadddate.Value))
-            cmd.Parameters.AddWithValue("@total", total)
-
-            Dim i As Integer = cmd.ExecuteNonQuery
-            If i > 0 Then
-                MessageBox.Show("Update Record Success!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Update Record Failed!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        Finally
-            connection.Close()
-        End Try
-        clear()
-        Dvg_load()
-
-    End Sub
-    Public Sub Delete()
-        If MsgBox("Are you sure you want to Delete this record?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
-            'delete a tuple from the datagridview
-            Try
-                If connection.State = ConnectionState.Closed Then
-                    connection.Open()
-                End If
-
-                Dim exid As Integer = CInt(gaddtbxid.Text)
-
-                Dim cmd As New MySqlCommand("DELETE FROM tblexpenses WHERE expid = @expid", connection)
+            ' Save SQL query to the variable cmd
+            Using cmd As New MySqlCommand(query, connection)
                 cmd.Parameters.Clear()
-                cmd.Parameters.AddWithValue("@expid", exid)
+                cmd.Parameters.AddWithValue("@transid", transactionId)
 
-                Dim i As Integer = cmd.ExecuteNonQuery
+                ' Execute the query to delete the record from the database
+                Dim i As Integer = cmd.ExecuteNonQuery()
                 If i > 0 Then
-                    MessageBox.Show("Record Deletion Success!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Record deleted successfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MessageBox.Show("Record Deletion Failed!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                    MessageBox.Show("Failed to delete record!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 End If
+            End Using
 
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message)
-            Finally
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in DeleteTransaction: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            MessageBox.Show("Error in DeleteTransaction: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Check connection state; if open, then close
+            If connection.State = ConnectionState.Open Then
                 connection.Close()
-            End Try
-            clear()
-            Dvg_load()
-        Else
-            Return
-        End If
-    End Sub
-
-    Public Sub clear()
-        'clear the fields of textboxes
-        gaddcbxcat.Text = ""
-        gaddtbxname.Clear()
-        gaddtbxprice.Clear()
-        gaddtbxqty.Clear()
-        gadddate.Value = Now
-        gaddtbxid.Clear()
+            End If
+        End Try
     End Sub
 
     Public Sub LoadChartData()
 
         Dim query As String = ""
-        If expperiod = "Monthly" Then
-            query = "SELECT category, SUM(total) AS total_expense FROM tblexpenses where Username = @Username AND YEAR(expdate) = YEAR(CURDATE()) AND MONTH(expdate) = MONTH(CURDATE()) GROUP BY category"
-        ElseIf expperiod = "Yearly" Then
-            query = "SELECT category, SUM(total) AS total_expense FROM tblexpenses where Username = @Username AND YEAR(expdate) = YEAR(CURDATE()) GROUP BY category"
+        If gexpperiod = "Monthly" Then
+            query = "SELECT category, SUM(total) AS total_expense FROM tbltransaction where uname = @username AND (YEAR(transdate) = YEAR(CURDATE()) AND MONTH(transdate) = MONTH(CURDATE())) GROUP BY category"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "SELECT category, SUM(total) AS total_expense FROM tbltransaction where uname = @username AND YEAR(transdate) = YEAR(CURDATE()) GROUP BY category"
         End If
         Try
             If connection.State = ConnectionState.Closed Then
@@ -184,7 +113,7 @@ Public Class DashboardContentsForm
             End If
 
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@Username", uname)
+            cmd.Parameters.AddWithValue("@Username", usernamekey)
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
             While dr.Read()
                 Dim category As String = dr("category").ToString()
@@ -196,47 +125,68 @@ Public Class DashboardContentsForm
             dr.Close()
 
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
+            MessageBox.Show("Error in loadchartdata from dashcontentform: " & ex.Message)
         Finally
             connection.Close()
         End Try
-        Dvg_load()
+        DataGridView_load()
     End Sub
 
-    Public Sub newbudget()
-        'create a query that will insert a new balance into the table
-        Dim query As String = "INSERT INTO tblbalance(userid, Username, balance, remainbal, totalexp, startdate) VALUES((SELECT userid FROM tblusers WHERE Username = @Username), @Username, @balance, @remainbal, @totalexp, @startdate)"
-        Dim remaining As Decimal = lblbudget.Text - lblexp.Text
-        If MsgBox("Do you want to set new budget?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
-            Try
-                If connection.State = ConnectionState.Closed Then
-                    connection.Open()
-                End If
-
-                Dim cmd As New MySqlCommand(query, connection)
-                cmd.Parameters.Clear()
-                cmd.Parameters.AddWithValue("@Username", uname)
-                cmd.Parameters.AddWithValue("@balance", gtbxbudget.Text)
-                cmd.Parameters.AddWithValue("@remainbal", remaining)
-                cmd.Parameters.AddWithValue("@totalexp", lblexp.Text)
-                cmd.Parameters.AddWithValue("@startdate", Now())
-
-                Dim i As Integer = cmd.ExecuteNonQuery
-                If i > 0 Then
-                    MessageBox.Show("Set New Budget Succesfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Else
-                    MessageBox.Show("Set New Budget Unsuccessfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-                End If
-
-            Catch ex As Exception
-                MessageBox.Show("An error occurred: newbalance" & ex.Message)
-            Finally
-                connection.Close()
-            End Try
+    Public Sub SelectBalance()
+        Dim query As String = ""
+        If gexpperiod = "Monthly" Then
+            query = "SELECT budgetname, budget, availbal, totalexp, startdate FROM tblbalance WHERE budgetname = 'Monthly' AND (YEAR(startdate) = YEAR(CURDATE()) AND MONTH(startdate) = MONTH(CURDATE())) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "SELECT budgetname, budget, availbal, totalexp, startdate FROM tblbalance WHERE budgetname = 'Yearly' AND YEAR(startdate) = YEAR(CURDATE()) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
         End If
+
+        Try
+            ' Check connection state; if closed, then open
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
+
+            ' Save SQL query to the variable cmd
+            Dim cmd As New MySqlCommand(query, connection)
+            ' Execute query into the database and return the data retrieved
+            Dim dr As MySqlDataReader = cmd.ExecuteReader()
+            If dr.Read() Then
+                gbudgetname = dr("budgetname").ToString()
+                gbudget = Convert.ToDecimal(dr("budget"))
+                gavailbal = Convert.ToDecimal(dr("availbal"))
+                gtotalexp = Convert.ToDecimal(dr("totalexp"))
+                gstartdate = Convert.ToDateTime(dr("startdate")).ToString("yyyy-MM-dd")
+            End If
+
+            dr.Close()
+
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in SelectBalance: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            MessageBox.Show("Error in SelectBalance: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Check connection state; if open, then close
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
+        End Try
+
+        ' Update UI labels
+        lblbudgetname.Text = gbudgetname
+        lblavailbal.Text = gavailbal.ToString("F2")
+        lblexp.Text = gtotalexp.ToString("F2")
+        lblstartdate.Text = gstartdate
     End Sub
-    Public Sub selectcurrentbalance()
-        Dim query As String = "SELECT balance, startdate FROM tblbalance ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+
+    Public Sub UpdateBudget()
+        ' Calculate the remaining balance
+        Dim remaining As Decimal = gbudget - gtotal
+        Dim query As String = ""
+        If gexpperiod = "Monthly" Then
+            query = "UPDATE tblbalance SET availbal = @availbal, totalexp = @totalexp WHERE budgetname = 'Monthly' AND (YEAR(startdate) = YEAR(CURDATE()) AND MONTH(startdate) = MONTH(CURDATE())) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "UPDATE tblbalance SET availbal = @availbal, totalexp = @totalexp WHERE budgetname = 'Yearly' AND YEAR(startdate) = YEAR(CURDATE()) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+        End If
 
         Try
             If connection.State = ConnectionState.Closed Then
@@ -244,16 +194,26 @@ Public Class DashboardContentsForm
             End If
 
             Dim cmd As New MySqlCommand(query, connection)
-            Dim dr As MySqlDataReader = cmd.ExecuteReader
-            While dr.Read
-                balance = Convert.ToDecimal(dr("balance"))
-                startdate = Convert.ToDateTime(dr("startdate")).ToString("yyyy-MM-dd")
-            End While
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@availbal", remaining)
+            cmd.Parameters.AddWithValue("@totalexp", gtotal)
 
-            dr.Close()
+            Dim i As Integer = cmd.ExecuteNonQuery()
+            If i > 0 Then
+                ' Update the global variable gavailbal
+                gavailbal = remaining
 
+                ' Update UI labels
+                lblbudgetname.Text = gbudgetname
+                lblavailbal.Text = gavailbal.ToString("F2")
+                lblexp.Text = gtotalexp.ToString("F2")
+                lblstartdate.Text = gstartdate
+            End If
+
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in UpdateBudget: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
-            MessageBox.Show("An error occurred: SelectCurrentBalance" & ex.Message)
+            MessageBox.Show("Error in UpdateBudget: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             If connection.State = ConnectionState.Open Then
                 connection.Close()
@@ -261,96 +221,60 @@ Public Class DashboardContentsForm
         End Try
     End Sub
 
-    Public Sub addbudget()
-        Dim budget As Decimal = balance + Val(gtbxbudget.Text)
-        Dim query As String = "UPDATE tblbalance SET balance = @balance ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
-        If MsgBox("Do you want to add new funds?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
-            Try
-                If connection.State = ConnectionState.Closed Then
-                    connection.Open()
-                End If
-                Dim cmd As New MySqlCommand(query, connection)
-                cmd.Parameters.Clear()
-                cmd.Parameters.AddWithValue("@balance", budget)
 
-                Dim i As Integer = cmd.ExecuteNonQuery
-                If i > 0 Then
-                    MessageBox.Show("Add Budget Succesfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Else
-                    MessageBox.Show("Add Budget Unsuccessfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-                End If
-
-            Catch ex As Exception
-                MessageBox.Show("An Error Occured: addbudget" & ex.Message)
-            Finally
-                If connection.State = ConnectionState.Open Then
-                    connection.Close()
-                End If
-            End Try
-        End If
-    End Sub
-
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles gbtndel.Click
-        'use the method to delete a tuple from the datagridview
-        Delete()
-    End Sub
-
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles gbtnupdate.Click
-        'use the metheod to update a tuple from the datagridview
-        Updaterecord()
-
-    End Sub
-
-    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles gbtnsave.Click
-        'use the method save
-        Save()
-    End Sub
-
-    Private Sub gbtnprofile_Click(sender As Object, e As EventArgs) Handles gbtnclear.Click
-        'clear the text fields and allow again to save
-        clear()
-        gaddtbxid.ReadOnly = True
-        gbtnsave.Enabled = True
-    End Sub
-
-    Private Sub gaddtbxsearch_TextChanged(sender As Object, e As EventArgs) Handles gaddtbxsearch.TextChanged
+    Public Sub searchtable()
         Try
-
+            'check connection state if closed then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
-            Dim query As String = "SELECT * FROM tblexpenses WHERE Username = @username AND expname LIKE @search"
+            Dim query As String = "SELECT * FROM tbltransaction WHERE uname = @username AND transname LIKE @search"
 
+            'save sql query to the variable cmd
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", uname)
+            cmd.Parameters.AddWithValue("@username", usernamekey)
             cmd.Parameters.AddWithValue("@search", "%" & gaddtbxsearch.Text & "%")
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
 
             gdashgrid.Rows.Clear()
             While dr.Read()
-                gdashgrid.Rows.Add(dr("expid"), dr("category"), dr("expname"), dr("price"), dr("qty"), dr("expdate"), dr("total"))
+                gdashgrid.Rows.Add(
+                dr.Item("transid"),
+                dr.Item("transstatus"),
+                dr.Item("category"),
+                dr.Item("transname"),
+                Convert.ToDecimal(dr("price")).ToString("F2"),
+                Convert.ToInt32(dr("quantity")),
+                Convert.ToDecimal(dr("total")).ToString("F2"),
+                Convert.ToDateTime(dr("transdate")).ToString("yyyy-MM-dd"))
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show("Error in search from historyform: " & ex.Message)
         Finally
-            connection.Close()
+            'check connection state if open then close
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
         End Try
     End Sub
 
+    Private Sub gaddtbxsearch_TextChanged(sender As Object, e As EventArgs) Handles gaddtbxsearch.TextChanged
+        searchtable()
+    End Sub
+
     Private Sub DashboardContentsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'use method to get the balance and startdate
-        selectcurrentbalance()
-
         'change username into user account
-        lblusername.Text = uname
-
-        'set the tbx id for read only
-        gaddtbxid.ReadOnly = True
+        lblusername.Text = usernamekey
 
         'use the method datagridview load to display the values into the datagridview
-        Dvg_load()
+        DataGridView_load()
+
+        'load balance
+        SelectBalance()
+
+        UpdateBudget()
 
         ' Configure the chart
         chrtexpenses.Series.Clear()
@@ -363,65 +287,77 @@ Public Class DashboardContentsForm
         ' Load data into the chart
         LoadChartData()
 
-        'set the label into select value from balance and startdate
-        lblbudget.Text = balance
-
-        'set the remaining balance from the difference of budget and total expense
-        Dim remaining As Decimal = CDec(lblbudget.Text) - CDec(lblexp.Text)
-        lblbal.Text = remaining
-
-    End Sub
-
-    Private Sub gdashgrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles gdashgrid.CellClick
-        'when a record/tuple is clicked will display the values into the textboxes 
-        gaddtbxid.Text = gdashgrid.CurrentRow.Cells(0).Value
-        gaddcbxcat.Text = gdashgrid.CurrentRow.Cells(1).Value
-        gaddtbxname.Text = gdashgrid.CurrentRow.Cells(2).Value
-        gaddtbxprice.Text = gdashgrid.CurrentRow.Cells(3).Value
-        gaddtbxqty.Text = gdashgrid.CurrentRow.Cells(4).Value
-        gadddate.Text = gdashgrid.CurrentRow.Cells(5).Value
-
-        userid = gaddtbxid.Text
-
-        'setting the values 
-        gaddtbxid.ReadOnly = True
-        gbtnsave.Enabled = False
-    End Sub
-
-    Private Sub gaddcbxcat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gaddcbxcat.SelectedIndexChanged
-
     End Sub
 
     Private Sub gdashgrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gdashgrid.CellContentClick
 
-    End Sub
+        'this set the columns selected from datagridview into the
+        'corresponding globalvariables to be access in another form
+        Try
+            If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Return
+            ' Ensure row and column indices are valid
+            Dim selectedRow As DataGridViewRow = gdashgrid.Rows(e.RowIndex)
+            If gdashgrid.Columns(e.ColumnIndex).Name = "EditRec" Then
+                gtransid = selectedRow.Cells("ID").Value.ToString()
+                gtransstatus = selectedRow.Cells("Transaction").Value.ToString()
+                gcategory = selectedRow.Cells("Category").Value.ToString()
+                gtransname = selectedRow.Cells("Transname").Value.ToString()
+                gprice = selectedRow.Cells("Price").Value.ToString()
+                gquantity = selectedRow.Cells("Quantity").Value.ToString()
+                gtransdate = selectedRow.Cells("Transdate").Value.ToString()
+                'set edit to true to display the contents in transaction form 
+                editrecords = True
+                ' Create and show the form as a dialog
+                Using transactions As New TransactionsForm()
+                    transactions.Owner = Me
+                    transactions.ShowDialog()
+                End Using
+            ElseIf gdashgrid.Columns(e.ColumnIndex).Name = "DeleteRec" Then
+                Dim transactionId As Integer = Convert.ToInt32(selectedRow.Cells("ID").Value)
+                ' Delete the transaction from the database
+                DeleteTransaction(transactionId)
 
-    Private Sub gbtnset_Click(sender As Object, e As EventArgs) Handles gbtnaddbal.Click
-        'execute the method to add budget
-        addbudget()
+                ' Remove the row from the DataGridView
+                gdashgrid.Rows.RemoveAt(e.RowIndex)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-    End Sub
 
-    Private Sub gbtnnewbal_Click(sender As Object, e As EventArgs) Handles gbtnnewbal.Click
-        'a method to insert value into db
-        newbudget()
     End Sub
 
     Private Sub gsignbtn_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click
         'set the value of expense period into monthly
-        If expperiod = "Yearly" Then
-            expperiod = "Monthly"
+        If gexpperiod = "Yearly" Then
+            gexpperiod = "Monthly"
         End If
 
-        Dvg_load()
+        DataGridView_load()
     End Sub
 
     Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles gbtnyearly.Click
         'set the value of expense period into yearly
-        If expperiod = "Monthly" Then
-            expperiod = "Yearly"
+        If gexpperiod = "Monthly" Then
+            gexpperiod = "Yearly"
         End If
 
-        Dvg_load()
+        DataGridView_load()
+    End Sub
+
+    Private Sub gbtntransadd_click(sender As Object, e As EventArgs) Handles gbtntransadd.Click
+        ' Create and show the form as a dialog
+        Using transactions As New TransactionsForm()
+            transactions.Owner = Me
+            transactions.ShowDialog()
+        End Using
+    End Sub
+
+    Private Sub gbtnsetbudget_Click(sender As Object, e As EventArgs) Handles gbtnsetbudget.Click
+        ' Create and show the form as a dialog
+        Using Budget As New BudgetForm()
+            Budget.Owner = Me
+            Budget.ShowDialog()
+        End Using
     End Sub
 End Class

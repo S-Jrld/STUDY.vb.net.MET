@@ -33,8 +33,8 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.gloginbtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.gsignbtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnlogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnsignup = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,38 +136,38 @@ Partial Class Form1
         Me.Label4.Text = "A good budget tracking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "is wealth-hacking"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'gloginbtn
+        'gbtnlogin
         '
-        Me.gloginbtn.BackColor = System.Drawing.Color.White
-        Me.gloginbtn.BorderRadius = 15
-        Me.gloginbtn.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.gloginbtn.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gloginbtn.ForeColor = System.Drawing.Color.White
-        Me.gloginbtn.Location = New System.Drawing.Point(355, 288)
-        Me.gloginbtn.Name = "gloginbtn"
-        Me.gloginbtn.PressedColor = System.Drawing.Color.White
-        Me.gloginbtn.Size = New System.Drawing.Size(210, 33)
-        Me.gloginbtn.TabIndex = 8
-        Me.gloginbtn.Text = "Login"
+        Me.gbtnlogin.BackColor = System.Drawing.Color.White
+        Me.gbtnlogin.BorderRadius = 15
+        Me.gbtnlogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.gbtnlogin.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnlogin.ForeColor = System.Drawing.Color.White
+        Me.gbtnlogin.Location = New System.Drawing.Point(355, 288)
+        Me.gbtnlogin.Name = "gbtnlogin"
+        Me.gbtnlogin.PressedColor = System.Drawing.Color.White
+        Me.gbtnlogin.Size = New System.Drawing.Size(210, 33)
+        Me.gbtnlogin.TabIndex = 8
+        Me.gbtnlogin.Text = "Login"
         '
-        'gsignbtn
+        'gbtnsignup
         '
-        Me.gsignbtn.BackColor = System.Drawing.Color.White
-        Me.gsignbtn.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.gsignbtn.BorderRadius = 15
-        Me.gsignbtn.BorderThickness = 2
-        Me.gsignbtn.CheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.gsignbtn.FillColor = System.Drawing.Color.White
-        Me.gsignbtn.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gsignbtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.gsignbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gsignbtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gsignbtn.Location = New System.Drawing.Point(355, 337)
-        Me.gsignbtn.Name = "gsignbtn"
-        Me.gsignbtn.PressedColor = System.Drawing.Color.Transparent
-        Me.gsignbtn.Size = New System.Drawing.Size(210, 33)
-        Me.gsignbtn.TabIndex = 9
-        Me.gsignbtn.Text = "Sign Up"
+        Me.gbtnsignup.BackColor = System.Drawing.Color.White
+        Me.gbtnsignup.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.gbtnsignup.BorderRadius = 15
+        Me.gbtnsignup.BorderThickness = 2
+        Me.gbtnsignup.CheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.gbtnsignup.FillColor = System.Drawing.Color.White
+        Me.gbtnsignup.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnsignup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.gbtnsignup.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gbtnsignup.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnsignup.Location = New System.Drawing.Point(355, 337)
+        Me.gbtnsignup.Name = "gbtnsignup"
+        Me.gbtnsignup.PressedColor = System.Drawing.Color.Transparent
+        Me.gbtnsignup.Size = New System.Drawing.Size(210, 33)
+        Me.gbtnsignup.TabIndex = 9
+        Me.gbtnsignup.Text = "Sign Up"
         '
         'Guna2PictureBox1
         '
@@ -190,8 +190,8 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(600, 400)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.gsignbtn)
-        Me.Controls.Add(Me.gloginbtn)
+        Me.Controls.Add(Me.gbtnsignup)
+        Me.Controls.Add(Me.gbtnlogin)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Guna2Panel1)
@@ -214,9 +214,9 @@ Partial Class Form1
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents gctrlclose As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents gloginbtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnlogin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents gsignbtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnsignup As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

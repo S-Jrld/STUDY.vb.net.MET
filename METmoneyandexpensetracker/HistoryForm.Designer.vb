@@ -23,9 +23,9 @@ Partial Class HistoryForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -43,30 +43,29 @@ Partial Class HistoryForm
         Me.lblname = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.gaddtbxsearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.gsignbtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.gdatagrid = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.gbtnyearly = New Guna.UI2.WinForms.Guna2Button()
+        Me.gbtnmonthly = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.gdashgrid = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.chartexpense, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
-        Me.Guna2Panel7.SuspendLayout()
-        CType(Me.gdatagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2Panel9.SuspendLayout()
+        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -76,17 +75,17 @@ Partial Class HistoryForm
         '
         'chartexpense
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.chartexpense.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.chartexpense.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        Me.chartexpense.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.chartexpense.Legends.Add(Legend2)
         Me.chartexpense.Location = New System.Drawing.Point(9, 10)
         Me.chartexpense.Name = "chartexpense"
         Me.chartexpense.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.chartexpense.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.chartexpense.Series.Add(Series2)
         Me.chartexpense.Size = New System.Drawing.Size(600, 208)
         Me.chartexpense.TabIndex = 47
         Me.chartexpense.Text = "Chart1"
@@ -96,7 +95,7 @@ Partial Class HistoryForm
         Me.lblYear.AutoSize = True
         Me.lblYear.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblYear.ForeColor = System.Drawing.Color.White
-        Me.lblYear.Location = New System.Drawing.Point(21, 70)
+        Me.lblYear.Location = New System.Drawing.Point(9, 51)
         Me.lblYear.Name = "lblYear"
         Me.lblYear.Size = New System.Drawing.Size(45, 19)
         Me.lblYear.TabIndex = 1
@@ -104,12 +103,11 @@ Partial Class HistoryForm
         '
         'lbldate
         '
-        Me.lbldate.AutoSize = True
         Me.lbldate.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbldate.ForeColor = System.Drawing.Color.White
-        Me.lbldate.Location = New System.Drawing.Point(23, 103)
+        Me.lbldate.Location = New System.Drawing.Point(22, 79)
         Me.lbldate.Name = "lbldate"
-        Me.lbldate.Size = New System.Drawing.Size(45, 19)
+        Me.lbldate.Size = New System.Drawing.Size(181, 57)
         Me.lbldate.TabIndex = 0
         Me.lbldate.Text = "date"
         '
@@ -118,7 +116,7 @@ Partial Class HistoryForm
         Me.lblHighestTotal.AutoSize = True
         Me.lblHighestTotal.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHighestTotal.ForeColor = System.Drawing.Color.White
-        Me.lblHighestTotal.Location = New System.Drawing.Point(22, 96)
+        Me.lblHighestTotal.Location = New System.Drawing.Point(17, 96)
         Me.lblHighestTotal.Name = "lblHighestTotal"
         Me.lblHighestTotal.Size = New System.Drawing.Size(56, 15)
         Me.lblHighestTotal.TabIndex = 3
@@ -129,7 +127,7 @@ Partial Class HistoryForm
         Me.lblCategory.AutoSize = True
         Me.lblCategory.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCategory.ForeColor = System.Drawing.Color.White
-        Me.lblCategory.Location = New System.Drawing.Point(22, 70)
+        Me.lblCategory.Location = New System.Drawing.Point(15, 70)
         Me.lblCategory.Name = "lblCategory"
         Me.lblCategory.Size = New System.Drawing.Size(144, 18)
         Me.lblCategory.TabIndex = 3
@@ -139,7 +137,7 @@ Partial Class HistoryForm
         '
         Me.lblTotalSpent.AutoSize = True
         Me.lblTotalSpent.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalSpent.Location = New System.Drawing.Point(23, 80)
+        Me.lblTotalSpent.Location = New System.Drawing.Point(11, 81)
         Me.lblTotalSpent.Name = "lblTotalSpent"
         Me.lblTotalSpent.Size = New System.Drawing.Size(99, 19)
         Me.lblTotalSpent.TabIndex = 2
@@ -149,7 +147,7 @@ Partial Class HistoryForm
         '
         Me.lblYear2.AutoSize = True
         Me.lblYear2.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblYear2.Location = New System.Drawing.Point(22, 52)
+        Me.lblYear2.Location = New System.Drawing.Point(13, 56)
         Me.lblYear2.Name = "lblYear2"
         Me.lblYear2.Size = New System.Drawing.Size(45, 19)
         Me.lblYear2.TabIndex = 2
@@ -220,33 +218,6 @@ Partial Class HistoryForm
         Me.Label8.TabIndex = 58
         Me.Label8.Text = "History"
         '
-        'gaddtbxsearch
-        '
-        Me.gaddtbxsearch.BackColor = System.Drawing.Color.Transparent
-        Me.gaddtbxsearch.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gaddtbxsearch.BorderRadius = 12
-        Me.gaddtbxsearch.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gaddtbxsearch.DefaultText = ""
-        Me.gaddtbxsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gaddtbxsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gaddtbxsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gaddtbxsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gaddtbxsearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gaddtbxsearch.ForeColor = System.Drawing.Color.Black
-        Me.gaddtbxsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gaddtbxsearch.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gaddtbxsearch.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxsearch.Location = New System.Drawing.Point(167, 16)
-        Me.gaddtbxsearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.gaddtbxsearch.Name = "gaddtbxsearch"
-        Me.gaddtbxsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gaddtbxsearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gaddtbxsearch.PlaceholderText = "Search in table"
-        Me.gaddtbxsearch.SelectedText = ""
-        Me.gaddtbxsearch.Size = New System.Drawing.Size(387, 27)
-        Me.gaddtbxsearch.TabIndex = 57
-        '
         'Guna2Panel3
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
@@ -298,178 +269,6 @@ Partial Class HistoryForm
         Me.Guna2Panel6.Size = New System.Drawing.Size(225, 150)
         Me.Guna2Panel6.TabIndex = 63
         '
-        'Guna2Panel7
-        '
-        Me.Guna2Panel7.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel7.BorderRadius = 20
-        Me.Guna2Panel7.Controls.Add(Me.Guna2Button1)
-        Me.Guna2Panel7.Controls.Add(Me.gsignbtn)
-        Me.Guna2Panel7.Controls.Add(Me.Label1)
-        Me.Guna2Panel7.Controls.Add(Me.gdatagrid)
-        Me.Guna2Panel7.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel7.Location = New System.Drawing.Point(17, 319)
-        Me.Guna2Panel7.Name = "Guna2Panel7"
-        Me.Guna2Panel7.Size = New System.Drawing.Size(620, 260)
-        Me.Guna2Panel7.TabIndex = 64
-        '
-        'Guna2Button1
-        '
-        Me.Guna2Button1.BackColor = System.Drawing.Color.White
-        Me.Guna2Button1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2Button1.BorderRadius = 10
-        Me.Guna2Button1.BorderThickness = 2
-        Me.Guna2Button1.CheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.FillColor = System.Drawing.Color.White
-        Me.Guna2Button1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.Guna2Button1.Location = New System.Drawing.Point(498, 10)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.PressedColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.Size = New System.Drawing.Size(110, 25)
-        Me.Guna2Button1.TabIndex = 11
-        Me.Guna2Button1.Text = "Yearly"
-        '
-        'gsignbtn
-        '
-        Me.gsignbtn.BackColor = System.Drawing.Color.White
-        Me.gsignbtn.BorderColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.gsignbtn.BorderRadius = 10
-        Me.gsignbtn.BorderThickness = 2
-        Me.gsignbtn.CheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.gsignbtn.FillColor = System.Drawing.Color.White
-        Me.gsignbtn.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gsignbtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.gsignbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gsignbtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gsignbtn.Location = New System.Drawing.Point(378, 10)
-        Me.gsignbtn.Name = "gsignbtn"
-        Me.gsignbtn.PressedColor = System.Drawing.Color.Transparent
-        Me.gsignbtn.Size = New System.Drawing.Size(110, 25)
-        Me.gsignbtn.TabIndex = 10
-        Me.gsignbtn.Text = "Monthly"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 32)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Expenses"
-        '
-        'gdatagrid
-        '
-        Me.gdatagrid.AllowUserToAddRows = False
-        Me.gdatagrid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.gdatagrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gdatagrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.gdatagrid.ColumnHeadersHeight = 19
-        Me.gdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.gdatagrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gdatagrid.DefaultCellStyle = DataGridViewCellStyle3
-        Me.gdatagrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gdatagrid.Location = New System.Drawing.Point(9, 43)
-        Me.gdatagrid.Name = "gdatagrid"
-        Me.gdatagrid.ReadOnly = True
-        Me.gdatagrid.RowHeadersVisible = False
-        Me.gdatagrid.Size = New System.Drawing.Size(600, 205)
-        Me.gdatagrid.TabIndex = 0
-        Me.gdatagrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.gdatagrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.gdatagrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.gdatagrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.gdatagrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.gdatagrid.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.gdatagrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gdatagrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gdatagrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.gdatagrid.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.gdatagrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.gdatagrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.gdatagrid.ThemeStyle.HeaderStyle.Height = 19
-        Me.gdatagrid.ThemeStyle.ReadOnly = True
-        Me.gdatagrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.gdatagrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.gdatagrid.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.gdatagrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.gdatagrid.ThemeStyle.RowsStyle.Height = 22
-        Me.gdatagrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gdatagrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 44
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Category"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 86
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Expenses Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Price"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 65
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Quantity"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Width = 86
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Date"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Width = 58
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Total"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 65
-        '
         'Guna2Panel1
         '
         Me.Guna2Panel1.BorderRadius = 20
@@ -480,21 +279,192 @@ Partial Class HistoryForm
         Me.Guna2Panel1.Size = New System.Drawing.Size(620, 230)
         Me.Guna2Panel1.TabIndex = 65
         '
+        'Guna2Panel9
+        '
+        Me.Guna2Panel9.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel9.BorderRadius = 20
+        Me.Guna2Panel9.Controls.Add(Me.gdashgrid)
+        Me.Guna2Panel9.Controls.Add(Me.gbtnyearly)
+        Me.Guna2Panel9.Controls.Add(Me.gbtnmonthly)
+        Me.Guna2Panel9.Controls.Add(Me.Label1)
+        Me.Guna2Panel9.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel9.Location = New System.Drawing.Point(6, 322)
+        Me.Guna2Panel9.Name = "Guna2Panel9"
+        Me.Guna2Panel9.Size = New System.Drawing.Size(642, 257)
+        Me.Guna2Panel9.TabIndex = 66
+        '
+        'gbtnyearly
+        '
+        Me.gbtnyearly.BackColor = System.Drawing.Color.White
+        Me.gbtnyearly.BorderColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnyearly.BorderRadius = 10
+        Me.gbtnyearly.BorderThickness = 2
+        Me.gbtnyearly.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnyearly.FillColor = System.Drawing.Color.White
+        Me.gbtnyearly.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnyearly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnyearly.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gbtnyearly.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnyearly.Location = New System.Drawing.Point(475, 12)
+        Me.gbtnyearly.Name = "gbtnyearly"
+        Me.gbtnyearly.PressedColor = System.Drawing.Color.Transparent
+        Me.gbtnyearly.Size = New System.Drawing.Size(110, 25)
+        Me.gbtnyearly.TabIndex = 11
+        Me.gbtnyearly.Text = "Yearly"
+        '
+        'gbtnmonthly
+        '
+        Me.gbtnmonthly.BackColor = System.Drawing.Color.White
+        Me.gbtnmonthly.BorderColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnmonthly.BorderRadius = 10
+        Me.gbtnmonthly.BorderThickness = 2
+        Me.gbtnmonthly.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnmonthly.FillColor = System.Drawing.Color.White
+        Me.gbtnmonthly.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnmonthly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.gbtnmonthly.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gbtnmonthly.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gbtnmonthly.Location = New System.Drawing.Point(355, 12)
+        Me.gbtnmonthly.Name = "gbtnmonthly"
+        Me.gbtnmonthly.PressedColor = System.Drawing.Color.Transparent
+        Me.gbtnmonthly.Size = New System.Drawing.Size(110, 25)
+        Me.gbtnmonthly.TabIndex = 10
+        Me.gbtnmonthly.Text = "Monthly"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(17, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(194, 32)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Transactions"
+        '
+        'gdashgrid
+        '
+        Me.gdashgrid.AllowUserToAddRows = False
+        Me.gdashgrid.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.gdashgrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gdashgrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.gdashgrid.ColumnHeadersHeight = 19
+        Me.gdashgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.gdashgrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.column1, Me.column2, Me.column3, Me.column4, Me.column5, Me.column6, Me.column7})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle3
+        Me.gdashgrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.Location = New System.Drawing.Point(12, 43)
+        Me.gdashgrid.Name = "gdashgrid"
+        Me.gdashgrid.ReadOnly = True
+        Me.gdashgrid.RowHeadersVisible = False
+        Me.gdashgrid.Size = New System.Drawing.Size(619, 203)
+        Me.gdashgrid.TabIndex = 12
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.gdashgrid.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.gdashgrid.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.gdashgrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.gdashgrid.ThemeStyle.HeaderStyle.Height = 19
+        Me.gdashgrid.ThemeStyle.ReadOnly = True
+        Me.gdashgrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.gdashgrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.gdashgrid.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.gdashgrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.RowsStyle.Height = 22
+        Me.gdashgrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gdashgrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'column1
+        '
+        Me.column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.column1.HeaderText = "Transaction"
+        Me.column1.Name = "column1"
+        Me.column1.ReadOnly = True
+        Me.column1.Width = 107
+        '
+        'column2
+        '
+        Me.column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.column2.HeaderText = "Category"
+        Me.column2.Name = "column2"
+        Me.column2.ReadOnly = True
+        Me.column2.Width = 86
+        '
+        'column3
+        '
+        Me.column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.column3.HeaderText = "Transaction name"
+        Me.column3.Name = "column3"
+        Me.column3.ReadOnly = True
+        '
+        'column4
+        '
+        Me.column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.column4.HeaderText = "Price"
+        Me.column4.Name = "column4"
+        Me.column4.ReadOnly = True
+        Me.column4.Width = 65
+        '
+        'column5
+        '
+        Me.column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.column5.HeaderText = "Quantity"
+        Me.column5.Name = "column5"
+        Me.column5.ReadOnly = True
+        Me.column5.Width = 86
+        '
+        'column6
+        '
+        Me.column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.column6.HeaderText = "Total"
+        Me.column6.Name = "column6"
+        Me.column6.ReadOnly = True
+        Me.column6.Width = 65
+        '
+        'column7
+        '
+        Me.column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.column7.HeaderText = "Date"
+        Me.column7.Name = "column7"
+        Me.column7.ReadOnly = True
+        Me.column7.Width = 58
+        '
         'HistoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(900, 600)
+        Me.Controls.Add(Me.Guna2Panel9)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.Guna2Panel7)
         Me.Controls.Add(Me.Guna2Panel6)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel3)
         Me.Controls.Add(Me.lblname)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.gaddtbxsearch)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "HistoryForm"
         CType(Me.chartexpense, System.ComponentModel.ISupportInitialize).EndInit()
@@ -504,10 +474,10 @@ Partial Class HistoryForm
         Me.Guna2Panel2.PerformLayout()
         Me.Guna2Panel6.ResumeLayout(False)
         Me.Guna2Panel6.PerformLayout()
-        Me.Guna2Panel7.ResumeLayout(False)
-        Me.Guna2Panel7.PerformLayout()
-        CType(Me.gdatagrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel9.ResumeLayout(False)
+        Me.Guna2Panel9.PerformLayout()
+        CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -527,21 +497,20 @@ Partial Class HistoryForm
     Friend WithEvents lblname As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents gaddtbxsearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gsignbtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents gbtnyearly As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtnmonthly As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents gdatagrid As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents gdashgrid As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents column1 As DataGridViewTextBoxColumn
+    Friend WithEvents column2 As DataGridViewTextBoxColumn
+    Friend WithEvents column3 As DataGridViewTextBoxColumn
+    Friend WithEvents column4 As DataGridViewTextBoxColumn
+    Friend WithEvents column5 As DataGridViewTextBoxColumn
+    Friend WithEvents column6 As DataGridViewTextBoxColumn
+    Friend WithEvents column7 As DataGridViewTextBoxColumn
 End Class

@@ -35,14 +35,14 @@ Partial Class SurveyForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.gtbxlname = New Guna.UI2.WinForms.Guna2TextBox()
         Me.gtbxaddress = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.gcmboccupation = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.gcmbstatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.gcmbsource = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.gcmbfundsource = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.gbirthdate = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.gtbxincome = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.gtbxmincome = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -218,25 +218,25 @@ Partial Class SurveyForm
         Me.gtbxaddress.Size = New System.Drawing.Size(352, 35)
         Me.gtbxaddress.TabIndex = 36
         '
-        'gcmboccupation
+        'gcmbstatus
         '
-        Me.gcmboccupation.BackColor = System.Drawing.Color.Transparent
-        Me.gcmboccupation.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gcmboccupation.BorderRadius = 15
-        Me.gcmboccupation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.gcmboccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.gcmboccupation.FocusedColor = System.Drawing.Color.Empty
-        Me.gcmboccupation.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gcmboccupation.ForeColor = System.Drawing.Color.Black
-        Me.gcmboccupation.FormattingEnabled = True
-        Me.gcmboccupation.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gcmboccupation.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gcmboccupation.ItemHeight = 30
-        Me.gcmboccupation.Items.AddRange(New Object() {"Employed", "Self-Employed", "Student"})
-        Me.gcmboccupation.Location = New System.Drawing.Point(389, 223)
-        Me.gcmboccupation.Name = "gcmboccupation"
-        Me.gcmboccupation.Size = New System.Drawing.Size(190, 36)
-        Me.gcmboccupation.TabIndex = 37
+        Me.gcmbstatus.BackColor = System.Drawing.Color.Transparent
+        Me.gcmbstatus.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gcmbstatus.BorderRadius = 15
+        Me.gcmbstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.gcmbstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.gcmbstatus.FocusedColor = System.Drawing.Color.Empty
+        Me.gcmbstatus.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gcmbstatus.ForeColor = System.Drawing.Color.Black
+        Me.gcmbstatus.FormattingEnabled = True
+        Me.gcmbstatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gcmbstatus.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gcmbstatus.ItemHeight = 30
+        Me.gcmbstatus.Items.AddRange(New Object() {"Employed", "Self-Employed", "Student"})
+        Me.gcmbstatus.Location = New System.Drawing.Point(389, 223)
+        Me.gcmbstatus.Name = "gcmbstatus"
+        Me.gcmbstatus.Size = New System.Drawing.Size(190, 36)
+        Me.gcmbstatus.TabIndex = 37
         '
         'Label1
         '
@@ -245,9 +245,9 @@ Partial Class SurveyForm
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(243, 231)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 18)
+        Me.Label1.Size = New System.Drawing.Size(56, 18)
         Me.Label1.TabIndex = 38
-        Me.Label1.Text = "Occupation"
+        Me.Label1.Text = "Status"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2
@@ -262,25 +262,25 @@ Partial Class SurveyForm
         Me.Label2.Text = "Source of funds"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'gcmbsource
+        'gcmbfundsource
         '
-        Me.gcmbsource.BackColor = System.Drawing.Color.Transparent
-        Me.gcmbsource.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gcmbsource.BorderRadius = 15
-        Me.gcmbsource.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.gcmbsource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.gcmbsource.FocusedColor = System.Drawing.Color.Empty
-        Me.gcmbsource.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gcmbsource.ForeColor = System.Drawing.Color.Black
-        Me.gcmbsource.FormattingEnabled = True
-        Me.gcmbsource.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gcmbsource.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gcmbsource.ItemHeight = 30
-        Me.gcmbsource.Items.AddRange(New Object() {"Cash on Hand", "Bank Account", "E-money"})
-        Me.gcmbsource.Location = New System.Drawing.Point(389, 265)
-        Me.gcmbsource.Name = "gcmbsource"
-        Me.gcmbsource.Size = New System.Drawing.Size(190, 36)
-        Me.gcmbsource.TabIndex = 39
+        Me.gcmbfundsource.BackColor = System.Drawing.Color.Transparent
+        Me.gcmbfundsource.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gcmbfundsource.BorderRadius = 15
+        Me.gcmbfundsource.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.gcmbfundsource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.gcmbfundsource.FocusedColor = System.Drawing.Color.Empty
+        Me.gcmbfundsource.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gcmbfundsource.ForeColor = System.Drawing.Color.Black
+        Me.gcmbfundsource.FormattingEnabled = True
+        Me.gcmbfundsource.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gcmbfundsource.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gcmbfundsource.ItemHeight = 30
+        Me.gcmbfundsource.Items.AddRange(New Object() {"Cash on Hand", "Bank Account", "E-money"})
+        Me.gcmbfundsource.Location = New System.Drawing.Point(389, 265)
+        Me.gcmbfundsource.Name = "gcmbfundsource"
+        Me.gcmbfundsource.Size = New System.Drawing.Size(190, 36)
+        Me.gcmbfundsource.TabIndex = 39
         '
         'gbirthdate
         '
@@ -325,31 +325,31 @@ Partial Class SurveyForm
         Me.Label6.Text = "Monthly Income"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'gtbxincome
+        'gtbxmincome
         '
-        Me.gtbxincome.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gtbxincome.BorderRadius = 15
-        Me.gtbxincome.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.gtbxincome.DefaultText = ""
-        Me.gtbxincome.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.gtbxincome.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.gtbxincome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gtbxincome.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.gtbxincome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gtbxincome.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gtbxincome.ForeColor = System.Drawing.Color.Black
-        Me.gtbxincome.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gtbxincome.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gtbxincome.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxincome.Location = New System.Drawing.Point(389, 307)
-        Me.gtbxincome.Margin = New System.Windows.Forms.Padding(4)
-        Me.gtbxincome.Name = "gtbxincome"
-        Me.gtbxincome.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.gtbxincome.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gtbxincome.PlaceholderText = "Income"
-        Me.gtbxincome.SelectedText = ""
-        Me.gtbxincome.Size = New System.Drawing.Size(190, 35)
-        Me.gtbxincome.TabIndex = 44
+        Me.gtbxmincome.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxmincome.BorderRadius = 15
+        Me.gtbxmincome.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.gtbxmincome.DefaultText = ""
+        Me.gtbxmincome.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.gtbxmincome.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.gtbxmincome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxmincome.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.gtbxmincome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gtbxmincome.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gtbxmincome.ForeColor = System.Drawing.Color.Black
+        Me.gtbxmincome.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gtbxmincome.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gtbxmincome.IconLeftSize = New System.Drawing.Size(25, 25)
+        Me.gtbxmincome.Location = New System.Drawing.Point(389, 307)
+        Me.gtbxmincome.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxmincome.Name = "gtbxmincome"
+        Me.gtbxmincome.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.gtbxmincome.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gtbxmincome.PlaceholderText = "Income"
+        Me.gtbxmincome.SelectedText = ""
+        Me.gtbxmincome.Size = New System.Drawing.Size(190, 35)
+        Me.gtbxmincome.TabIndex = 44
         '
         'SurveyForm
         '
@@ -357,14 +357,14 @@ Partial Class SurveyForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(600, 400)
-        Me.Controls.Add(Me.gtbxincome)
+        Me.Controls.Add(Me.gtbxmincome)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.gbirthdate)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.gcmbsource)
+        Me.Controls.Add(Me.gcmbfundsource)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.gcmboccupation)
+        Me.Controls.Add(Me.gcmbstatus)
         Me.Controls.Add(Me.gtbxaddress)
         Me.Controls.Add(Me.gtbxlname)
         Me.Controls.Add(Me.Label4)
@@ -374,6 +374,7 @@ Partial Class SurveyForm
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SurveyForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SurveyForm"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -393,12 +394,12 @@ Partial Class SurveyForm
     Friend WithEvents Label5 As Label
     Friend WithEvents gtbxaddress As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents gtbxlname As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents gcmboccupation As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents gcmbstatus As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents gcmbsource As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents gcmbfundsource As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents gbirthdate As Guna.UI2.WinForms.Guna2DateTimePicker
-    Friend WithEvents gtbxincome As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents gtbxmincome As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
 End Class

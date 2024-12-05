@@ -4,57 +4,67 @@ Imports System.Windows.Forms.DataVisualization.Charting
 Imports System.Globalization
 
 Public Class HistoryForm
-    Public Sub Dvg_open()
+    Public Sub DataGridView_load()
         ' Clear the rows of the DataGridView
-        gdatagrid.Rows.Clear()
+        gdashgrid.Rows.Clear()
 
-        ' SQL query to fetch the required columns from the database
-        Dim query As String = "SELECT category, expname, price, qty, expdate, total FROM tblexpenses WHERE Username = @username"
+        Dim query As String = ""
+        If gexpperiod = "Monthly" Then
+            query = "SELECT transid, transstatus, category, transname, price, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND (YEAR(transdate) = YEAR(CURDATE()) AND MONTH(transdate) = MONTH(CURDATE()))"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "SELECT transid, transstatus, category, transname, price, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND YEAR(transdate) = YEAR(CURDATE())"
+        End If
 
+        ' Create a query to show the values into the DataGridView
         Try
-            ' Open the database connection if it's closed
+            ' Check connection state; if closed, then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
 
-            ' Prepare the MySQL command
-            Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", uname)
+            ' Save SQL query to the variable cmd
+            Using cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.AddWithValue("@username", usernamekey)
 
-            ' Execute the query and load the data into the DataGridView
-            Dim dr As MySqlDataReader = cmd.ExecuteReader
-            While dr.Read
-                gdatagrid.Rows.Add(
-                dr("category").ToString(),
-                dr("expname").ToString(),
-                Convert.ToDecimal(dr("price")).ToString("F2"), ' Format price as decimal (e.g., 12.50)
-                Convert.ToInt32(dr("qty")),                  ' Convert quantity to integer
-                Convert.ToDateTime(dr("expdate")).ToString("yyyy-MM-dd"), ' Format the date
-                Convert.ToDecimal(dr("total")).ToString("F2") ' Format total as decimal
-            )
-            End While
+                ' Execute query in the database and return the read value of every column selected
+                Using dr As MySqlDataReader = cmd.ExecuteReader()
+                    While dr.Read()
+                        gdashgrid.Rows.Add(
+                            dr.Item("transid"),
+                            dr.Item("transstatus"),
+                            dr.Item("category"),
+                            dr.Item("transname"),
+                            Convert.ToDecimal(dr("price")).ToString("F2"),
+                            Convert.ToInt32(dr("quantity")),
+                            Convert.ToDecimal(dr("total")).ToString("F2"),
+                            Convert.ToDateTime(dr("transdate")).ToString("yyyy-MM-dd")
+                        )
+                    End While
+                End Using
+            End Using
 
-            ' Close the data reader
-            dr.Close()
-
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in dgvload from dashcontentsform: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
-            ' Show the exception message in case of errors
-            MessageBox.Show("An error occurred while loading data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error in dgvload from dashcontentsform: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
-            ' Ensure the database connection is closed
+            ' Check connection state; if open, then close
             If connection.State = ConnectionState.Open Then
                 connection.Close()
             End If
         End Try
-
     End Sub
     Public Sub LoadChartData()
         ' Clear the existing chart data
         chartexpense.Series.Clear()
 
         ' SQL query to fetch the required columns from the database
-        Dim query As String = "SELECT category, qty, total, expdate FROM tblexpenses WHERE Username = @username"
-
+        Dim query As String = ""
+        If gexpperiod = "Monthly" Then
+            query = "SELECT category, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND (YEAR(transdate) = YEAR(CURDATE()) AND MONTH(transdate) = MONTH(CURDATE()))"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "SELECT category, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND YEAR(transdate) = YEAR(CURDATE())"
+        End If
         Try
             ' Open the database connection if it's closed
             If connection.State = ConnectionState.Closed Then
@@ -63,7 +73,7 @@ Public Class HistoryForm
 
             ' Prepare the MySQL command
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", uname)
+            cmd.Parameters.AddWithValue("@username", usernamekey)
 
             ' Execute the query and fetch the data
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
@@ -90,13 +100,13 @@ Public Class HistoryForm
             ' Read data and populate the Line Chart
             While dr.Read()
                 ' Extract data
-                Dim qty As Integer = Convert.ToInt32(dr("qty"))
+                Dim quantity As Integer = Convert.ToInt32(dr("quantity"))
                 Dim total As Decimal = Convert.ToDecimal(dr("total"))
-                Dim expdate As DateTime = Convert.ToDateTime(dr("expdate"))
+                Dim transdate As DateTime = Convert.ToDateTime(dr("transdate"))
 
                 ' Add the data to the chart (X: Date, Y: qty or total)
-                qtySeries.Points.AddXY(expdate.ToString("yyyy-MM-dd"), qty)
-                totalSeries.Points.AddXY(expdate.ToString("yyyy-MM-dd"), total)
+                qtySeries.Points.AddXY(transdate.ToString("yyyy-MM-dd"), quantity)
+                totalSeries.Points.AddXY(transdate.ToString("yyyy-MM-dd"), total)
             End While
 
             ' Close the data reader
@@ -107,7 +117,7 @@ Public Class HistoryForm
 
         Catch ex As Exception
             ' Show the exception message in case of errors
-            MessageBox.Show("An error occurred while loading data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occurred in loadchart from historyform: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             ' Ensure the database connection is closed
             If connection.State = ConnectionState.Open Then
@@ -128,13 +138,13 @@ Public Class HistoryForm
 
         ' Add chart title
         chartexpense.Titles.Clear()
-        chartexpense.Titles.Add("Expenses Over the Year")
+        chartexpense.Titles.Add("Expenses Over the " & gexpperiod)
         chartexpense.Titles(0).Font = New Font("Arial", 14, FontStyle.Bold)
     End Sub
 
     Public Sub DisplayExpenseDetails()
         ' SQL query to fetch the required columns (date, category, expname, and total) from the database
-        Dim query As String = "SELECT category, expname, total, expdate FROM tblexpenses WHERE Username = @username"
+        Dim query As String = "SELECT category, transname, total, transdate FROM tbltransaction WHERE uname = @username"
 
         ' Variables to track the unique months, years, and total calculations
         Dim monthList As New List(Of String)()
@@ -153,7 +163,7 @@ Public Class HistoryForm
 
             ' Prepare the MySQL command
             Dim cmd As New MySqlCommand(query, connection)
-            cmd.Parameters.AddWithValue("@username", uname)
+            cmd.Parameters.AddWithValue("@username", usernamekey)
 
             ' Execute the query and fetch the data
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
@@ -162,26 +172,26 @@ Public Class HistoryForm
             While dr.Read()
                 ' Extract data
                 Dim category As String = dr("category").ToString()
-                Dim expname As String = dr("expname").ToString()
+                Dim transname As String = dr("transname").ToString()
                 Dim total As Decimal = Convert.ToDecimal(dr("total"))
-                Dim expdate As DateTime = Convert.ToDateTime(dr("expdate"))
+                Dim transdate As DateTime = Convert.ToDateTime(dr("transdate"))
 
                 ' Update total money spent
                 totalMoneySpent += total
 
                 ' Track the most recent date
-                If expdate > mostRecentDate Then
-                    mostRecentDate = expdate
+                If transdate > mostRecentDate Then
+                    mostRecentDate = transdate
                 End If
 
                 ' Collect unique months in "yyyy-MM" format
-                Dim month As String = expdate.ToString("yyyy-MM")
+                Dim month As String = transdate.ToString("yyyy-MM")
                 If Not monthList.Contains(month) Then
                     monthList.Add(month)
                 End If
 
                 ' Collect unique years
-                Dim year As Integer = expdate.Year
+                Dim year As Integer = transdate.Year
                 If Not yearList.Contains(year) Then
                     yearList.Add(year)
                 End If
@@ -189,7 +199,7 @@ Public Class HistoryForm
                 ' Find the expense name with the highest total
                 If total > highestTotal Then
                     highestTotal = total
-                    highestExpName = expname
+                    highestExpName = transname
                     highestCategory = category
                 End If
             End While
@@ -220,12 +230,29 @@ Public Class HistoryForm
 
     Private Sub HistoryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DisplayExpenseDetails()
-        Dvg_open()
+        DataGridView_load()
         LoadChartData()
 
         'change value of label username to show user acc
-        lblname.Text = uname
+        lblname.Text = usernamekey
     End Sub
 
+    Private Sub gbtnmonthly_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click
+        'set the value of expense period into monthly
+        If gexpperiod = "Yearly" Then
+            gexpperiod = "Monthly"
+        End If
+
+        DataGridView_load()
+    End Sub
+
+    Private Sub gbtnyearly_Click(sender As Object, e As EventArgs) Handles gbtnyearly.Click
+        'set the value of expense period into yearly
+        If gexpperiod = "Monthly" Then
+            gexpperiod = "Yearly"
+        End If
+
+        DataGridView_load()
+    End Sub
 
 End Class

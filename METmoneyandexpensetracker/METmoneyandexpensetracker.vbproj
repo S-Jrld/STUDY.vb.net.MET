@@ -143,6 +143,12 @@
     <Compile Include="AccountSecurityForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BudgetForm.Designer.vb">
+      <DependentUpon>BudgetForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashboardContentsForm.Designer.vb">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
     </Compile>
@@ -203,6 +209,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NoteInfoForm.Designer.vb">
+      <DependentUpon>NoteInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NoteInfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ProfileForm.Designer.vb">
       <DependentUpon>ProfileForm.vb</DependentUpon>
     </Compile>
@@ -221,6 +233,12 @@
     <Compile Include="SurveyForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransactionsForm.Designer.vb">
+      <DependentUpon>TransactionsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserProfileForm.Designer.vb">
       <DependentUpon>UserProfileForm.vb</DependentUpon>
     </Compile>
@@ -234,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountSecurityForm.resx">
       <DependentUpon>AccountSecurityForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudgetForm.resx">
+      <DependentUpon>BudgetForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardContentsForm.resx">
       <DependentUpon>DashboardContentsForm.vb</DependentUpon>
@@ -262,6 +283,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NoteInfoForm.resx">
+      <DependentUpon>NoteInfoForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfileForm.resx">
       <DependentUpon>ProfileForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SurveyForm.resx">
       <DependentUpon>SurveyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionsForm.resx">
+      <DependentUpon>TransactionsForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfileForm.resx">
       <DependentUpon>UserProfileForm.vb</DependentUpon>

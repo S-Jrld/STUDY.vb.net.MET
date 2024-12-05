@@ -1,101 +1,126 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class ForgotForm
-    Public Property Username As Boolean = False
+    Public Property UsernameExists As Boolean = False
 
-    Public Sub checkusername()
-        'check the username if the same as input by user in the textbox
+    Private Sub CheckUsername()
+        ' Check the username if the same as input by user in the textbox
+        Dim query As String = "SELECT COUNT(*) FROM tbluser WHERE uname = @username"
+
         Try
-            connection.Open()
-
-            Dim cmd As New MySqlCommand("SELECT COUNT(*) FROM tblusers WHERE Username = @Username", connection)
-            cmd.Parameters.AddWithValue("@Username", gfortbxname.Text)
-            Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-            If result > 0 Then
-                Username = True
-            Else
-                MessageBox.Show("Invalid username")
+            'check connection state if closed then open
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
             End If
+            'save sql query to the variable cmd
+            Using cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.AddWithValue("@username", gtbxuname.Text)
+                Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                If result > 0 Then
+                    UsernameExists = True
+                Else
+                    MessageBox.Show("Invalid username", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                    UsernameExists = False
+                End If
+            End Using
 
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in CheckUsername: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show("Error in CheckUsername: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
-            connection.Close()
+            'check connection state if open then close
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
         End Try
     End Sub
 
-    Public Sub changepass()
-        'using the query will update the password into the current password
+    Private Sub ChangePass()
+        ' Using the query will update the password into the current password
+        Dim query As String = "UPDATE tbluser SET pass = @password WHERE uname = @username"
+
         Try
-            connection.Open()
-
-            Dim cmd As New MySqlCommand("UPDATE `tblusers` SET Password = @Password WHERE Username =@Username ", connection)
-            cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@Password", gfortbxcon.Text)
-            cmd.Parameters.AddWithValue("@Username", gfortbxname.Text)
-
-            Dim i As Integer = cmd.ExecuteNonQuery
-            If i > 0 Then
-                MessageBox.Show("Save Succesfully", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Save Unsuccessfully", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            'check connection state if closed then open
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
             End If
+            'save sql query to the variable cmd
+            Using cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@password", gtbxconfirmpass.Text)
+                cmd.Parameters.AddWithValue("@username", gtbxuname.Text)
 
+                Dim i As Integer = cmd.ExecuteNonQuery()
+                If i > 0 Then
+                    MessageBox.Show("Save Successfully", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Save Unsuccessfully", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                End If
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error in ChangePass: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
+            MessageBox.Show("Error in ChangePass: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
-            connection.Close()
+            'check connection state if open then close
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
         End Try
     End Sub
 
-    Private Sub ForgotForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub gcheckshow2_CheckedChanged(sender As Object, e As EventArgs) Handles gcheckshow2.CheckedChanged
+        'the condition to show password
+        If gcheckshow2.Checked Then
+            ' Show the password
+            gtbxconfirmpass.PasswordChar = ControlChars.NullChar
+        Else ' Hide the password
+            gtbxconfirmpass.PasswordChar = "*"c
+        End If
     End Sub
 
-    Private Sub ForgotForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        'close the application
-        Application.Exit()
+    Private Sub gcheckshow1_CheckedChanged(sender As Object, e As EventArgs) Handles gcheckshow1.CheckedChanged
+        'the condition to show password
+        If gcheckshow1.Checked Then
+            ' Show the password
+            gtbxnewpass.PasswordChar = ControlChars.NullChar
+        Else ' Hide the password
+            gtbxnewpass.PasswordChar = "*"c
+        End If
     End Sub
 
-    Private Sub gregbtnlog_Click(sender As Object, e As EventArgs) Handles gforbtncnl.Click
+    Private Sub gbtnchangepass_Click(sender As Object, e As EventArgs) Handles gbtnchangepass.Click
+        ' Check if the username exists
+        CheckUsername()
+
+        ' If the username exists, change the password and redirect to the login form
+        If UsernameExists Then
+            ChangePass()
+            Dim login As New LoginForm()
+            login.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Invalid User Account", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        End If
+    End Sub
+
+    Private Sub gbtnback_Click(sender As Object, e As EventArgs) Handles gbtnback.Click
         'will cancel the forgot form and go back to login
         Dim log As New LoginForm
         log.Show()
         Hide()
     End Sub
 
-    Private Sub gregbtn_Click(sender As Object, e As EventArgs) Handles gforbtn.Click
-        'this is the condition that will combine 2 methods to work
-        checkusername()
-
-        If Username = True Then
-            changepass()
-            Dim login As New LoginForm
-            login.Show()
-            Me.Hide()
-
+    Private Sub gctrlclose_Click(sender As Object, e As EventArgs) Handles gctrlclose.Click
+        'close the application if closebutton.clicked is yes else return to the same form
+        If MsgBox("Do you want to close the application?", MsgBoxStyle.Question + vbYesNo) = vbYes Then
+            Application.Exit()
         Else
-            MessageBox.Show("Invalid username")
-        End If
-    End Sub
-
-    Private Sub Guna2ImageCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles gckbxshow2.CheckedChanged
-        'the condition to show password
-        If gckbxshow2.Checked Then
-            ' Show the password
-            gfortbxcon.PasswordChar = ControlChars.NullChar
-        Else ' Hide the password
-            gfortbxcon.PasswordChar = "*"c
-        End If
-    End Sub
-
-    Private Sub gckbxshow1_CheckedChanged(sender As Object, e As EventArgs) Handles gckbxshow1.CheckedChanged
-        'the condition to show password
-        If gckbxshow1.Checked Then
-            ' Show the password
-            gfortbxnew.PasswordChar = ControlChars.NullChar
-        Else ' Hide the password
-            gfortbxnew.PasswordChar = "*"c
+            Dim forgot As New ForgotForm()
+            forgot.Show()
+            Me.Close()
         End If
     End Sub
 End Class
