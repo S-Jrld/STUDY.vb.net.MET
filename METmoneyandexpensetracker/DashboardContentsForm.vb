@@ -223,13 +223,20 @@ Public Class DashboardContentsForm
 
 
     Public Sub searchtable()
+        ' Clear the rows of the DataGridView
+        gdashgrid.Rows.Clear()
+
+        Dim query As String = ""
+        If gexpperiod = "Monthly" Then
+            query = "SELECT transid, transstatus, category, transname, price, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND transname LIKE @search AND (YEAR(transdate) = YEAR(CURDATE()) AND MONTH(transdate) = MONTH(CURDATE()))"
+        ElseIf gexpperiod = "Yearly" Then
+            query = "SELECT transid, transstatus, category, transname, price, quantity, total, transdate FROM tbltransaction WHERE uname = @username AND transname LIKE @search AND YEAR(transdate) = YEAR(CURDATE())"
+        End If
         Try
             'check connection state if closed then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
-
-            Dim query As String = "SELECT * FROM tbltransaction WHERE uname = @username AND transname LIKE @search"
 
             'save sql query to the variable cmd
             Dim cmd As New MySqlCommand(query, connection)
@@ -265,8 +272,6 @@ Public Class DashboardContentsForm
     End Sub
 
     Private Sub DashboardContentsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'change username into user account
-        lblusername.Text = usernamekey
 
         'use the method datagridview load to display the values into the datagridview
         DataGridView_load()
@@ -325,24 +330,6 @@ Public Class DashboardContentsForm
         End Try
 
 
-    End Sub
-
-    Private Sub gsignbtn_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click
-        'set the value of expense period into monthly
-        If gexpperiod = "Yearly" Then
-            gexpperiod = "Monthly"
-        End If
-
-        DataGridView_load()
-    End Sub
-
-    Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles gbtnyearly.Click
-        'set the value of expense period into yearly
-        If gexpperiod = "Monthly" Then
-            gexpperiod = "Yearly"
-        End If
-
-        DataGridView_load()
     End Sub
 
     Private Sub gbtntransadd_click(sender As Object, e As EventArgs) Handles gbtntransadd.Click

@@ -45,6 +45,7 @@ Public Module GlobalVariables
     End Class
 
     Public Property gexpperiod As String = "Monthly"
+    Public Property gstateperiod As String
 
     'list of top achievements
     Public Property gtopspent As String

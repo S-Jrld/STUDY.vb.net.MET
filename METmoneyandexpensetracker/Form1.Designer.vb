@@ -131,9 +131,9 @@ Partial Class Form1
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(367, 230)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(184, 36)
+        Me.Label4.Size = New System.Drawing.Size(176, 36)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "A good budget tracking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "is wealth-hacking"
+        Me.Label4.Text = "A good money tracking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "is wealth-hacking"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'gbtnlogin

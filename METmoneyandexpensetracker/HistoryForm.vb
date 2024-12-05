@@ -233,8 +233,6 @@ Public Class HistoryForm
         DataGridView_load()
         LoadChartData()
 
-        'change value of label username to show user acc
-        lblname.Text = usernamekey
     End Sub
 
     Private Sub gbtnmonthly_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click

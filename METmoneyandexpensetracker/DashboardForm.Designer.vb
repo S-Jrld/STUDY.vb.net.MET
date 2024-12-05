@@ -34,11 +34,16 @@ Partial Class DashboardForm
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.gbtnhelp = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtndashboard = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnhistory = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnlogout = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtngoal = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnprofile = New Guna.UI2.WinForms.Guna2Button()
+        Me.lbltitle = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.gcmbperiod = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -116,10 +121,10 @@ Partial Class DashboardForm
         Me.gpanelmain.BorderColor = System.Drawing.Color.Black
         Me.gpanelmain.BorderRadius = 20
         Me.gpanelmain.FillColor = System.Drawing.Color.White
-        Me.gpanelmain.Location = New System.Drawing.Point(191, 40)
+        Me.gpanelmain.Location = New System.Drawing.Point(191, 90)
         Me.gpanelmain.Margin = New System.Windows.Forms.Padding(0)
         Me.gpanelmain.Name = "gpanelmain"
-        Me.gpanelmain.Size = New System.Drawing.Size(900, 600)
+        Me.gpanelmain.Size = New System.Drawing.Size(900, 550)
         Me.gpanelmain.TabIndex = 34
         Me.gpanelmain.UseTransparentBackground = True
         '
@@ -144,6 +149,7 @@ Partial Class DashboardForm
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.Controls.Add(Me.gbtnhelp)
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Controls.Add(Me.gbtndashboard)
         Me.Guna2Panel2.Controls.Add(Me.gbtnaboutus)
@@ -159,6 +165,27 @@ Partial Class DashboardForm
         Me.Guna2Panel2.Size = New System.Drawing.Size(186, 620)
         Me.Guna2Panel2.TabIndex = 44
         Me.Guna2Panel2.UseTransparentBackground = True
+        '
+        'gbtnhelp
+        '
+        Me.gbtnhelp.Animated = True
+        Me.gbtnhelp.BackColor = System.Drawing.Color.Transparent
+        Me.gbtnhelp.BorderColor = System.Drawing.Color.Transparent
+        Me.gbtnhelp.BorderRadius = 15
+        Me.gbtnhelp.BorderThickness = 1
+        Me.gbtnhelp.Cursor = System.Windows.Forms.Cursors.Default
+        Me.gbtnhelp.FillColor = System.Drawing.Color.Empty
+        Me.gbtnhelp.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbtnhelp.ForeColor = System.Drawing.Color.LightGreen
+        Me.gbtnhelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.gbtnhelp.ImageSize = New System.Drawing.Size(30, 30)
+        Me.gbtnhelp.Location = New System.Drawing.Point(19, 345)
+        Me.gbtnhelp.Margin = New System.Windows.Forms.Padding(0)
+        Me.gbtnhelp.Name = "gbtnhelp"
+        Me.gbtnhelp.Size = New System.Drawing.Size(140, 40)
+        Me.gbtnhelp.TabIndex = 44
+        Me.gbtnhelp.Text = "Help"
+        Me.gbtnhelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'gbtndashboard
         '
@@ -263,12 +290,69 @@ Partial Class DashboardForm
         Me.gbtnprofile.Text = "Profile"
         Me.gbtnprofile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'lbltitle
+        '
+        Me.lbltitle.AutoSize = True
+        Me.lbltitle.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.lbltitle.Location = New System.Drawing.Point(380, 44)
+        Me.lbltitle.Name = "lbltitle"
+        Me.lbltitle.Size = New System.Drawing.Size(149, 32)
+        Me.lbltitle.TabIndex = 48
+        Me.lbltitle.Text = "Dashboard"
+        '
+        'lblusername
+        '
+        Me.lblusername.AutoSize = True
+        Me.lblusername.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblusername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.lblusername.Location = New System.Drawing.Point(979, 50)
+        Me.lblusername.Name = "lblusername"
+        Me.lblusername.Size = New System.Drawing.Size(106, 24)
+        Me.lblusername.TabIndex = 52
+        Me.lblusername.Text = "Username"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(878, 50)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(106, 24)
+        Me.Label6.TabIndex = 51
+        Me.Label6.Text = "Welcome,"
+        '
+        'gcmbperiod
+        '
+        Me.gcmbperiod.BackColor = System.Drawing.Color.Transparent
+        Me.gcmbperiod.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gcmbperiod.BorderRadius = 15
+        Me.gcmbperiod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.gcmbperiod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.gcmbperiod.FocusedColor = System.Drawing.Color.Empty
+        Me.gcmbperiod.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gcmbperiod.ForeColor = System.Drawing.Color.Black
+        Me.gcmbperiod.FormattingEnabled = True
+        Me.gcmbperiod.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gcmbperiod.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gcmbperiod.ItemHeight = 30
+        Me.gcmbperiod.Items.AddRange(New Object() {"Monthly", "Yearly"})
+        Me.gcmbperiod.Location = New System.Drawing.Point(205, 42)
+        Me.gcmbperiod.Name = "gcmbperiod"
+        Me.gcmbperiod.Size = New System.Drawing.Size(163, 36)
+        Me.gcmbperiod.TabIndex = 57
+        '
         'DashboardForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1100, 650)
+        Me.Controls.Add(Me.gcmbperiod)
+        Me.Controls.Add(Me.lblusername)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.lbltitle)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.gpanelmain)
         Me.Controls.Add(Me.Guna2Panel1)
@@ -280,6 +364,7 @@ Partial Class DashboardForm
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -298,4 +383,9 @@ Partial Class DashboardForm
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents gbtnhelp As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lbltitle As Label
+    Friend WithEvents lblusername As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents gcmbperiod As Guna.UI2.WinForms.Guna2ComboBox
 End Class

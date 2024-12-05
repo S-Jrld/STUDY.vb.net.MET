@@ -176,7 +176,6 @@ Public Class ProfileForm
     End Sub
     Private Sub ProfileForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         selectuserinfo()
-        lblusername.Text = usernamekey
         lblprofileusername.Text = usernamekey
         lblcomname.Text = gfname & " " & glname
 

@@ -24,9 +24,6 @@ Partial Class GoalsForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.lblname = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.mainflowpanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
@@ -52,39 +49,6 @@ Partial Class GoalsForm
         '
         Me.Guna2Elipse1.BorderRadius = 20
         Me.Guna2Elipse1.TargetControl = Me
-        '
-        'lblname
-        '
-        Me.lblname.AutoSize = True
-        Me.lblname.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.lblname.Location = New System.Drawing.Point(695, 18)
-        Me.lblname.Name = "lblname"
-        Me.lblname.Size = New System.Drawing.Size(106, 24)
-        Me.lblname.TabIndex = 64
-        Me.lblname.Text = "Username"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(594, 18)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 24)
-        Me.Label6.TabIndex = 63
-        Me.Label6.Text = "Welcome,"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(6, 13)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(74, 32)
-        Me.Label8.TabIndex = 62
-        Me.Label8.Text = "Goal"
         '
         'mainflowpanel
         '
@@ -117,7 +81,7 @@ Partial Class GoalsForm
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.Label2)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Location = New System.Drawing.Point(612, 76)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(612, 31)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(276, 287)
         Me.Guna2Panel1.TabIndex = 66
@@ -220,7 +184,7 @@ Partial Class GoalsForm
         Me.Guna2Panel2.BorderRadius = 20
         Me.Guna2Panel2.BorderThickness = 2
         Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(612, 382)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(612, 335)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(276, 202)
         Me.Guna2Panel2.TabIndex = 67
@@ -230,7 +194,7 @@ Partial Class GoalsForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Consolas", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 82)
+        Me.Label1.Location = New System.Drawing.Point(21, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 28)
         Me.Label1.TabIndex = 68
@@ -248,7 +212,7 @@ Partial Class GoalsForm
         Me.gbtnaddnote.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gbtnaddnote.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbtnaddnote.ForeColor = System.Drawing.Color.White
-        Me.gbtnaddnote.Location = New System.Drawing.Point(480, 76)
+        Me.gbtnaddnote.Location = New System.Drawing.Point(480, 29)
         Me.gbtnaddnote.Name = "gbtnaddnote"
         Me.gbtnaddnote.Size = New System.Drawing.Size(115, 34)
         Me.gbtnaddnote.TabIndex = 69
@@ -263,7 +227,7 @@ Partial Class GoalsForm
         Me.Guna2Panel3.BorderThickness = 2
         Me.Guna2Panel3.Controls.Add(Me.mainflowpanel)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Location = New System.Drawing.Point(12, 116)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(12, 69)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(583, 468)
         Me.Guna2Panel3.TabIndex = 70
@@ -274,15 +238,12 @@ Partial Class GoalsForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(900, 600)
+        Me.ClientSize = New System.Drawing.Size(900, 550)
         Me.Controls.Add(Me.Guna2Panel3)
         Me.Controls.Add(Me.gbtnaddnote)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.lblname)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GoalsForm"
         Me.Text = "Forecast end of month"
@@ -296,9 +257,6 @@ Partial Class GoalsForm
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents lblname As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents mainflowpanel As FlowLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel

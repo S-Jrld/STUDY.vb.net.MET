@@ -23,9 +23,9 @@ Partial Class HistoryForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -40,9 +40,6 @@ Partial Class HistoryForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblname = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
@@ -75,17 +72,17 @@ Partial Class HistoryForm
         '
         'chartexpense
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.chartexpense.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.chartexpense.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        Me.chartexpense.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.chartexpense.Legends.Add(Legend1)
         Me.chartexpense.Location = New System.Drawing.Point(9, 10)
         Me.chartexpense.Name = "chartexpense"
         Me.chartexpense.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.chartexpense.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.chartexpense.Series.Add(Series1)
         Me.chartexpense.Size = New System.Drawing.Size(600, 208)
         Me.chartexpense.TabIndex = 47
         Me.chartexpense.Text = "Chart1"
@@ -185,43 +182,10 @@ Partial Class HistoryForm
         Me.Label5.TabIndex = 55
         Me.Label5.Text = "Top Spend"
         '
-        'lblname
-        '
-        Me.lblname.AutoSize = True
-        Me.lblname.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.lblname.Location = New System.Drawing.Point(695, 18)
-        Me.lblname.Name = "lblname"
-        Me.lblname.Size = New System.Drawing.Size(106, 24)
-        Me.lblname.TabIndex = 60
-        Me.lblname.Text = "Username"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(594, 18)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 24)
-        Me.Label6.TabIndex = 59
-        Me.Label6.Text = "Welcome,"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(6, 13)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(119, 32)
-        Me.Label8.TabIndex = 58
-        Me.Label8.Text = "History"
-        '
         'Guna2Panel3
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel3.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel3.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel3.BorderRadius = 20
         Me.Guna2Panel3.BorderThickness = 1
         Me.Guna2Panel3.Controls.Add(Me.Label3)
@@ -229,7 +193,7 @@ Partial Class HistoryForm
         Me.Guna2Panel3.Controls.Add(Me.lblYear)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.Guna2Panel3.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Panel3.Location = New System.Drawing.Point(656, 237)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(661, 193)
         Me.Guna2Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(225, 150)
@@ -238,7 +202,7 @@ Partial Class HistoryForm
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel2.BorderRadius = 20
         Me.Guna2Panel2.BorderThickness = 1
         Me.Guna2Panel2.Controls.Add(Me.lblTotalSpent)
@@ -246,7 +210,7 @@ Partial Class HistoryForm
         Me.Guna2Panel2.Controls.Add(Me.Label4)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(119, Byte), Integer))
         Me.Guna2Panel2.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Panel2.Location = New System.Drawing.Point(656, 414)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(661, 370)
         Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(225, 150)
@@ -255,7 +219,7 @@ Partial Class HistoryForm
         'Guna2Panel6
         '
         Me.Guna2Panel6.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel6.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel6.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel6.BorderRadius = 20
         Me.Guna2Panel6.BorderThickness = 1
         Me.Guna2Panel6.Controls.Add(Me.lblHighestTotal)
@@ -263,7 +227,7 @@ Partial Class HistoryForm
         Me.Guna2Panel6.Controls.Add(Me.lblCategory)
         Me.Guna2Panel6.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2Panel6.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Panel6.Location = New System.Drawing.Point(656, 60)
+        Me.Guna2Panel6.Location = New System.Drawing.Point(661, 16)
         Me.Guna2Panel6.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel6.Name = "Guna2Panel6"
         Me.Guna2Panel6.Size = New System.Drawing.Size(225, 150)
@@ -271,10 +235,12 @@ Partial Class HistoryForm
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.BorderThickness = 2
         Me.Guna2Panel1.Controls.Add(Me.chartexpense)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Location = New System.Drawing.Point(17, 72)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(17, 16)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(620, 230)
         Me.Guna2Panel1.TabIndex = 65
@@ -282,15 +248,17 @@ Partial Class HistoryForm
         'Guna2Panel9
         '
         Me.Guna2Panel9.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel9.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel9.BorderRadius = 20
+        Me.Guna2Panel9.BorderThickness = 2
         Me.Guna2Panel9.Controls.Add(Me.gdashgrid)
         Me.Guna2Panel9.Controls.Add(Me.gbtnyearly)
         Me.Guna2Panel9.Controls.Add(Me.gbtnmonthly)
         Me.Guna2Panel9.Controls.Add(Me.Label1)
         Me.Guna2Panel9.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel9.Location = New System.Drawing.Point(6, 322)
+        Me.Guna2Panel9.Location = New System.Drawing.Point(8, 261)
         Me.Guna2Panel9.Name = "Guna2Panel9"
-        Me.Guna2Panel9.Size = New System.Drawing.Size(642, 257)
+        Me.Guna2Panel9.Size = New System.Drawing.Size(642, 277)
         Me.Guna2Panel9.TabIndex = 66
         '
         'gbtnyearly
@@ -372,7 +340,7 @@ Partial Class HistoryForm
         Me.gdashgrid.Name = "gdashgrid"
         Me.gdashgrid.ReadOnly = True
         Me.gdashgrid.RowHeadersVisible = False
-        Me.gdashgrid.Size = New System.Drawing.Size(619, 203)
+        Me.gdashgrid.Size = New System.Drawing.Size(619, 221)
         Me.gdashgrid.TabIndex = 12
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -456,15 +424,12 @@ Partial Class HistoryForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(900, 600)
+        Me.ClientSize = New System.Drawing.Size(900, 550)
         Me.Controls.Add(Me.Guna2Panel9)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2Panel6)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel3)
-        Me.Controls.Add(Me.lblname)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "HistoryForm"
         CType(Me.chartexpense, System.ComponentModel.ISupportInitialize).EndInit()
@@ -479,7 +444,6 @@ Partial Class HistoryForm
         Me.Guna2Panel9.PerformLayout()
         CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -494,9 +458,6 @@ Partial Class HistoryForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents lblname As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel

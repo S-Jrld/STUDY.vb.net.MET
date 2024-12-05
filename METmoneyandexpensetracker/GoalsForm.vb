@@ -8,7 +8,6 @@ Public Class GoalsForm
     Private notes As New List(Of GlobalVariables.Note)
 
     Private Sub GoalsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblname.Text = usernamekey
         forecastbudget()
         LoadNotes()
     End Sub

@@ -23,7 +23,6 @@ Partial Class ProfileForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProfileForm))
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -32,11 +31,7 @@ Partial Class ProfileForm
         Me.gbtnsecurity = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnuser = New Guna.UI2.WinForms.Guna2Button()
         Me.lblprofileusername = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblcomname = New System.Windows.Forms.Label()
-        Me.lblusername = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblHighestTotal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -51,7 +46,6 @@ Partial Class ProfileForm
         Me.lblYear2 = New System.Windows.Forms.Label()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblbal = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
@@ -67,15 +61,17 @@ Partial Class ProfileForm
         Me.column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel9.SuspendLayout()
         CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -88,13 +84,13 @@ Partial Class ProfileForm
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.Guna2Panel1.Controls.Add(Me.gbtnsecurity)
         Me.Guna2Panel1.Controls.Add(Me.gbtnuser)
         Me.Guna2Panel1.Controls.Add(Me.lblprofileusername)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel1.Controls.Add(Me.lblcomname)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Location = New System.Drawing.Point(16, 190)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(18, 141)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(249, 391)
         Me.Guna2Panel1.TabIndex = 34
@@ -109,9 +105,9 @@ Partial Class ProfileForm
         Me.gbtnsecurity.FillColor = System.Drawing.Color.Transparent
         Me.gbtnsecurity.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbtnsecurity.ForeColor = System.Drawing.Color.Black
-        Me.gbtnsecurity.Location = New System.Drawing.Point(17, 334)
+        Me.gbtnsecurity.Location = New System.Drawing.Point(16, 324)
         Me.gbtnsecurity.Name = "gbtnsecurity"
-        Me.gbtnsecurity.Size = New System.Drawing.Size(201, 45)
+        Me.gbtnsecurity.Size = New System.Drawing.Size(219, 45)
         Me.gbtnsecurity.TabIndex = 4
         Me.gbtnsecurity.Text = "Account security"
         Me.gbtnsecurity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -126,9 +122,9 @@ Partial Class ProfileForm
         Me.gbtnuser.FillColor = System.Drawing.Color.Transparent
         Me.gbtnuser.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
         Me.gbtnuser.ForeColor = System.Drawing.Color.Black
-        Me.gbtnuser.Location = New System.Drawing.Point(17, 283)
+        Me.gbtnuser.Location = New System.Drawing.Point(16, 270)
         Me.gbtnuser.Name = "gbtnuser"
-        Me.gbtnuser.Size = New System.Drawing.Size(201, 45)
+        Me.gbtnuser.Size = New System.Drawing.Size(219, 45)
         Me.gbtnuser.TabIndex = 3
         Me.gbtnuser.Text = "User profile"
         Me.gbtnuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -138,67 +134,23 @@ Partial Class ProfileForm
         '
         Me.lblprofileusername.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblprofileusername.ForeColor = System.Drawing.Color.Black
-        Me.lblprofileusername.Location = New System.Drawing.Point(9, 243)
+        Me.lblprofileusername.Location = New System.Drawing.Point(9, 216)
         Me.lblprofileusername.Name = "lblprofileusername"
         Me.lblprofileusername.Size = New System.Drawing.Size(227, 23)
         Me.lblprofileusername.TabIndex = 2
         Me.lblprofileusername.Text = "Username"
         Me.lblprofileusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(27, 18)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(191, 184)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 1
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'lblcomname
         '
         Me.lblcomname.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcomname.ForeColor = System.Drawing.Color.Black
-        Me.lblcomname.Location = New System.Drawing.Point(10, 215)
+        Me.lblcomname.Location = New System.Drawing.Point(10, 190)
         Me.lblcomname.Name = "lblcomname"
         Me.lblcomname.Size = New System.Drawing.Size(227, 23)
         Me.lblcomname.TabIndex = 0
         Me.lblcomname.Text = "Complete Name"
         Me.lblcomname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblusername
-        '
-        Me.lblusername.AutoSize = True
-        Me.lblusername.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblusername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.lblusername.Location = New System.Drawing.Point(695, 18)
-        Me.lblusername.Name = "lblusername"
-        Me.lblusername.Size = New System.Drawing.Size(106, 24)
-        Me.lblusername.TabIndex = 54
-        Me.lblusername.Text = "Username"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(594, 18)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 24)
-        Me.Label6.TabIndex = 53
-        Me.Label6.Text = "Welcome,"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(6, 13)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(119, 32)
-        Me.Label5.TabIndex = 52
-        Me.Label5.Text = "Profile"
         '
         'Guna2Panel2
         '
@@ -209,7 +161,7 @@ Partial Class ProfileForm
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Controls.Add(Me.lblCategory)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2Panel2.Location = New System.Drawing.Point(329, 75)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(329, 19)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(170, 214)
         Me.Guna2Panel2.TabIndex = 35
@@ -277,7 +229,7 @@ Partial Class ProfileForm
         Me.Guna2Panel3.Controls.Add(Me.lblYear)
         Me.Guna2Panel3.Controls.Add(Me.lbldate)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2Panel3.Location = New System.Drawing.Point(519, 75)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(519, 19)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(170, 214)
         Me.Guna2Panel3.TabIndex = 36
@@ -314,7 +266,7 @@ Partial Class ProfileForm
         Me.Guna2Panel4.Controls.Add(Me.lblYear2)
         Me.Guna2Panel4.Controls.Add(Me.lblTotalSpent)
         Me.Guna2Panel4.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2Panel4.Location = New System.Drawing.Point(709, 75)
+        Me.Guna2Panel4.Location = New System.Drawing.Point(709, 19)
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.Size = New System.Drawing.Size(170, 214)
         Me.Guna2Panel4.TabIndex = 36
@@ -349,7 +301,7 @@ Partial Class ProfileForm
         Me.Guna2Panel5.Controls.Add(Me.Guna2PictureBox2)
         Me.Guna2Panel5.Controls.Add(Me.Label3)
         Me.Guna2Panel5.FillColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Guna2Panel5.Location = New System.Drawing.Point(23, 64)
+        Me.Guna2Panel5.Location = New System.Drawing.Point(18, 19)
         Me.Guna2Panel5.Name = "Guna2Panel5"
         Me.Guna2Panel5.Size = New System.Drawing.Size(251, 100)
         Me.Guna2Panel5.TabIndex = 36
@@ -366,18 +318,6 @@ Partial Class ProfileForm
         Me.lblbal.TabIndex = 48
         Me.lblbal.Text = "0"
         Me.lblbal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(17, 47)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 40)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox2.TabIndex = 49
-        Me.Guna2PictureBox2.TabStop = False
         '
         'Label3
         '
@@ -397,7 +337,7 @@ Partial Class ProfileForm
         Me.Guna2Panel6.BorderColor = System.Drawing.Color.Transparent
         Me.Guna2Panel6.BorderRadius = 20
         Me.Guna2Panel6.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2Panel6.Location = New System.Drawing.Point(62, 64)
+        Me.Guna2Panel6.Location = New System.Drawing.Point(57, 19)
         Me.Guna2Panel6.Name = "Guna2Panel6"
         Me.Guna2Panel6.Size = New System.Drawing.Size(233, 100)
         Me.Guna2Panel6.TabIndex = 50
@@ -409,7 +349,7 @@ Partial Class ProfileForm
         Me.Guna2Panel8.BorderColor = System.Drawing.Color.Transparent
         Me.Guna2Panel8.BorderRadius = 20
         Me.Guna2Panel8.FillColor = System.Drawing.Color.Black
-        Me.Guna2Panel8.Location = New System.Drawing.Point(83, 64)
+        Me.Guna2Panel8.Location = New System.Drawing.Point(78, 19)
         Me.Guna2Panel8.Name = "Guna2Panel8"
         Me.Guna2Panel8.Size = New System.Drawing.Size(233, 100)
         Me.Guna2Panel8.TabIndex = 51
@@ -424,7 +364,7 @@ Partial Class ProfileForm
         Me.Guna2Panel9.Controls.Add(Me.Label1)
         Me.Guna2Panel9.Controls.Add(Me.gdashgrid)
         Me.Guna2Panel9.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel9.Location = New System.Drawing.Point(278, 326)
+        Me.Guna2Panel9.Location = New System.Drawing.Point(278, 275)
         Me.Guna2Panel9.Name = "Guna2Panel9"
         Me.Guna2Panel9.Size = New System.Drawing.Size(610, 257)
         Me.Guna2Panel9.TabIndex = 58
@@ -587,19 +527,40 @@ Partial Class ProfileForm
         Me.column7.ReadOnly = True
         Me.column7.Width = 58
         '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(17, 47)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 49
+        Me.Guna2PictureBox2.TabStop = False
+        '
+        'Guna2CirclePictureBox1
+        '
+        Me.Guna2CirclePictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Email_icon
+        Me.Guna2CirclePictureBox1.ImageRotate = 0!
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(53, 28)
+        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(150, 150)
+        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2CirclePictureBox1.TabIndex = 5
+        Me.Guna2CirclePictureBox1.TabStop = False
+        '
         'ProfileForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(900, 600)
+        Me.ClientSize = New System.Drawing.Size(900, 550)
         Me.Controls.Add(Me.Guna2Panel9)
         Me.Controls.Add(Me.Guna2Panel5)
         Me.Controls.Add(Me.Guna2Panel4)
         Me.Controls.Add(Me.Guna2Panel3)
-        Me.Controls.Add(Me.lblusername)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel6)
@@ -608,7 +569,6 @@ Partial Class ProfileForm
         Me.Name = "ProfileForm"
         Me.Text = "ProfileForm"
         Me.Guna2Panel1.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
@@ -617,25 +577,21 @@ Partial Class ProfileForm
         Me.Guna2Panel4.PerformLayout()
         Me.Guna2Panel5.ResumeLayout(False)
         Me.Guna2Panel5.PerformLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel9.ResumeLayout(False)
         Me.Guna2Panel9.PerformLayout()
         CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents lblusername As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblcomname As Label
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents gbtnsecurity As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbtnuser As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblprofileusername As Label
@@ -666,4 +622,5 @@ Partial Class ProfileForm
     Friend WithEvents column5 As DataGridViewTextBoxColumn
     Friend WithEvents column6 As DataGridViewTextBoxColumn
     Friend WithEvents column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
 End Class
