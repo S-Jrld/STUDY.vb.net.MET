@@ -63,40 +63,66 @@ Public Class BudgetForm
     End Sub
 
     Public Sub AddMonthBudget()
-        Dim query As String = "INSERT INTO tblbalance(userid, uname, budgetname, budget, startdate) VALUES ((SELECT userid FROM tbluser WHERE uname = @username), @username, 'Monthly', @budget, @startdate)"
+        Dim getUserIdQuery As String = "SELECT userid FROM tbluser WHERE uname = @username"
+        Dim insertBalanceQuery As String = "INSERT INTO tblbalance(userid, uname, budgetname, budget, startdate) VALUES (@userid, @username, 'Monthly', @budget, @startdate)"
+        Dim budgetAmount As Decimal
+
+        ' Validate and convert the budget input
+        If Not Decimal.TryParse(gtbxmonthlybudget.Text, budgetAmount) Then
+            MessageBox.Show("Invalid budget amount. Please enter a valid number.", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         Try
-            'check connection state if closed then open
+            ' Check connection state; if closed then open
             If connection.State = ConnectionState.Closed Then
                 connection.Open()
             End If
-            'save sql query to the variable cmd
-            Using cmd As New MySqlCommand(query, connection)
-                cmd.Parameters.Clear()
-                cmd.Parameters.AddWithValue("@username", usernamekey)
-                cmd.Parameters.AddWithValue("@budget", gtbxmonthlybudget.Text)
-                cmd.Parameters.AddWithValue("@startdate", Now())
-                'execute query into the database and return the integer value of number of rows affected
-                Dim i As Integer = cmd.ExecuteNonQuery()
+
+            ' Retrieve the user ID based on the username
+            Using cmdGetUserId As New MySqlCommand(getUserIdQuery, connection)
+                cmdGetUserId.Parameters.AddWithValue("@username", usernamekey)
+                Dim userIdResult As Object = cmdGetUserId.ExecuteScalar()
+
+                ' Ensure userIdResult is not null
+                If userIdResult Is Nothing Then
+                    MessageBox.Show("User not found. Please check the username.", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Exit Sub
+                End If
+
+                userid = userIdResult.ToString() ' Store the user ID as a string
+            End Using
+
+            ' Insert the new budget record
+            Using cmdInsertBalance As New MySqlCommand(insertBalanceQuery, connection)
+                cmdInsertBalance.Parameters.AddWithValue("@userid", userid) ' Use the string user ID
+                cmdInsertBalance.Parameters.AddWithValue("@username", usernamekey)
+                cmdInsertBalance.Parameters.AddWithValue("@budget", budgetAmount)
+                cmdInsertBalance.Parameters.AddWithValue("@startdate", Now())
+
+                Dim i As Integer = cmdInsertBalance.ExecuteNonQuery()
                 If i > 0 Then
                     MessageBox.Show("Set New Budget Successfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    'close the form and return to dashboard
+                    ' Close the form and return to the dashboard
                     Me.Close()
                 Else
                     MessageBox.Show("Set New Budget Unsuccessfully!", "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 End If
             End Using
+
         Catch ex As MySqlException
             MessageBox.Show("MySQL Error in ExecuteBudgetQuery: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
             MessageBox.Show("Error in ExecuteBudgetQuery: " & ex.Message, "MoneyExpenseTracker", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
-            'check connection state if open then close
+            ' Check connection state; if open then close
             If connection.State = ConnectionState.Open Then
                 connection.Close()
             End If
         End Try
-
     End Sub
+
+
     Private Sub gbtnback_Click(sender As Object, e As EventArgs) Handles gbtnback.Click
         'close the form and return to dashboard
         Me.Close()

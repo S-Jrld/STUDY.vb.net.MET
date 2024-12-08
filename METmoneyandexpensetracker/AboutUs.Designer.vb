@@ -215,7 +215,7 @@ Partial Class AboutUs
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(140, 14)
         Me.Label25.TabIndex = 0
-        Me.Label25.Text = "Kurt Lawrence Quirap"
+        Me.Label25.Text = "Kurt Lawrenze Quirap"
         '
         'Label24
         '
