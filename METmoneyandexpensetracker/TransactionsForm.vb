@@ -132,4 +132,8 @@ Public Class TransactionsForm
             gbtnedittrans.Enabled = False
         End If
     End Sub
+
+    Private Sub gcmbcategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gcmbcategory.SelectedIndexChanged
+
+    End Sub
 End Class

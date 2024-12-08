@@ -45,8 +45,9 @@ Partial Class BudgetForm
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(461, 30)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(692, 46)
         Me.Guna2Panel1.TabIndex = 61
         '
         'gbtnback
@@ -58,11 +59,11 @@ Partial Class BudgetForm
         Me.gbtnback.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gbtnback.HoverState.ForeColor = System.Drawing.Color.Black
         Me.gbtnback.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
-        Me.gbtnback.Location = New System.Drawing.Point(14, 42)
+        Me.gbtnback.Location = New System.Drawing.Point(21, 65)
         Me.gbtnback.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnback.Name = "gbtnback"
         Me.gbtnback.PressedColor = System.Drawing.Color.Transparent
-        Me.gbtnback.Size = New System.Drawing.Size(65, 22)
+        Me.gbtnback.Size = New System.Drawing.Size(98, 34)
         Me.gbtnback.TabIndex = 60
         Me.gbtnback.Text = "Back"
         Me.gbtnback.UseTransparentBackground = True
@@ -74,15 +75,16 @@ Partial Class BudgetForm
         Me.gbtnsetnew.BorderRadius = 15
         Me.gbtnsetnew.BorderThickness = 2
         Me.gbtnsetnew.CheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.gbtnsetnew.FillColor = System.Drawing.Color.White
+        Me.gbtnsetnew.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
         Me.gbtnsetnew.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbtnsetnew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.gbtnsetnew.ForeColor = System.Drawing.Color.Honeydew
         Me.gbtnsetnew.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gbtnsetnew.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gbtnsetnew.Location = New System.Drawing.Point(242, 260)
+        Me.gbtnsetnew.Location = New System.Drawing.Point(363, 400)
+        Me.gbtnsetnew.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gbtnsetnew.Name = "gbtnsetnew"
         Me.gbtnsetnew.PressedColor = System.Drawing.Color.Transparent
-        Me.gbtnsetnew.Size = New System.Drawing.Size(194, 33)
+        Me.gbtnsetnew.Size = New System.Drawing.Size(291, 51)
         Me.gbtnsetnew.TabIndex = 59
         Me.gbtnsetnew.Text = "Set new budget"
         Me.gbtnsetnew.UseTransparentBackground = True
@@ -93,9 +95,10 @@ Partial Class BudgetForm
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(27, 71)
+        Me.Label5.Location = New System.Drawing.Point(40, 109)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(164, 32)
+        Me.Label5.Size = New System.Drawing.Size(250, 48)
         Me.Label5.TabIndex = 52
         Me.Label5.Text = "Set Budget"
         '
@@ -116,14 +119,14 @@ Partial Class BudgetForm
         Me.gtbxmonthlybudget.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxmonthlybudget.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxmonthlybudget.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxmonthlybudget.Location = New System.Drawing.Point(29, 149)
-        Me.gtbxmonthlybudget.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxmonthlybudget.Location = New System.Drawing.Point(44, 229)
+        Me.gtbxmonthlybudget.Margin = New System.Windows.Forms.Padding(6)
         Me.gtbxmonthlybudget.Name = "gtbxmonthlybudget"
         Me.gtbxmonthlybudget.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxmonthlybudget.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxmonthlybudget.PlaceholderText = "Monthly Budget"
         Me.gtbxmonthlybudget.SelectedText = ""
-        Me.gtbxmonthlybudget.Size = New System.Drawing.Size(194, 35)
+        Me.gtbxmonthlybudget.Size = New System.Drawing.Size(291, 54)
         Me.gtbxmonthlybudget.TabIndex = 50
         '
         'Guna2DragControl1
@@ -149,14 +152,14 @@ Partial Class BudgetForm
         Me.gtbxyearlybudget.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxyearlybudget.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxyearlybudget.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxyearlybudget.Location = New System.Drawing.Point(242, 149)
-        Me.gtbxyearlybudget.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxyearlybudget.Location = New System.Drawing.Point(363, 229)
+        Me.gtbxyearlybudget.Margin = New System.Windows.Forms.Padding(6)
         Me.gtbxyearlybudget.Name = "gtbxyearlybudget"
         Me.gtbxyearlybudget.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxyearlybudget.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxyearlybudget.PlaceholderText = "Yearly Budget"
         Me.gtbxyearlybudget.SelectedText = ""
-        Me.gtbxyearlybudget.Size = New System.Drawing.Size(194, 35)
+        Me.gtbxyearlybudget.Size = New System.Drawing.Size(291, 54)
         Me.gtbxyearlybudget.TabIndex = 62
         '
         'Label2
@@ -165,9 +168,10 @@ Partial Class BudgetForm
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(26, 194)
+        Me.Label2.Location = New System.Drawing.Point(39, 298)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(182, 120)
+        Me.Label2.Size = New System.Drawing.Size(285, 184)
         Me.Label2.TabIndex = 65
         Me.Label2.Text = "Note." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "all fields must be filled" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "if you are not sure about" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the yearly budget ju" &
     "st " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "multiply your monthly" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "budget into the number" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of months remaining" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "before " &
@@ -189,17 +193,18 @@ Partial Class BudgetForm
         Me.gcmbbudgetname.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gcmbbudgetname.ItemHeight = 30
         Me.gcmbbudgetname.Items.AddRange(New Object() {"Monthly", "Both"})
-        Me.gcmbbudgetname.Location = New System.Drawing.Point(242, 67)
+        Me.gcmbbudgetname.Location = New System.Drawing.Point(363, 103)
+        Me.gcmbbudgetname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gcmbbudgetname.Name = "gcmbbudgetname"
-        Me.gcmbbudgetname.Size = New System.Drawing.Size(194, 36)
+        Me.gcmbbudgetname.Size = New System.Drawing.Size(289, 36)
         Me.gcmbbudgetname.TabIndex = 66
         '
         'BudgetForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(461, 328)
+        Me.BackColor = System.Drawing.Color.Honeydew
+        Me.ClientSize = New System.Drawing.Size(692, 505)
         Me.Controls.Add(Me.gcmbbudgetname)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.gtbxyearlybudget)
@@ -209,6 +214,7 @@ Partial Class BudgetForm
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.gtbxmonthlybudget)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "BudgetForm"
         Me.Text = "BudgetForm"
         Me.ResumeLayout(False)

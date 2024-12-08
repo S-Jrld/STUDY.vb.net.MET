@@ -62,8 +62,9 @@ Partial Class UserProfileForm
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(405, 30)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(608, 46)
         Me.Guna2Panel1.TabIndex = 45
         '
         'gtbxincome
@@ -83,14 +84,14 @@ Partial Class UserProfileForm
         Me.gtbxincome.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxincome.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxincome.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxincome.Location = New System.Drawing.Point(184, 399)
-        Me.gtbxincome.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxincome.Location = New System.Drawing.Point(276, 614)
+        Me.gtbxincome.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.gtbxincome.Name = "gtbxincome"
         Me.gtbxincome.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxincome.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxincome.PlaceholderText = "Income"
         Me.gtbxincome.SelectedText = ""
-        Me.gtbxincome.Size = New System.Drawing.Size(190, 35)
+        Me.gtbxincome.Size = New System.Drawing.Size(285, 54)
         Me.gtbxincome.TabIndex = 59
         '
         'Label6
@@ -98,9 +99,10 @@ Partial Class UserProfileForm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(38, 407)
+        Me.Label6.Location = New System.Drawing.Point(57, 626)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 18)
+        Me.Label6.Size = New System.Drawing.Size(194, 27)
         Me.Label6.TabIndex = 58
         Me.Label6.Text = "Monthly Income"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -110,9 +112,10 @@ Partial Class UserProfileForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(38, 282)
+        Me.Label3.Location = New System.Drawing.Point(57, 434)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 18)
+        Me.Label3.Size = New System.Drawing.Size(181, 27)
         Me.Label3.TabIndex = 57
         Me.Label3.Text = "Date of Birth"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -128,11 +131,12 @@ Partial Class UserProfileForm
         Me.gbirthdate.FillColor = System.Drawing.Color.White
         Me.gbirthdate.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.gbirthdate.Location = New System.Drawing.Point(184, 273)
+        Me.gbirthdate.Location = New System.Drawing.Point(276, 420)
+        Me.gbirthdate.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gbirthdate.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.gbirthdate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.gbirthdate.Name = "gbirthdate"
-        Me.gbirthdate.Size = New System.Drawing.Size(190, 36)
+        Me.gbirthdate.Size = New System.Drawing.Size(285, 55)
         Me.gbirthdate.TabIndex = 56
         Me.gbirthdate.Value = New Date(2024, 11, 26, 0, 0, 0, 0)
         '
@@ -141,9 +145,10 @@ Partial Class UserProfileForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(38, 364)
+        Me.Label2.Location = New System.Drawing.Point(57, 560)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 18)
+        Me.Label2.Size = New System.Drawing.Size(207, 27)
         Me.Label2.TabIndex = 55
         Me.Label2.Text = "Source of funds"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -163,9 +168,10 @@ Partial Class UserProfileForm
         Me.gcmbsource.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gcmbsource.ItemHeight = 30
         Me.gcmbsource.Items.AddRange(New Object() {"Cash on Hand", "Bank Account", "E-money"})
-        Me.gcmbsource.Location = New System.Drawing.Point(184, 357)
+        Me.gcmbsource.Location = New System.Drawing.Point(276, 549)
+        Me.gcmbsource.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gcmbsource.Name = "gcmbsource"
-        Me.gcmbsource.Size = New System.Drawing.Size(190, 36)
+        Me.gcmbsource.Size = New System.Drawing.Size(283, 36)
         Me.gcmbsource.TabIndex = 54
         '
         'Label1
@@ -173,9 +179,10 @@ Partial Class UserProfileForm
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(38, 323)
+        Me.Label1.Location = New System.Drawing.Point(57, 497)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 18)
+        Me.Label1.Size = New System.Drawing.Size(142, 27)
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "Occupation"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -195,9 +202,10 @@ Partial Class UserProfileForm
         Me.gcmboccupation.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gcmboccupation.ItemHeight = 30
         Me.gcmboccupation.Items.AddRange(New Object() {"Employed", "Self-Employed", "Student"})
-        Me.gcmboccupation.Location = New System.Drawing.Point(184, 315)
+        Me.gcmboccupation.Location = New System.Drawing.Point(276, 485)
+        Me.gcmboccupation.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gcmboccupation.Name = "gcmboccupation"
-        Me.gcmboccupation.Size = New System.Drawing.Size(190, 36)
+        Me.gcmboccupation.Size = New System.Drawing.Size(283, 36)
         Me.gcmboccupation.TabIndex = 52
         '
         'gtbxaddress
@@ -217,14 +225,14 @@ Partial Class UserProfileForm
         Me.gtbxaddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxaddress.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxaddress.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxaddress.Location = New System.Drawing.Point(22, 232)
-        Me.gtbxaddress.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxaddress.Location = New System.Drawing.Point(33, 357)
+        Me.gtbxaddress.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.gtbxaddress.Name = "gtbxaddress"
         Me.gtbxaddress.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxaddress.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxaddress.PlaceholderText = "Address"
         Me.gtbxaddress.SelectedText = ""
-        Me.gtbxaddress.Size = New System.Drawing.Size(352, 35)
+        Me.gtbxaddress.Size = New System.Drawing.Size(528, 54)
         Me.gtbxaddress.TabIndex = 51
         '
         'gtbxlname
@@ -244,14 +252,14 @@ Partial Class UserProfileForm
         Me.gtbxlname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxlname.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxlname.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxlname.Location = New System.Drawing.Point(202, 191)
-        Me.gtbxlname.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxlname.Location = New System.Drawing.Point(303, 294)
+        Me.gtbxlname.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.gtbxlname.Name = "gtbxlname"
         Me.gtbxlname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxlname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxlname.PlaceholderText = "Lastname"
         Me.gtbxlname.SelectedText = ""
-        Me.gtbxlname.Size = New System.Drawing.Size(172, 35)
+        Me.gtbxlname.Size = New System.Drawing.Size(258, 54)
         Me.gtbxlname.TabIndex = 50
         '
         'Label4
@@ -259,9 +267,10 @@ Partial Class UserProfileForm
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(24, 111)
+        Me.Label4.Location = New System.Drawing.Point(36, 171)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(144, 18)
+        Me.Label4.Size = New System.Drawing.Size(233, 27)
         Me.Label4.TabIndex = 49
         Me.Label4.Text = "Edit your profile"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -270,12 +279,13 @@ Partial Class UserProfileForm
         '
         Me.gbtnupdateinfo.BackColor = System.Drawing.Color.Transparent
         Me.gbtnupdateinfo.BorderRadius = 15
-        Me.gbtnupdateinfo.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gbtnupdateinfo.FillColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.gbtnupdateinfo.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbtnupdateinfo.ForeColor = System.Drawing.Color.White
-        Me.gbtnupdateinfo.Location = New System.Drawing.Point(219, 441)
+        Me.gbtnupdateinfo.Location = New System.Drawing.Point(328, 678)
+        Me.gbtnupdateinfo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gbtnupdateinfo.Name = "gbtnupdateinfo"
-        Me.gbtnupdateinfo.Size = New System.Drawing.Size(155, 35)
+        Me.gbtnupdateinfo.Size = New System.Drawing.Size(232, 54)
         Me.gbtnupdateinfo.TabIndex = 48
         Me.gbtnupdateinfo.Text = "Update Info"
         '
@@ -296,14 +306,14 @@ Partial Class UserProfileForm
         Me.gtbxfname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxfname.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxfname.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxfname.Location = New System.Drawing.Point(22, 191)
-        Me.gtbxfname.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxfname.Location = New System.Drawing.Point(33, 294)
+        Me.gtbxfname.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.gtbxfname.Name = "gtbxfname"
         Me.gtbxfname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxfname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxfname.PlaceholderText = "Firstname"
         Me.gtbxfname.SelectedText = ""
-        Me.gtbxfname.Size = New System.Drawing.Size(172, 35)
+        Me.gtbxfname.Size = New System.Drawing.Size(258, 54)
         Me.gtbxfname.TabIndex = 47
         '
         'Label5
@@ -311,9 +321,10 @@ Partial Class UserProfileForm
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(21, 70)
+        Me.Label5.Location = New System.Drawing.Point(32, 108)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(194, 32)
+        Me.Label5.Size = New System.Drawing.Size(296, 48)
         Me.Label5.TabIndex = 46
         Me.Label5.Text = "User profile"
         '
@@ -334,14 +345,14 @@ Partial Class UserProfileForm
         Me.gtbxuname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gtbxuname.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxuname.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.gtbxuname.Location = New System.Drawing.Point(22, 148)
-        Me.gtbxuname.Margin = New System.Windows.Forms.Padding(4)
+        Me.gtbxuname.Location = New System.Drawing.Point(33, 228)
+        Me.gtbxuname.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.gtbxuname.Name = "gtbxuname"
         Me.gtbxuname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxuname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gtbxuname.PlaceholderText = "Username"
         Me.gtbxuname.SelectedText = ""
-        Me.gtbxuname.Size = New System.Drawing.Size(352, 35)
+        Me.gtbxuname.Size = New System.Drawing.Size(528, 54)
         Me.gtbxuname.TabIndex = 60
         '
         'gbtnback
@@ -353,11 +364,11 @@ Partial Class UserProfileForm
         Me.gbtnback.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gbtnback.HoverState.ForeColor = System.Drawing.Color.Black
         Me.gbtnback.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Back_icon48
-        Me.gbtnback.Location = New System.Drawing.Point(16, 45)
+        Me.gbtnback.Location = New System.Drawing.Point(24, 69)
         Me.gbtnback.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnback.Name = "gbtnback"
         Me.gbtnback.PressedColor = System.Drawing.Color.Transparent
-        Me.gbtnback.Size = New System.Drawing.Size(65, 22)
+        Me.gbtnback.Size = New System.Drawing.Size(98, 34)
         Me.gbtnback.TabIndex = 61
         Me.gbtnback.Text = "Back"
         Me.gbtnback.UseTransparentBackground = True
@@ -377,17 +388,18 @@ Partial Class UserProfileForm
         Me.gcmbctrl.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gcmbctrl.ItemHeight = 30
         Me.gcmbctrl.Items.AddRange(New Object() {"Info", "EditInfo"})
-        Me.gcmbctrl.Location = New System.Drawing.Point(252, 45)
+        Me.gcmbctrl.Location = New System.Drawing.Point(378, 69)
+        Me.gcmbctrl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gcmbctrl.Name = "gcmbctrl"
-        Me.gcmbctrl.Size = New System.Drawing.Size(122, 36)
+        Me.gcmbctrl.Size = New System.Drawing.Size(181, 36)
         Me.gcmbctrl.TabIndex = 62
         '
         'UserProfileForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(405, 500)
+        Me.BackColor = System.Drawing.Color.Honeydew
+        Me.ClientSize = New System.Drawing.Size(608, 769)
         Me.Controls.Add(Me.gcmbctrl)
         Me.Controls.Add(Me.gbtnback)
         Me.Controls.Add(Me.gtbxuname)
@@ -407,6 +419,7 @@ Partial Class UserProfileForm
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "UserProfileForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserProfileForm"

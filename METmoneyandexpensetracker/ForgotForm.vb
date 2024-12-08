@@ -123,4 +123,32 @@ Public Class ForgotForm
             Me.Close()
         End If
     End Sub
+
+    Private Sub ForgotForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
+
+    End Sub
+
+    Private Sub gtbxuname_TextChanged(sender As Object, e As EventArgs) Handles gtbxuname.TextChanged
+
+    End Sub
+
+    Private Sub gtbxnewpass_TextChanged(sender As Object, e As EventArgs) Handles gtbxnewpass.TextChanged
+
+    End Sub
+
+    Private Sub gtbxconfirmpass_TextChanged(sender As Object, e As EventArgs) Handles gtbxconfirmpass.TextChanged
+
+    End Sub
 End Class

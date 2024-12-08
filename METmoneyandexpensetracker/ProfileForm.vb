@@ -203,7 +203,7 @@ Public Class ProfileForm
         Dvg_load()
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs)
         'set the value of expense period into monthly
         If gexpperiod = "Yearly" Then
             gexpperiod = "Monthly"
@@ -212,7 +212,7 @@ Public Class ProfileForm
         Me.Refresh()
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles gbtnyearly.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
         'set the value of expense period into yearly
         If gexpperiod = "Monthly" Then
             gexpperiod = "Yearly"
@@ -239,5 +239,9 @@ Public Class ProfileForm
             usersecurity.Owner = Me
             usersecurity.ShowDialog()
         End Using
+    End Sub
+
+    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
+
     End Sub
 End Class
