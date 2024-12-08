@@ -117,7 +117,7 @@ Partial Class BudgetForm
         Me.gtbxmonthlybudget.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxmonthlybudget.IconLeftSize = New System.Drawing.Size(25, 25)
         Me.gtbxmonthlybudget.Location = New System.Drawing.Point(29, 149)
-        Me.gtbxmonthlybudget.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gtbxmonthlybudget.Margin = New System.Windows.Forms.Padding(4)
         Me.gtbxmonthlybudget.Name = "gtbxmonthlybudget"
         Me.gtbxmonthlybudget.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxmonthlybudget.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
@@ -150,7 +150,7 @@ Partial Class BudgetForm
         Me.gtbxyearlybudget.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gtbxyearlybudget.IconLeftSize = New System.Drawing.Size(25, 25)
         Me.gtbxyearlybudget.Location = New System.Drawing.Point(242, 149)
-        Me.gtbxyearlybudget.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gtbxyearlybudget.Margin = New System.Windows.Forms.Padding(4)
         Me.gtbxyearlybudget.Name = "gtbxyearlybudget"
         Me.gtbxyearlybudget.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gtbxyearlybudget.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
