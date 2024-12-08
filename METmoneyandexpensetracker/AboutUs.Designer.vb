@@ -77,10 +77,10 @@ Partial Class AboutUs
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Ivory
-        Me.Label1.Location = New System.Drawing.Point(74, 12)
+        Me.Label1.Location = New System.Drawing.Point(386, 27)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(207, 43)
+        Me.Label1.Size = New System.Drawing.Size(136, 29)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ABOUT US"
         '
@@ -91,7 +91,7 @@ Partial Class AboutUs
         Me.Label4.Location = New System.Drawing.Point(322, 440)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 38)
+        Me.Label4.Size = New System.Drawing.Size(0, 25)
         Me.Label4.TabIndex = 4
         Me.Label4.Tag = "Welcome to"
         '
@@ -101,10 +101,10 @@ Partial Class AboutUs
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label6.ForeColor = System.Drawing.Color.Beige
-        Me.Label6.Location = New System.Drawing.Point(513, 83)
+        Me.Label6.Location = New System.Drawing.Point(512, 128)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(430, 220)
+        Me.Label6.Size = New System.Drawing.Size(301, 140)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = resources.GetString("Label6.Text")
         '
@@ -113,9 +113,9 @@ Partial Class AboutUs
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Green
-        Me.Label13.Location = New System.Drawing.Point(25, 72)
+        Me.Label13.Location = New System.Drawing.Point(193, 81)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(818, 27)
+        Me.Label13.Size = New System.Drawing.Size(504, 18)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "We offer features that help you stay organized and in control."
         '
@@ -124,9 +124,9 @@ Partial Class AboutUs
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label14.Location = New System.Drawing.Point(346, 11)
+        Me.Label14.Location = New System.Drawing.Point(346, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(326, 48)
+        Me.Label14.Size = New System.Drawing.Size(216, 32)
         Me.Label14.TabIndex = 1
         Me.Label14.Text = "WHAT WE OFFER"
         '
@@ -135,9 +135,9 @@ Partial Class AboutUs
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label8.ForeColor = System.Drawing.Color.Green
-        Me.Label8.Location = New System.Drawing.Point(350, 185)
+        Me.Label8.Location = New System.Drawing.Point(337, 189)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(290, 110)
+        Me.Label8.Size = New System.Drawing.Size(203, 70)
         Me.Label8.TabIndex = 8
         Me.Label8.Text = "With easy-to-understand " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reports and visualizations, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "you'll always know where " &
     "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your money is going and " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "how to optimize your budget."
@@ -147,9 +147,9 @@ Partial Class AboutUs
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label9.ForeColor = System.Drawing.Color.Green
-        Me.Label9.Location = New System.Drawing.Point(12, 185)
+        Me.Label9.Location = New System.Drawing.Point(35, 189)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(300, 110)
+        Me.Label9.Size = New System.Drawing.Size(210, 70)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Whether you're saving for a " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "vacation, a new gadget, or " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "building an emergency " &
     "fund, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "we'll help you set and track " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "financial goals "
@@ -159,9 +159,9 @@ Partial Class AboutUs
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label11.ForeColor = System.Drawing.Color.Green
-        Me.Label11.Location = New System.Drawing.Point(553, 369)
+        Me.Label11.Location = New System.Drawing.Point(539, 372)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(290, 66)
+        Me.Label11.Size = New System.Drawing.Size(203, 42)
         Me.Label11.TabIndex = 8
         Me.Label11.Text = "Monitor your daily, weekly, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and monthly spending across " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "various categories."
         '
@@ -170,9 +170,9 @@ Partial Class AboutUs
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label16.ForeColor = System.Drawing.Color.Beige
-        Me.Label16.Location = New System.Drawing.Point(48, 83)
+        Me.Label16.Location = New System.Drawing.Point(47, 128)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(430, 220)
+        Me.Label16.Size = New System.Drawing.Size(301, 140)
         Me.Label16.TabIndex = 18
         Me.Label16.Text = resources.GetString("Label16.Text")
         '
@@ -180,9 +180,9 @@ Partial Class AboutUs
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(348, 163)
+        Me.Label15.Location = New System.Drawing.Point(346, 159)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(367, 68)
+        Me.Label15.Size = New System.Drawing.Size(230, 44)
         Me.Label15.TabIndex = 17
         Me.Label15.Text = """A good money tracking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  is wealth-hacking"""
         '
@@ -192,7 +192,7 @@ Partial Class AboutUs
         Me.Label18.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(332, 1136)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(272, 28)
+        Me.Label18.Size = New System.Drawing.Size(189, 19)
         Me.Label18.TabIndex = 1
         Me.Label18.Text = "We Are The Best Team"
         '
@@ -202,7 +202,7 @@ Partial Class AboutUs
         Me.Label17.Font = New System.Drawing.Font("Segoe UI Black", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(279, 1076)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(393, 60)
+        Me.Label17.Size = New System.Drawing.Size(260, 40)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "MEET OUR TEAM"
         '
@@ -211,9 +211,9 @@ Partial Class AboutUs
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Green
-        Me.Label25.Location = New System.Drawing.Point(208, 1739)
+        Me.Label25.Location = New System.Drawing.Point(173, 1735)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(210, 22)
+        Me.Label25.Size = New System.Drawing.Size(140, 14)
         Me.Label25.TabIndex = 0
         Me.Label25.Text = "Kurt Lawrence Quirap"
         '
@@ -222,9 +222,9 @@ Partial Class AboutUs
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Green
-        Me.Label24.Location = New System.Drawing.Point(577, 1739)
+        Me.Label24.Location = New System.Drawing.Point(542, 1735)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(115, 22)
+        Me.Label24.Size = New System.Drawing.Size(77, 14)
         Me.Label24.TabIndex = 0
         Me.Label24.Text = "Jerald Seña"
         '
@@ -233,9 +233,9 @@ Partial Class AboutUs
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.Green
-        Me.Label23.Location = New System.Drawing.Point(694, 1430)
+        Me.Label23.Location = New System.Drawing.Point(670, 1427)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(173, 22)
+        Me.Label23.Size = New System.Drawing.Size(118, 14)
         Me.Label23.TabIndex = 0
         Me.Label23.Text = "Rodel Lingcopines"
         '
@@ -244,9 +244,9 @@ Partial Class AboutUs
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Green
-        Me.Label22.Location = New System.Drawing.Point(381, 1430)
+        Me.Label22.Location = New System.Drawing.Point(357, 1427)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(189, 22)
+        Me.Label22.Size = New System.Drawing.Size(123, 14)
         Me.Label22.TabIndex = 0
         Me.Label22.Text = "Jennielyn Guillamar"
         '
@@ -255,9 +255,9 @@ Partial Class AboutUs
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Green
-        Me.Label21.Location = New System.Drawing.Point(80, 1430)
+        Me.Label21.Location = New System.Drawing.Point(56, 1427)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(172, 22)
+        Me.Label21.Size = New System.Drawing.Size(115, 14)
         Me.Label21.TabIndex = 0
         Me.Label21.Text = "Vincent Ian David"
         '
@@ -276,9 +276,9 @@ Partial Class AboutUs
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Consolas", 30.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(444, 19)
+        Me.Label2.Location = New System.Drawing.Point(380, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(228, 70)
+        Me.Label2.Size = New System.Drawing.Size(152, 47)
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "M.E.T."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -288,9 +288,9 @@ Partial Class AboutUs
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Consolas", 25.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(164, 89)
+        Me.Label3.Location = New System.Drawing.Point(218, 90)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(700, 59)
+        Me.Label3.Size = New System.Drawing.Size(492, 40)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "Money and Expense Tracker"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -300,9 +300,9 @@ Partial Class AboutUs
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Black", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label5.Location = New System.Drawing.Point(67, 137)
+        Me.Label5.Location = New System.Drawing.Point(90, 141)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(160, 28)
+        Me.Label5.Size = New System.Drawing.Size(112, 19)
         Me.Label5.TabIndex = 46
         Me.Label5.Text = "Financial Goals"
         '
@@ -311,9 +311,9 @@ Partial Class AboutUs
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Segoe UI Black", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label19.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label19.Location = New System.Drawing.Point(588, 330)
+        Me.Label19.Location = New System.Drawing.Point(574, 333)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(225, 28)
+        Me.Label19.Size = New System.Drawing.Size(157, 19)
         Me.Label19.TabIndex = 47
         Me.Label19.Text = "Spending Monitoring"
         '
@@ -322,15 +322,15 @@ Partial Class AboutUs
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI Black", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label20.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label20.Location = New System.Drawing.Point(365, 137)
+        Me.Label20.Location = New System.Drawing.Point(343, 141)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(266, 28)
+        Me.Label20.Size = New System.Drawing.Size(187, 19)
         Me.Label20.TabIndex = 48
         Me.Label20.Text = "Reports and Visualization" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Location = New System.Drawing.Point(132, 1809)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(99, 1809)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(654, 67)
         Me.Guna2Panel1.TabIndex = 49
@@ -340,9 +340,9 @@ Partial Class AboutUs
         Me.Guna2Panel2.Controls.Add(Me.Label2)
         Me.Guna2Panel2.Controls.Add(Me.Label15)
         Me.Guna2Panel2.Controls.Add(Me.Label3)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(0, -1)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(1008, 231)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(876, 232)
         Me.Guna2Panel2.TabIndex = 50
         '
         'Guna2Panel3
@@ -351,9 +351,9 @@ Partial Class AboutUs
         Me.Guna2Panel3.Controls.Add(Me.Label16)
         Me.Guna2Panel3.Controls.Add(Me.Label1)
         Me.Guna2Panel3.Controls.Add(Me.Label6)
-        Me.Guna2Panel3.Location = New System.Drawing.Point(0, 222)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(0, 231)
         Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(1008, 355)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(876, 355)
         Me.Guna2Panel3.TabIndex = 0
         '
         'Guna2Panel4
@@ -373,7 +373,7 @@ Partial Class AboutUs
         Me.Guna2Panel4.Controls.Add(Me.Label8)
         Me.Guna2Panel4.Location = New System.Drawing.Point(0, 583)
         Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.Size = New System.Drawing.Size(1008, 479)
+        Me.Guna2Panel4.Size = New System.Drawing.Size(876, 479)
         Me.Guna2Panel4.TabIndex = 19
         '
         'Label12
@@ -381,9 +381,9 @@ Partial Class AboutUs
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Black", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label12.Location = New System.Drawing.Point(169, 330)
+        Me.Label12.Location = New System.Drawing.Point(155, 333)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(212, 28)
+        Me.Label12.Size = New System.Drawing.Size(149, 19)
         Me.Label12.TabIndex = 52
         Me.Label12.Text = "Security and Privacy"
         '
@@ -392,9 +392,9 @@ Partial Class AboutUs
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label26.ForeColor = System.Drawing.Color.Green
-        Me.Label26.Location = New System.Drawing.Point(128, 369)
+        Me.Label26.Location = New System.Drawing.Point(114, 372)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(350, 88)
+        Me.Label26.Size = New System.Drawing.Size(245, 56)
         Me.Label26.TabIndex = 51
         Me.Label26.Text = "We prioritize your security and " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "privacy with our robust encryption" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and privacy" &
     " policies to ensure " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your financial data safe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
@@ -404,9 +404,9 @@ Partial Class AboutUs
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Black", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label10.Location = New System.Drawing.Point(757, 137)
+        Me.Label10.Location = New System.Drawing.Point(671, 141)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(186, 28)
+        Me.Label10.Size = New System.Drawing.Size(131, 19)
         Me.Label10.TabIndex = 50
         Me.Label10.Text = "Expense Tracking"
         '
@@ -415,9 +415,9 @@ Partial Class AboutUs
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.Label7.ForeColor = System.Drawing.Color.Green
-        Me.Label7.Location = New System.Drawing.Point(694, 185)
+        Me.Label7.Location = New System.Drawing.Point(632, 189)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(310, 110)
+        Me.Label7.Size = New System.Drawing.Size(217, 70)
         Me.Label7.TabIndex = 49
         Me.Label7.Text = "Track and organize all your " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "expenses,incomes, and savings " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "into customizable c" &
     "ategories " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to better understand where" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your money is going"
@@ -425,7 +425,7 @@ Partial Class AboutUs
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(676, 1207)
+        Me.PictureBox5.Location = New System.Drawing.Point(652, 1204)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -435,7 +435,7 @@ Partial Class AboutUs
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(370, 1207)
+        Me.PictureBox3.Location = New System.Drawing.Point(346, 1204)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -445,7 +445,7 @@ Partial Class AboutUs
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(52, 1207)
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 1204)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -455,7 +455,7 @@ Partial Class AboutUs
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(540, 1516)
+        Me.PictureBox4.Location = New System.Drawing.Point(505, 1512)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -465,7 +465,7 @@ Partial Class AboutUs
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(212, 1516)
+        Me.PictureBox2.Location = New System.Drawing.Point(177, 1512)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -475,12 +475,12 @@ Partial Class AboutUs
         'AboutUs
         '
         Me.AllowDrop = True
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Honeydew
-        Me.ClientSize = New System.Drawing.Size(890, 550)
+        Me.ClientSize = New System.Drawing.Size(900, 550)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Guna2Panel1)

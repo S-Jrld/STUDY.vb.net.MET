@@ -46,6 +46,7 @@ Partial Class DashboardContentsForm
         Me.gaddtbxsearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.chrtexpenses = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblexp = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
@@ -53,21 +54,20 @@ Partial Class DashboardContentsForm
         Me.gbtnsetbudget = New Guna.UI2.WinForms.Guna2Button()
         Me.lblstartdate = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
         Me.gbtntransadd = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chrtexpenses, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel6.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel7.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -80,10 +80,9 @@ Partial Class DashboardContentsForm
         Me.lblavailbal.BackColor = System.Drawing.Color.Transparent
         Me.lblavailbal.Font = New System.Drawing.Font("Consolas", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblavailbal.ForeColor = System.Drawing.Color.White
-        Me.lblavailbal.Location = New System.Drawing.Point(86, 23)
-        Me.lblavailbal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblavailbal.Location = New System.Drawing.Point(57, 15)
         Me.lblavailbal.Name = "lblavailbal"
-        Me.lblavailbal.Size = New System.Drawing.Size(240, 54)
+        Me.lblavailbal.Size = New System.Drawing.Size(160, 35)
         Me.lblavailbal.TabIndex = 11
         Me.lblavailbal.Text = "0"
         Me.lblavailbal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -94,10 +93,9 @@ Partial Class DashboardContentsForm
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(22, 89)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(15, 58)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 28)
+        Me.Label1.Size = New System.Drawing.Size(162, 19)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Available Balance"
         '
@@ -128,13 +126,12 @@ Partial Class DashboardContentsForm
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.gdashgrid.DefaultCellStyle = DataGridViewCellStyle3
         Me.gdashgrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.gdashgrid.Location = New System.Drawing.Point(14, 66)
-        Me.gdashgrid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gdashgrid.Location = New System.Drawing.Point(9, 43)
         Me.gdashgrid.Name = "gdashgrid"
         Me.gdashgrid.ReadOnly = True
         Me.gdashgrid.RowHeadersVisible = False
         Me.gdashgrid.RowHeadersWidth = 62
-        Me.gdashgrid.Size = New System.Drawing.Size(1278, 303)
+        Me.gdashgrid.Size = New System.Drawing.Size(852, 197)
         Me.gdashgrid.TabIndex = 0
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.gdashgrid.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -165,7 +162,7 @@ Partial Class DashboardContentsForm
         Me.ID.MinimumWidth = 8
         Me.ID.Name = "ID"
         Me.ID.ReadOnly = True
-        Me.ID.Width = 66
+        Me.ID.Width = 44
         '
         'Transaction
         '
@@ -174,7 +171,7 @@ Partial Class DashboardContentsForm
         Me.Transaction.MinimumWidth = 8
         Me.Transaction.Name = "Transaction"
         Me.Transaction.ReadOnly = True
-        Me.Transaction.Width = 165
+        Me.Transaction.Width = 107
         '
         'Category
         '
@@ -183,7 +180,7 @@ Partial Class DashboardContentsForm
         Me.Category.MinimumWidth = 8
         Me.Category.Name = "Category"
         Me.Category.ReadOnly = True
-        Me.Category.Width = 132
+        Me.Category.Width = 86
         '
         'Transname
         '
@@ -200,7 +197,7 @@ Partial Class DashboardContentsForm
         Me.Price.MinimumWidth = 8
         Me.Price.Name = "Price"
         Me.Price.ReadOnly = True
-        Me.Price.Width = 99
+        Me.Price.Width = 65
         '
         'Quantity
         '
@@ -209,7 +206,7 @@ Partial Class DashboardContentsForm
         Me.Quantity.MinimumWidth = 8
         Me.Quantity.Name = "Quantity"
         Me.Quantity.ReadOnly = True
-        Me.Quantity.Width = 132
+        Me.Quantity.Width = 86
         '
         'Total
         '
@@ -218,7 +215,7 @@ Partial Class DashboardContentsForm
         Me.Total.MinimumWidth = 8
         Me.Total.Name = "Total"
         Me.Total.ReadOnly = True
-        Me.Total.Width = 99
+        Me.Total.Width = 65
         '
         'Transdate
         '
@@ -227,7 +224,7 @@ Partial Class DashboardContentsForm
         Me.Transdate.MinimumWidth = 8
         Me.Transdate.Name = "Transdate"
         Me.Transdate.ReadOnly = True
-        Me.Transdate.Width = 88
+        Me.Transdate.Width = 58
         '
         'EditRec
         '
@@ -240,7 +237,7 @@ Partial Class DashboardContentsForm
         Me.EditRec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.EditRec.Text = "Edit"
         Me.EditRec.UseColumnTextForButtonValue = True
-        Me.EditRec.Width = 88
+        Me.EditRec.Width = 58
         '
         'DeleteRec
         '
@@ -253,7 +250,7 @@ Partial Class DashboardContentsForm
         Me.DeleteRec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.DeleteRec.Text = "Delete"
         Me.DeleteRec.UseColumnTextForButtonValue = True
-        Me.DeleteRec.Width = 110
+        Me.DeleteRec.Width = 72
         '
         'gaddtbxsearch
         '
@@ -272,14 +269,14 @@ Partial Class DashboardContentsForm
         Me.gaddtbxsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gaddtbxsearch.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.gaddtbxsearch.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.gaddtbxsearch.Location = New System.Drawing.Point(327, 14)
-        Me.gaddtbxsearch.Margin = New System.Windows.Forms.Padding(6)
+        Me.gaddtbxsearch.Location = New System.Drawing.Point(218, 9)
+        Me.gaddtbxsearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gaddtbxsearch.Name = "gaddtbxsearch"
         Me.gaddtbxsearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.gaddtbxsearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.gaddtbxsearch.PlaceholderText = "Search in table"
         Me.gaddtbxsearch.SelectedText = ""
-        Me.gaddtbxsearch.Size = New System.Drawing.Size(556, 42)
+        Me.gaddtbxsearch.Size = New System.Drawing.Size(371, 27)
         Me.gaddtbxsearch.TabIndex = 44
         '
         'chrtexpenses
@@ -288,15 +285,14 @@ Partial Class DashboardContentsForm
         Me.chrtexpenses.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Me.chrtexpenses.Legends.Add(Legend1)
-        Me.chrtexpenses.Location = New System.Drawing.Point(16, 17)
-        Me.chrtexpenses.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.chrtexpenses.Location = New System.Drawing.Point(11, 11)
         Me.chrtexpenses.Name = "chrtexpenses"
         Me.chrtexpenses.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.chrtexpenses.Series.Add(Series1)
-        Me.chrtexpenses.Size = New System.Drawing.Size(867, 343)
+        Me.chrtexpenses.Size = New System.Drawing.Size(578, 223)
         Me.chrtexpenses.TabIndex = 46
         Me.chrtexpenses.Text = "Chart1"
         '
@@ -310,21 +306,32 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel3.Controls.Add(Me.lblexp)
         Me.Guna2Panel3.Controls.Add(Me.Label2)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(104, Byte), Integer))
-        Me.Guna2Panel3.Location = New System.Drawing.Point(942, 289)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(628, 188)
         Me.Guna2Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(381, 128)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(254, 83)
         Me.Guna2Panel3.TabIndex = 2
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(18, 35)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 47
+        Me.Guna2PictureBox2.TabStop = False
         '
         'lblexp
         '
         Me.lblexp.BackColor = System.Drawing.Color.Transparent
         Me.lblexp.Font = New System.Drawing.Font("Consolas", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblexp.ForeColor = System.Drawing.Color.White
-        Me.lblexp.Location = New System.Drawing.Point(95, 54)
-        Me.lblexp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblexp.Location = New System.Drawing.Point(63, 35)
         Me.lblexp.Name = "lblexp"
-        Me.lblexp.Size = New System.Drawing.Size(210, 54)
+        Me.lblexp.Size = New System.Drawing.Size(140, 35)
         Me.lblexp.TabIndex = 12
         Me.lblexp.Text = "0"
         Me.lblexp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -335,10 +342,9 @@ Partial Class DashboardContentsForm
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(16, 23)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(11, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(194, 28)
+        Me.Label2.Size = New System.Drawing.Size(135, 19)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Total Expenses"
         '
@@ -356,10 +362,10 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel6.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel6.Controls.Add(Me.Label1)
         Me.Guna2Panel6.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(104, Byte), Integer))
-        Me.Guna2Panel6.Location = New System.Drawing.Point(942, 17)
+        Me.Guna2Panel6.Location = New System.Drawing.Point(628, 11)
         Me.Guna2Panel6.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel6.Name = "Guna2Panel6"
-        Me.Guna2Panel6.Size = New System.Drawing.Size(381, 257)
+        Me.Guna2Panel6.Size = New System.Drawing.Size(254, 167)
         Me.Guna2Panel6.TabIndex = 55
         '
         'lblbudgetname
@@ -368,10 +374,9 @@ Partial Class DashboardContentsForm
         Me.lblbudgetname.BackColor = System.Drawing.Color.Transparent
         Me.lblbudgetname.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblbudgetname.ForeColor = System.Drawing.Color.White
-        Me.lblbudgetname.Location = New System.Drawing.Point(46, 126)
-        Me.lblbudgetname.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblbudgetname.Location = New System.Drawing.Point(31, 82)
         Me.lblbudgetname.Name = "lblbudgetname"
-        Me.lblbudgetname.Size = New System.Drawing.Size(168, 28)
+        Me.lblbudgetname.Size = New System.Drawing.Size(117, 19)
         Me.lblbudgetname.TabIndex = 61
         Me.lblbudgetname.Text = "(budgetname)"
         '
@@ -386,10 +391,9 @@ Partial Class DashboardContentsForm
         Me.gbtnsetbudget.FocusedColor = System.Drawing.Color.Green
         Me.gbtnsetbudget.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbtnsetbudget.ForeColor = System.Drawing.Color.White
-        Me.gbtnsetbudget.Location = New System.Drawing.Point(242, 163)
-        Me.gbtnsetbudget.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gbtnsetbudget.Location = New System.Drawing.Point(161, 106)
         Me.gbtnsetbudget.Name = "gbtnsetbudget"
-        Me.gbtnsetbudget.Size = New System.Drawing.Size(124, 66)
+        Me.gbtnsetbudget.Size = New System.Drawing.Size(83, 43)
         Me.gbtnsetbudget.TabIndex = 60
         Me.gbtnsetbudget.Text = "Set budget"
         '
@@ -399,11 +403,10 @@ Partial Class DashboardContentsForm
         Me.lblstartdate.BackColor = System.Drawing.Color.Transparent
         Me.lblstartdate.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblstartdate.ForeColor = System.Drawing.Color.White
-        Me.lblstartdate.Location = New System.Drawing.Point(48, 200)
-        Me.lblstartdate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblstartdate.Location = New System.Drawing.Point(32, 130)
         Me.lblstartdate.Name = "lblstartdate"
         Me.lblstartdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblstartdate.Size = New System.Drawing.Size(90, 28)
+        Me.lblstartdate.Size = New System.Drawing.Size(63, 19)
         Me.lblstartdate.TabIndex = 48
         Me.lblstartdate.Text = "(date)"
         '
@@ -413,12 +416,23 @@ Partial Class DashboardContentsForm
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(20, 160)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(13, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 28)
+        Me.Label3.Size = New System.Drawing.Size(90, 19)
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "Startdate"
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(18, 10)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 46
+        Me.Guna2PictureBox1.TabStop = False
         '
         'Guna2Panel7
         '
@@ -431,10 +445,9 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel7.Controls.Add(Me.gdashgrid)
         Me.Guna2Panel7.Controls.Add(Me.gaddtbxsearch)
         Me.Guna2Panel7.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel7.Location = New System.Drawing.Point(18, 442)
-        Me.Guna2Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2Panel7.Location = New System.Drawing.Point(12, 287)
         Me.Guna2Panel7.Name = "Guna2Panel7"
-        Me.Guna2Panel7.Size = New System.Drawing.Size(1305, 386)
+        Me.Guna2Panel7.Size = New System.Drawing.Size(870, 251)
         Me.Guna2Panel7.TabIndex = 56
         '
         'gbtntransadd
@@ -449,11 +462,10 @@ Partial Class DashboardContentsForm
         Me.gbtntransadd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.gbtntransadd.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
         Me.gbtntransadd.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gbtntransadd.Location = New System.Drawing.Point(1218, 8)
-        Me.gbtntransadd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gbtntransadd.Location = New System.Drawing.Point(812, 5)
         Me.gbtntransadd.Name = "gbtntransadd"
         Me.gbtntransadd.PressedColor = System.Drawing.Color.Transparent
-        Me.gbtntransadd.Size = New System.Drawing.Size(70, 49)
+        Me.gbtntransadd.Size = New System.Drawing.Size(47, 32)
         Me.gbtntransadd.TabIndex = 12
         Me.gbtntransadd.Text = "+"
         '
@@ -461,10 +473,9 @@ Partial Class DashboardContentsForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 12)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(17, 8)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(296, 48)
+        Me.Label4.Size = New System.Drawing.Size(194, 32)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Transactions"
         '
@@ -477,70 +488,43 @@ Partial Class DashboardContentsForm
         Me.Guna2Panel1.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.Guna2Panel1.Controls.Add(Me.chrtexpenses)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Location = New System.Drawing.Point(18, 17)
-        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(12, 11)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(900, 399)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(600, 259)
         Me.Guna2Panel1.TabIndex = 57
         '
         'Guna2CustomGradientPanel1
         '
-        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(737, 156)
+        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(491, 101)
+        Me.Guna2CustomGradientPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(8, 10)
+        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(5, 6)
         Me.Guna2CustomGradientPanel1.TabIndex = 47
-        '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(27, 54)
-        Me.Guna2PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(60, 62)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox2.TabIndex = 47
-        Me.Guna2PictureBox2.TabStop = False
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Peso_icon48
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(27, 15)
-        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(60, 62)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 46
-        Me.Guna2PictureBox1.TabStop = False
         '
         'DashboardContentsForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Honeydew
-        Me.ClientSize = New System.Drawing.Size(1350, 846)
+        Me.ClientSize = New System.Drawing.Size(900, 550)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2Panel3)
         Me.Controls.Add(Me.Guna2Panel7)
         Me.Controls.Add(Me.Guna2Panel6)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "DashboardContentsForm"
         Me.Text = " "
         CType(Me.gdashgrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chrtexpenses, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel6.ResumeLayout(False)
         Me.Guna2Panel6.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel7.ResumeLayout(False)
         Me.Guna2Panel7.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

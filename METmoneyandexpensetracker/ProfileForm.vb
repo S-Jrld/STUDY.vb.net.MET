@@ -244,4 +244,8 @@ Public Class ProfileForm
     Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
 
     End Sub
+
+    Private Sub lblCategory_Click(sender As Object, e As EventArgs) Handles lblCategory.Click
+
+    End Sub
 End Class

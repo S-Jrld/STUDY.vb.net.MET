@@ -235,22 +235,4 @@ Public Class HistoryForm
 
     End Sub
 
-    Private Sub gbtnmonthly_Click(sender As Object, e As EventArgs) Handles gbtnmonthly.Click
-        'set the value of expense period into monthly
-        If gexpperiod = "Yearly" Then
-            gexpperiod = "Monthly"
-        End If
-
-        DataGridView_load()
-    End Sub
-
-    Private Sub gbtnyearly_Click(sender As Object, e As EventArgs) Handles gbtnyearly.Click
-        'set the value of expense period into yearly
-        If gexpperiod = "Monthly" Then
-            gexpperiod = "Yearly"
-        End If
-
-        DataGridView_load()
-    End Sub
-
 End Class

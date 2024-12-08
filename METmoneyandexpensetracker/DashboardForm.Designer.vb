@@ -34,10 +34,6 @@ Partial Class DashboardForm
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lbltitle = New System.Windows.Forms.Label()
-        Me.lblusername = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.gcmbperiod = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.gbtnhelp = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtndashboard = New Guna.UI2.WinForms.Guna2Button()
@@ -45,6 +41,10 @@ Partial Class DashboardForm
         Me.gbtnlogout = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtngoal = New Guna.UI2.WinForms.Guna2Button()
         Me.gbtnprofile = New Guna.UI2.WinForms.Guna2Button()
+        Me.lbltitle = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.gcmbperiod = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,9 +63,8 @@ Partial Class DashboardForm
         Me.Guna2Panel1.Controls.Add(Me.gctrlclose)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1650, 46)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1100, 30)
         Me.Guna2Panel1.TabIndex = 30
         '
         'Guna2ControlBox3
@@ -76,10 +75,9 @@ Partial Class DashboardForm
         Me.Guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2ControlBox3.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.Guna2ControlBox3.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox3.Location = New System.Drawing.Point(1510, 2)
-        Me.Guna2ControlBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2ControlBox3.Location = New System.Drawing.Point(1007, 1)
         Me.Guna2ControlBox3.Name = "Guna2ControlBox3"
-        Me.Guna2ControlBox3.Size = New System.Drawing.Size(68, 45)
+        Me.Guna2ControlBox3.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox3.TabIndex = 6
         '
         'Guna2ControlBox2
@@ -90,10 +88,9 @@ Partial Class DashboardForm
         Me.Guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.Guna2ControlBox2.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox2.Location = New System.Drawing.Point(1443, 2)
-        Me.Guna2ControlBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2ControlBox2.Location = New System.Drawing.Point(962, 1)
         Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Me.Guna2ControlBox2.Size = New System.Drawing.Size(68, 45)
+        Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox2.TabIndex = 5
         '
         'gctrlclose
@@ -103,10 +100,9 @@ Partial Class DashboardForm
         Me.gctrlclose.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.gctrlclose.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.gctrlclose.IconColor = System.Drawing.Color.White
-        Me.gctrlclose.Location = New System.Drawing.Point(1578, 2)
-        Me.gctrlclose.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gctrlclose.Location = New System.Drawing.Point(1052, 1)
         Me.gctrlclose.Name = "gctrlclose"
-        Me.gctrlclose.Size = New System.Drawing.Size(68, 45)
+        Me.gctrlclose.Size = New System.Drawing.Size(45, 29)
         Me.gctrlclose.TabIndex = 4
         '
         'gbtnaboutus
@@ -115,10 +111,9 @@ Partial Class DashboardForm
         Me.gbtnaboutus.FillColor = System.Drawing.Color.Transparent
         Me.gbtnaboutus.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold)
         Me.gbtnaboutus.ForeColor = System.Drawing.Color.LightGreen
-        Me.gbtnaboutus.Location = New System.Drawing.Point(52, 836)
-        Me.gbtnaboutus.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gbtnaboutus.Location = New System.Drawing.Point(35, 543)
         Me.gbtnaboutus.Name = "gbtnaboutus"
-        Me.gbtnaboutus.Size = New System.Drawing.Size(146, 35)
+        Me.gbtnaboutus.Size = New System.Drawing.Size(97, 23)
         Me.gbtnaboutus.TabIndex = 42
         Me.gbtnaboutus.Text = "About Us"
         '
@@ -128,10 +123,10 @@ Partial Class DashboardForm
         Me.gpanelmain.BorderColor = System.Drawing.Color.Black
         Me.gpanelmain.BorderRadius = 20
         Me.gpanelmain.FillColor = System.Drawing.Color.White
-        Me.gpanelmain.Location = New System.Drawing.Point(286, 138)
+        Me.gpanelmain.Location = New System.Drawing.Point(191, 90)
         Me.gpanelmain.Margin = New System.Windows.Forms.Padding(0)
         Me.gpanelmain.Name = "gpanelmain"
-        Me.gpanelmain.Size = New System.Drawing.Size(1350, 846)
+        Me.gpanelmain.Size = New System.Drawing.Size(900, 550)
         Me.gpanelmain.TabIndex = 34
         Me.gpanelmain.UseTransparentBackground = True
         '
@@ -146,10 +141,9 @@ Partial Class DashboardForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Consolas", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LightGreen
-        Me.Label2.Location = New System.Drawing.Point(45, 115)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(30, 75)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(201, 62)
+        Me.Label2.Size = New System.Drawing.Size(132, 41)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "M.E.T."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -168,76 +162,20 @@ Partial Class DashboardForm
         Me.Guna2Panel2.Controls.Add(Me.gbtnprofile)
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 46)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 30)
         Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(279, 954)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(186, 620)
         Me.Guna2Panel2.TabIndex = 44
         Me.Guna2Panel2.UseTransparentBackground = True
-        '
-        'lbltitle
-        '
-        Me.lbltitle.AutoSize = True
-        Me.lbltitle.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.lbltitle.Location = New System.Drawing.Point(570, 65)
-        Me.lbltitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltitle.Name = "lbltitle"
-        Me.lbltitle.Size = New System.Drawing.Size(227, 48)
-        Me.lbltitle.TabIndex = 48
-        Me.lbltitle.Text = "Dashboard"
-        '
-        'lblusername
-        '
-        Me.lblusername.AutoSize = True
-        Me.lblusername.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblusername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(104, Byte), Integer))
-        Me.lblusername.Location = New System.Drawing.Point(1468, 77)
-        Me.lblusername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblusername.Name = "lblusername"
-        Me.lblusername.Size = New System.Drawing.Size(161, 37)
-        Me.lblusername.TabIndex = 52
-        Me.lblusername.Text = "Username"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(104, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(1317, 77)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(161, 37)
-        Me.Label6.TabIndex = 51
-        Me.Label6.Text = "Welcome,"
-        '
-        'gcmbperiod
-        '
-        Me.gcmbperiod.BackColor = System.Drawing.Color.Transparent
-        Me.gcmbperiod.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.gcmbperiod.BorderRadius = 15
-        Me.gcmbperiod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.gcmbperiod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.gcmbperiod.FocusedColor = System.Drawing.Color.Empty
-        Me.gcmbperiod.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gcmbperiod.ForeColor = System.Drawing.Color.Black
-        Me.gcmbperiod.FormattingEnabled = True
-        Me.gcmbperiod.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.gcmbperiod.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.gcmbperiod.ItemHeight = 30
-        Me.gcmbperiod.Items.AddRange(New Object() {"Monthly", "Yearly"})
-        Me.gcmbperiod.Location = New System.Drawing.Point(308, 77)
-        Me.gcmbperiod.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.gcmbperiod.Name = "gcmbperiod"
-        Me.gcmbperiod.Size = New System.Drawing.Size(242, 36)
-        Me.gcmbperiod.TabIndex = 57
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.Designer__3__removebg_preview
-        Me.PictureBox1.Location = New System.Drawing.Point(76, 9)
+        Me.PictureBox1.Location = New System.Drawing.Point(51, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(120, 110)
+        Me.PictureBox1.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 45
         Me.PictureBox1.TabStop = False
@@ -256,10 +194,10 @@ Partial Class DashboardForm
         Me.gbtnhelp.Image = Global.METmoneyandexpensetracker.My.Resources.Resources.icons8_help_501
         Me.gbtnhelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtnhelp.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtnhelp.Location = New System.Drawing.Point(28, 516)
+        Me.gbtnhelp.Location = New System.Drawing.Point(19, 335)
         Me.gbtnhelp.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnhelp.Name = "gbtnhelp"
-        Me.gbtnhelp.Size = New System.Drawing.Size(210, 62)
+        Me.gbtnhelp.Size = New System.Drawing.Size(140, 40)
         Me.gbtnhelp.TabIndex = 44
         Me.gbtnhelp.Text = "Help"
         Me.gbtnhelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -277,10 +215,10 @@ Partial Class DashboardForm
         Me.gbtndashboard.Image = CType(resources.GetObject("gbtndashboard.Image"), System.Drawing.Image)
         Me.gbtndashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtndashboard.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtndashboard.Location = New System.Drawing.Point(28, 263)
+        Me.gbtndashboard.Location = New System.Drawing.Point(19, 171)
         Me.gbtndashboard.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtndashboard.Name = "gbtndashboard"
-        Me.gbtndashboard.Size = New System.Drawing.Size(210, 62)
+        Me.gbtndashboard.Size = New System.Drawing.Size(140, 40)
         Me.gbtndashboard.TabIndex = 37
         Me.gbtndashboard.Text = "Dashboard"
         Me.gbtndashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -298,10 +236,10 @@ Partial Class DashboardForm
         Me.gbtnhistory.Image = CType(resources.GetObject("gbtnhistory.Image"), System.Drawing.Image)
         Me.gbtnhistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtnhistory.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtnhistory.Location = New System.Drawing.Point(28, 449)
+        Me.gbtnhistory.Location = New System.Drawing.Point(19, 292)
         Me.gbtnhistory.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnhistory.Name = "gbtnhistory"
-        Me.gbtnhistory.Size = New System.Drawing.Size(210, 62)
+        Me.gbtnhistory.Size = New System.Drawing.Size(140, 40)
         Me.gbtnhistory.TabIndex = 40
         Me.gbtnhistory.Text = "History"
         Me.gbtnhistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -316,10 +254,10 @@ Partial Class DashboardForm
         Me.gbtnlogout.Image = CType(resources.GetObject("gbtnlogout.Image"), System.Drawing.Image)
         Me.gbtnlogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtnlogout.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtnlogout.Location = New System.Drawing.Point(44, 748)
+        Me.gbtnlogout.Location = New System.Drawing.Point(29, 486)
         Me.gbtnlogout.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnlogout.Name = "gbtnlogout"
-        Me.gbtnlogout.Size = New System.Drawing.Size(188, 62)
+        Me.gbtnlogout.Size = New System.Drawing.Size(125, 40)
         Me.gbtnlogout.TabIndex = 41
         Me.gbtnlogout.Text = "Logout"
         Me.gbtnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -337,10 +275,10 @@ Partial Class DashboardForm
         Me.gbtngoal.Image = CType(resources.GetObject("gbtngoal.Image"), System.Drawing.Image)
         Me.gbtngoal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtngoal.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtngoal.Location = New System.Drawing.Point(28, 386)
+        Me.gbtngoal.Location = New System.Drawing.Point(19, 251)
         Me.gbtngoal.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtngoal.Name = "gbtngoal"
-        Me.gbtngoal.Size = New System.Drawing.Size(210, 62)
+        Me.gbtngoal.Size = New System.Drawing.Size(140, 40)
         Me.gbtngoal.TabIndex = 39
         Me.gbtngoal.Text = "Goal"
         Me.gbtngoal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -359,21 +297,74 @@ Partial Class DashboardForm
         Me.gbtnprofile.Image = CType(resources.GetObject("gbtnprofile.Image"), System.Drawing.Image)
         Me.gbtnprofile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.gbtnprofile.ImageSize = New System.Drawing.Size(30, 30)
-        Me.gbtnprofile.Location = New System.Drawing.Point(28, 325)
+        Me.gbtnprofile.Location = New System.Drawing.Point(19, 211)
         Me.gbtnprofile.Margin = New System.Windows.Forms.Padding(0)
         Me.gbtnprofile.Name = "gbtnprofile"
-        Me.gbtnprofile.Size = New System.Drawing.Size(210, 62)
+        Me.gbtnprofile.Size = New System.Drawing.Size(140, 40)
         Me.gbtnprofile.TabIndex = 38
         Me.gbtnprofile.Text = "Profile"
         Me.gbtnprofile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'lbltitle
+        '
+        Me.lbltitle.AutoSize = True
+        Me.lbltitle.Font = New System.Drawing.Font("Consolas", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.lbltitle.Location = New System.Drawing.Point(380, 42)
+        Me.lbltitle.Name = "lbltitle"
+        Me.lbltitle.Size = New System.Drawing.Size(149, 32)
+        Me.lbltitle.TabIndex = 48
+        Me.lbltitle.Text = "Dashboard"
+        '
+        'lblusername
+        '
+        Me.lblusername.AutoSize = True
+        Me.lblusername.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblusername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.lblusername.Location = New System.Drawing.Point(979, 50)
+        Me.lblusername.Name = "lblusername"
+        Me.lblusername.Size = New System.Drawing.Size(106, 24)
+        Me.lblusername.TabIndex = 52
+        Me.lblusername.Text = "Username"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(878, 50)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(106, 24)
+        Me.Label6.TabIndex = 51
+        Me.Label6.Text = "Welcome,"
+        '
+        'gcmbperiod
+        '
+        Me.gcmbperiod.BackColor = System.Drawing.Color.Transparent
+        Me.gcmbperiod.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.gcmbperiod.BorderRadius = 15
+        Me.gcmbperiod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.gcmbperiod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.gcmbperiod.FocusedColor = System.Drawing.Color.Empty
+        Me.gcmbperiod.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gcmbperiod.ForeColor = System.Drawing.Color.Black
+        Me.gcmbperiod.FormattingEnabled = True
+        Me.gcmbperiod.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.gcmbperiod.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.gcmbperiod.ItemHeight = 30
+        Me.gcmbperiod.Items.AddRange(New Object() {"Monthly", "Yearly"})
+        Me.gcmbperiod.Location = New System.Drawing.Point(205, 50)
+        Me.gcmbperiod.Name = "gcmbperiod"
+        Me.gcmbperiod.Size = New System.Drawing.Size(163, 36)
+        Me.gcmbperiod.TabIndex = 57
+        '
         'DashboardForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Honeydew
-        Me.ClientSize = New System.Drawing.Size(1650, 1000)
+        Me.ClientSize = New System.Drawing.Size(1100, 650)
         Me.Controls.Add(Me.gcmbperiod)
         Me.Controls.Add(Me.lblusername)
         Me.Controls.Add(Me.Label6)
@@ -382,7 +373,6 @@ Partial Class DashboardForm
         Me.Controls.Add(Me.gpanelmain)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "DashboardForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DashboardForm"
