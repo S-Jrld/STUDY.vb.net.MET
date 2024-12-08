@@ -135,9 +135,9 @@ Public Class DashboardContentsForm
     Public Sub SelectBalance()
         Dim query As String = ""
         If gexpperiod = "Monthly" Then
-            query = "SELECT budgetname, budget, availbal, totalexp, startdate FROM tblbalance WHERE budgetname = 'Monthly' AND (YEAR(startdate) = YEAR(CURDATE()) AND MONTH(startdate) = MONTH(CURDATE())) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+            query = "SELECT budgetname, budget, availbal, totalexp, startdate FROM tblbalance WHERE budgetname = 'Monthly' AND uname = @uname AND (YEAR(startdate) = YEAR(CURDATE()) AND MONTH(startdate) = MONTH(CURDATE())) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
         ElseIf gexpperiod = "Yearly" Then
-            query = "SELECT budgetname, budget, availbal, totalexp, startdate FROM tblbalance WHERE budgetname = 'Yearly' AND YEAR(startdate) = YEAR(CURDATE()) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+            query = "SELECT budgetname, budget, availbal, totalexp, startdate FROM tblbalance WHERE budgetname = 'Yearly' AND uname = @uname AND YEAR(startdate) = YEAR(CURDATE()) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
         End If
 
         Try
@@ -148,6 +148,7 @@ Public Class DashboardContentsForm
 
             ' Save SQL query to the variable cmd
             Dim cmd As New MySqlCommand(query, connection)
+            cmd.Parameters.AddWithValue("@uname", usernamekey)
             ' Execute query into the database and return the data retrieved
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
             If dr.Read() Then
@@ -183,9 +184,9 @@ Public Class DashboardContentsForm
         Dim remaining As Decimal = gbudget - gtotal
         Dim query As String = ""
         If gexpperiod = "Monthly" Then
-            query = "UPDATE tblbalance SET availbal = @availbal, totalexp = @totalexp WHERE budgetname = 'Monthly' AND (YEAR(startdate) = YEAR(CURDATE()) AND MONTH(startdate) = MONTH(CURDATE())) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+            query = "UPDATE tblbalance SET availbal = @availbal, totalexp = @totalexp WHERE budgetname = 'Monthly' AND uname = @uname AND (YEAR(startdate) = YEAR(CURDATE()) AND MONTH(startdate) = MONTH(CURDATE())) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
         ElseIf gexpperiod = "Yearly" Then
-            query = "UPDATE tblbalance SET availbal = @availbal, totalexp = @totalexp WHERE budgetname = 'Yearly' AND YEAR(startdate) = YEAR(CURDATE()) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
+            query = "UPDATE tblbalance SET availbal = @availbal, totalexp = @totalexp WHERE budgetname = 'Yearly' AND uname = @uname AND YEAR(startdate) = YEAR(CURDATE()) ORDER BY ABS(DATEDIFF(NOW(), startdate)) LIMIT 1"
         End If
 
         Try
@@ -195,6 +196,7 @@ Public Class DashboardContentsForm
 
             Dim cmd As New MySqlCommand(query, connection)
             cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("uname", usernamekey)
             cmd.Parameters.AddWithValue("@availbal", remaining)
             cmd.Parameters.AddWithValue("@totalexp", gtotal)
 
